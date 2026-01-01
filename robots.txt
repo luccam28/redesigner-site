@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Bloquear pastas de sistema e ficheiros sensíveis
+Disallow: /README.md
+Disallow: /LICENSE
+Disallow: /.git/
+
+# Caminho para o Sitemap (ajuda o Google a ler a estrutura do site)
+Sitemap: https://luccam28.github.io/redesigner-site/sitemap.xml
