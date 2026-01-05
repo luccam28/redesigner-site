@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Redesigner | Agência de Marketing Digital e Autoridade em Performance</title>
+    <title>Redesigner Comunicação e Marketing | Agência de Marketing Digital e Autoridade em Performance</title>
     <meta name="description" content="A Redesigner projeta o futuro de micro e pequenas empresas através de SEO estratégico, gestão de mídias sociais e tráfego pago.">
     <meta name="keywords" content="marketing digital, SEO, tráfego pago, social media, Redesigner PPM, autoridade digital, gestão de redes sociais, agência de marketing">
     <meta name="author" content="Redesigner PPM">
@@ -21,7 +21,8 @@
     <meta name="twitter:description" content="Estratégias de performance para pequenas empresas.">
     <meta name="twitter:image" content="cropped-fav-redesigner2-32x32.png">
 
-    <link rel="icon" href="cropped-fav-redesigner2-32x32.png" type="image/png">
+    <link rel="icon" href="cropped-fav-redesigner2-32x32.png" type="image/png" style="filter: brightness(0) saturate(100%) invert(85%) sepia(50%) saturate(5000%) hue-rotate(350deg);">
+    
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
@@ -61,9 +62,17 @@
             display: flex; flex-direction: column; justify-content: space-between; align-items: center; 
             padding: 40px 0; z-index: 1001; transition: var(--transition);
         }
-        .logo-box { width: 32px; height: 32px; transition: 0.3s; display: block; }
+
+        /* LOGO AJUSTADA PARA 90PX E COR AMARELA */
+        .logo-box { width: 90px; height: 90px; transition: 0.3s; display: block; }
         .logo-box:hover { transform: scale(1.1); }
-        .logo-img { width: 100%; height: 100%; object-fit: contain; }
+        .logo-img { 
+            width: 100%; height: 100%; object-fit: contain; 
+            filter: brightness(0) saturate(100%) invert(85%) sepia(50%) saturate(5000%) hue-rotate(350deg);
+        }
+        .mobile-header img {
+            filter: brightness(0) saturate(100%) invert(85%) sepia(50%) saturate(5000%) hue-rotate(350deg);
+        }
 
         .nav-items { list-style: none; width: 100%; text-align: center; }
         .nav-items a { 
@@ -218,7 +227,7 @@
     </div>
 
     <header class="mobile-header">
-        <img src="cropped-fav-redesigner2-32x32.png" alt="Redesigner" style="width: 25px;">
+        <img src="logo.png" alt="Redesigner" style="width: 25px;">
         <button class="burger-btn" onclick="toggleMenu()">
             <span></span><span></span><span></span>
         </button>
@@ -226,7 +235,7 @@
 
     <nav class="sidebar" id="sidebar">
         <a href="index.html" class="logo-box">
-            <img src="cropped-fav-redesigner2-32x32.png" alt="Redesigner" class="logo-img">
+            <img src="logo.png" alt="Redesigner" class="logo-img">
         </a>
         <ul class="nav-items">
             <li><a href="#home" onclick="closeMenu()">Home</a></li>
@@ -238,7 +247,7 @@
         </ul>
         <div class="sidebar-footer">
             <a href="#home" class="back-to-top">↑</a>
-            <div class="copyright">© REDESIGNER PPM<br>@2026 - Todos os Direitos Reservados</div>
+            <div class="copyright">© REDESIGNER PPM<br>EST. 2024</div>
         </div>
     </nav>
 
@@ -255,7 +264,7 @@
             <h2>Autoridade Digital para Pequenas Empresas</h2>
             <div style="max-width: 850px;">
                 <p style="margin-bottom: 25px; font-size: 1.15rem; line-height: 1.8; color: var(--text-dim);">
-                    <strong>Bem-vindo à Redesigner Comunicação e Marketing.<br></strong> Somos uma agência de marketing digital especializada em soluções eficazes para micro e pequenas empresas desde 2019. Unimos <strong>gestão de redes sociais, tráfego pago e produção gráfica</strong> em estratégias abrangentes que transformam sua presença online em resultados reais de negócio. Focamos no relacionamento próximo para entender suas metas e entregar um serviço de primeira linha.
+                    <strong>Bem-vindo à Redesigner Comunicação e Marketing.</strong> Somos uma agência de marketing digital especializada em soluções eficazes para micro e pequenas empresas desde 2019. Unimos <strong>gestão de redes sociais, tráfego pago e produção gráfica</strong> em estratégias abrangentes que transformam sua presença online em resultados reais de negócio. Focamos no relacionamento próximo para entender suas metas e entregar um serviço de primeira linha.
                 </p>
                 
                 <div class="dna-grid">
@@ -309,12 +318,13 @@
             <h2>Cases de Sucesso</h2>
             <div class="carousel-viewport">
                 <div class="carousel-track">
-                    <a href="#" class="case-item"><div class="case-img-box"><img src="paradies.png" alt="Paradies"></div><h4>Hotel Paradies</h4><span>SEO & Performance</span></a>
-                    <a href="#" class="case-item"><div class="case-img-box"><img src="rg-etiquetas.png" alt="RG Etiquetas"></div><h4>RG Etiquetas</h4><span>Ads & Social</span></a>
-                    <a href="#" class="case-item"><div class="case-img-box"><img src="dorvet.png" alt="Dorvet"></div><h4>Dorvet</h4><span>Branding Visual</span></a>
-                    <a href="#" class="case-item"><div class="case-img-box"><img src="taxipet.png" alt="TaxiPet"></div><h4>Taxi Pet</h4><span>Digital Presence</span></a>
-                    <a href="#" class="case-item"><div class="case-img-box"><img src="jardin-paysan.png" alt="Jardin"></div><h4>Jardin Paysan</h4><span>Conteúdo</span></a>
-                    <a href="#" class="case-item"><div class="case-img-box"><img src="mib-portoes.png" alt="MIB Portões"></div><h4>MIB Portões</h4><span>Ads Performance</span></a>
+                    <a href="https://hotelparadiesexpress.com.br/" class="case-item"><div class="case-img-box"><img src="paradies.png" alt="Paradies"></div><h4>Hotel Paradies</h4><span>SEO & Performance</span></a>
+                    <a href="http://rgetiquetas.com.br/" class="case-item"><div class="case-img-box"><img src="rg-etiquetas.png" alt="RG Etiquetas"></div><h4>RG Etiquetas</h4><span>Ads & Social</span></a>
+                    <a href="https://www.dorvet.com.br/" class="case-item"><div class="case-img-box"><img src="dorvet.png" alt="Dorvet"></div><h4>Dorvet</h4><span>Branding Visual</span></a>
+                    <a href="https://tiojuniortaxipet.com.br/" class="case-item"><div class="case-img-box"><img src="taxipet.png" alt="TaxiPet"></div><h4>Taxi Pet</h4><span>Digital Presence</span></a>
+                    <a href="https://jardinpaysan.com.br/" class="case-item"><div class="case-img-box"><img src="jardin-paysan.png" alt="Jardin"></div><h4>Jardin Paysan</h4><span>Conteúdo</span></a>
+                    <a href="https://mibportoes.com.br/" class="case-item"><div class="case-img-box"><img src="mib-portoes.png" alt="MIB Portões"></div><h4>MIB Portões</h4><span>Ads Performance</span></a>
+                    <a href="#" class="case-item"><div class="case-img-box"><img src="ideale.png" alt=" Dr. Luiz Fernando Cardoso - Odontologia Ideale"></div><h4>Dr. Luiz Fernando Cardoso - Odontologia Ideale</h4><span>Web</span></a>
                 </div>
             </div>
         </section>
