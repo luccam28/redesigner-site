@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Redesigner Comunicação e Marketing | Agência de Marketing Digital e Autoridade em Performance</title>
-    <meta name="description" content="A Redesigner projeta o futuro de micro e pequenas empresas através de SEO estratégico, gestão de mídias sociais e tráfego pago.">
-    <meta name="keywords" content="marketing digital, SEO, tráfego pago, social media, Redesigner PPM, autoridade digital, gestão de redes sociais, agência de marketing">
+    <title>Redesigner Comunicação e Marketing | Agência de Marketing Digital e Performance</title>
+    <meta name="description" content="A Redesigner projeta o futuro de micro e pequenas empresas através de SEO estratégico, gestão de mídias sociais e tráfego pago. Aumente sua autoridade digital.">
+    <meta name="keywords" content="marketing digital, SEO, tráfego pago, social media, Redesigner PPM, autoridade digital, agência de marketing em São Paulo">
     <meta name="author" content="Redesigner PPM">
     <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://redesigner.com.br/">
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="Redesigner | Comunicação e Marketing de Performance">
@@ -24,7 +25,41 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="logo.png">
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Redesigner Comunicação e Marketing",
+      "image": "https://redesigner.com.br/logo.png",
+      "@id": "https://redesigner.com.br",
+      "url": "https://redesigner.com.br",
+      "telephone": "+5511999778996",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "São Paulo",
+        "addressCountry": "BR"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://www.instagram.com/redesignerppm"
+      ]
+    }
+    </script>
 
     <style>
         :root {
@@ -33,7 +68,7 @@
             --orange: #ff6b35;
             --yellow: #f7b733;
             --text-main: #ffffff;
-            --text-dim: rgba(255, 255, 255, 0.5);
+            --text-dim: rgba(255, 255, 255, 0.6); /* Aumentado levemente para acessibilidade (WCAG) */
             --sidebar-w: 130px;
             --glass: rgba(255, 255, 255, 0.02);
             --transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -64,7 +99,6 @@
             padding: 40px 0; z-index: 1001; transition: var(--transition);
         }
 
-        /* LOGO 90PX E AMARELA (CSS FILTER) */
         .logo-box { width: 90px; height: 90px; transition: 0.3s; display: block; }
         .logo-box:hover { transform: scale(1.1); }
         .logo-img { 
@@ -93,16 +127,6 @@
         .back-to-top:hover { background: var(--purple); transform: translateY(-5px); }
         .copyright { font-size: 8px; opacity: 0.4; text-transform: uppercase; line-height: 1.5; }
 
-        /* WHATSAPP FLOAT */
-        .whatsapp-float {
-            position: fixed; right: 30px; bottom: 30px; z-index: 101;
-            width: 60px; height: 60px; background: #25d366; border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3); animation: pulse 2s infinite;
-        }
-        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
-
-        /* COOKIE POPUP */
         .cookie-popup {
             position: fixed; bottom: -100%; left: 50%; transform: translateX(-50%);
             width: 90%; max-width: 600px; background: rgba(20, 20, 20, 0.98);
@@ -136,18 +160,8 @@
 
         /* DNA BOXES */
         .dna-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 50px; }
-        .dna-card { 
-            padding: 30px; 
-            background: var(--glass); 
-            border: 1px solid rgba(255,255,255,0.05); 
-            border-radius: 20px; 
-            transition: var(--transition);
-        }
-        .dna-card:hover { 
-            background: var(--gradient-brand); 
-            border-color: transparent;
-            transform: translateY(-10px);
-        }
+        .dna-card { padding: 30px; background: var(--glass); border: 1px solid rgba(255,255,255,0.05); border-radius: 20px; transition: var(--transition); }
+        .dna-card:hover { background: var(--gradient-brand); border-color: transparent; transform: translateY(-10px); }
         .dna-card:hover h3, .dna-card:hover p { color: #fff !important; }
         .dna-card h3 { font-family: 'Syne'; font-size: 1.2rem; margin-bottom: 10px; color: var(--orange); text-transform: uppercase; }
 
@@ -203,44 +217,24 @@
         }
         .contact-input:focus { border-color: var(--purple); background: rgba(255,255,255,0.06); }
 
-        /* AJUSTES DE RESPONSIVIDADE (MOBILE) */
         @media (max-width: 900px) {
             .mobile-header { display: flex; }
             .sidebar { transform: translateX(-100%); width: 280px; background: #030303; }
             .sidebar.active { transform: translateX(0); }
             main { margin-left: 0; padding-top: 100px; }
-            
-            /* CENTRALIZAÇÃO GERAL */
-            .hero { align-items: center; text-align: center; }
-            .hero p { 
-                border-left: none; 
-                border-bottom: 3px solid var(--purple); /* Move o detalhe para baixo */
-                padding-left: 0; 
-                padding-bottom: 20px;
-                margin-top: 30px;
-            }
-            
-            h2, .section-label, .dna-grid p, .services-grid p { text-align: center; }
-            .section-label { margin-left: auto; margin-right: auto; width: max-content; }
-            
-            /* Ajuste Quem Somos */
-            #quem-somos div[style*="max-width"] { margin: 0 auto; }
-            #quem-somos p { text-align: center; }
+            .contact-grid { grid-template-columns: 1fr; }
+        }
 
-            /* Ajuste Contato */
-            .contact-grid { grid-template-columns: 1fr; gap: 40px; }
-            .contact-grid > div:first-child { 
-                display: flex; 
-                flex-direction: column; 
-                align-items: center; 
-                text-align: center; 
-            }
-            .transform-box { padding: 60px 20px; border-radius: 40px; }
-            .btn-prime { padding: 20px 40px; width: 100%; font-size: 0.9rem; }
+        /* ACESSIBILIDADE: Ocultar H1 visualmente mas manter para SEO */
+        .sr-only {
+            position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+            overflow: hidden; clip: rect(0,0,0,0); border: 0;
         }
     </style>
 </head>
 <body>
+
+    <h1 class="sr-only">Redesigner - Agência de Marketing Digital e Performance em São Paulo</h1>
 
     <div id="particles-js"></div>
 
@@ -256,15 +250,15 @@
     </div>
 
     <header class="mobile-header">
-        <img src="logo.png" alt="Redesigner" style="width: 50px;">
-        <button class="burger-btn" onclick="toggleMenu()">
+        <img src="logo.png" alt="Logo Agência Redesigner" style="width: 50px;">
+        <button class="burger-btn" onclick="toggleMenu()" aria-label="Abrir Menu">
             <span></span><span></span><span></span>
         </button>
     </header>
 
     <nav class="sidebar" id="sidebar">
-        <a href="index.html" class="logo-box">
-            <img src="logo.png" alt="Redesigner" class="logo-img">
+        <a href="index.html" class="logo-box" aria-label="Voltar para Home">
+            <img src="logo.png" alt="Redesigner PPM" class="logo-img">
         </a>
         <ul class="nav-items">
             <li><a href="#home" onclick="closeMenu()">Home</a></li>
@@ -275,14 +269,14 @@
             <li><a href="#contato" onclick="closeMenu()">Contato</a></li>
         </ul>
         <div class="sidebar-footer">
-            <a href="#home" class="back-to-top">↑</a>
+            <a href="#home" class="back-to-top" aria-label="Voltar ao topo">↑</a>
             <div class="copyright">© REDESIGNER PPM<br>EST. 2019 - Todos os Direitos Reservados</div>
         </div>
     </nav>
 
     <main>
         <section id="home" class="hero" style="border-bottom: none;">
-            <div class="typing-container">
+            <div class="typing-container" aria-hidden="true">
                 <span class="prefix">RE</span><span class="dynamic-text" id="text"></span><span class="cursor"></span>
             </div>
             <p>A <strong>Redesigner</strong> projeta o futuro de micro e pequenas empresas através de estratégias de <strong>SEO de Performance</strong> e design focado em conversão.</p>
@@ -293,22 +287,22 @@
             <h2>Autoridade Digital para Pequenas Empresas</h2>
             <div style="max-width: 850px;">
                 <p style="margin-bottom: 25px; font-size: 1.15rem; line-height: 1.8; color: var(--text-dim);">
-                    <strong>Bem-vindo à Redesigner Comunicação e Marketing.</strong> Somos uma agência de marketing digital especializada em soluções eficazes para micro e pequenas empresas desde 2019. Unimos <strong>gestão de redes sociais, tráfego pago e produção gráfica</strong> em estratégias abrangentes que transformam sua presença online em resultados reais de negócio. Focamos no relacionamento próximo para entender suas metas e entregar um serviço de primeira linha.
+                    <strong>Bem-vindo à Redesigner Comunicação e Marketing.</strong> Somos uma agência de marketing digital especializada em soluções eficazes para micro e pequenas empresas desde 2019. Unimos <strong>gestão de redes sociais, tráfego pago e produção gráfica</strong> em estratégias abrangentes que transformam sua presença online em resultados reais de negócio.
                 </p>
                 
                 <div class="dna-grid">
-                    <div class="dna-card">
+                    <article class="dna-card">
                         <h3>Missão</h3>
                         <p style="color:var(--text-dim); font-size: 0.9rem;">Democratizar o marketing de elite e o crescimento digital para empreendedores.</p>
-                    </div>
-                    <div class="dna-card">
+                    </article>
+                    <article class="dna-card">
                         <h3>Visão</h3>
                         <p style="color:var(--text-dim); font-size: 0.9rem;">Ser o motor de crescimento e autoridade número 1 das pequenas empresas brasileiras.</p>
-                    </div>
-                    <div class="dna-card">
+                    </article>
+                    <article class="dna-card">
                         <h3>Valores</h3>
                         <p style="color:var(--text-dim); font-size: 0.9rem;">Transparência total, compromisso com o ROI e criatividade baseada em dados.</p>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -317,9 +311,9 @@
             <span class="section-label">O que fazemos</span>
             <h2>Nossas Soluções</h2>
             <div class="services-grid">
-                <div class="service-card"><div class="card-number">01</div><h3>CRIAR</h3><p>Design visual de impacto e websites otimizados para velocidade e vendas.</p></div>
-                <div class="service-card"><div class="card-number">02</div><h3>OTIMIZAR</h3><p>SEO Técnico e gestão de tráfego pago para atrair o público qualificado.</p></div>
-                <div class="service-card"><div class="card-number">03</div><h3>ESCALAR</h3><p>Conteúdo estratégico em mídias sociais para gerar desejo e fidelização.</p></div>
+                <div class="service-card"><div class="card-number" aria-hidden="true">01</div><h3>CRIAR</h3><p>Design visual de impacto e websites otimizados para velocidade e vendas.</p></div>
+                <div class="service-card"><div class="card-number" aria-hidden="true">02</div><h3>OTIMIZAR</h3><p>SEO Técnico e gestão de tráfego pago para atrair o público qualificado.</p></div>
+                <div class="service-card"><div class="card-number" aria-hidden="true">03</div><h3>ESCALAR</h3><p>Conteúdo estratégico em mídias sociais para gerar desejo e fidelização.</p></div>
             </div>
         </section>
 
@@ -327,18 +321,18 @@
             <span class="section-label">Resultados Reais</span>
             <h2>Feedback dos Parceiros</h2>
             <div class="testi-grid">
-                <div class="testi-card">
+                <blockquote class="testi-card">
                     <p class="testi-text">"A visibilidade que ganhamos com o trabalho de SEO da Redesigner superou todas as expectativas."</p>
-                    <p class="testi-author">Ricardo S. - Diretor Industrial</p>
-                </div>
-                <div class="testi-card">
+                    <cite class="testi-author">Ricardo S. - Diretor Industrial</cite>
+                </blockquote>
+                <blockquote class="testi-card">
                     <p class="testi-text">"Pela primeira vez temos uma identidade visual que realmente passa confiança aos nossos investidores."</p>
-                    <p class="testi-author">Ana Paula M. - Proprietária</p>
-                </div>
-                <div class="testi-card">
+                    <cite class="testi-author">Ana Paula M. - Proprietária</cite>
+                </blockquote>
+                <blockquote class="testi-card">
                     <p class="testi-text">"O suporte é direto e focado em ROI. Não perdem tempo com métricas de vaidade."</p>
-                    <p class="testi-author">Marcos V. - Gestão Hoteleira</p>
-                </div>
+                    <cite class="testi-author">Marcos V. - Gestão Hoteleira</cite>
+                </blockquote>
             </div>
         </section>
 
@@ -347,13 +341,30 @@
             <h2>Cases de Sucesso</h2>
             <div class="carousel-viewport">
                 <div class="carousel-track">
-                    <a href="https://hotelparadiesexpress.com.br/" class="case-item"><div class="case-img-box"><img src="paradies.png" alt="Paradies"></div><h4>Hotel Paradies</h4><span>SEO & Performance</span></a>
-                    <a href="http://rgetiquetas.com.br/" class="case-item"><div class="case-img-box"><img src="rg-etiquetas.png" alt="RG Etiquetas"></div><h4>RG Etiquetas</h4><span>Ads & Social</span></a>
-                    <a href="https://www.dorvet.com.br/" class="case-item"><div class="case-img-box"><img src="dorvet.png" alt="Dorvet"></div><h4>Dorvet</h4><span>Branding Visual</span></a>
-                    <a href="https://tiojuniortaxipet.com.br/" class="case-item"><div class="case-img-box"><img src="taxipet.png" alt="TaxiPet"></div><h4>Taxi Pet</h4><span>Digital Presence</span></a>
-                    <a href="https://jardinpaysan.com.br/" class="case-item"><div class="case-img-box"><img src="jardin-paysan.png" alt="Jardin"></div><h4>Jardin Paysan</h4><span>Conteúdo</span></a>
-                    <a href="https://mibportoes.com.br/" class="case-item"><div class="case-img-box"><img src="mib-portoes.png" alt="MIB Portões"></div><h4>MIB Portões</h4><span>Ads Performance</span></a>
-                    <a href="#" class="case-item"><div class="case-img-box"><img src="logo-ideale.png" alt="Odontologia Ideale"></div><h4>Odontologia Ideale</h4><span>Web</span></a>
+                    <a href="https://hotelparadiesexpress.com.br/" class="case-item">
+                        <div class="case-img-box"><img src="paradies.png" alt="Projeto SEO Hotel Paradies" loading="lazy"></div>
+                        <h4>Hotel Paradies</h4><span>SEO & Performance</span>
+                    </a>
+                    <a href="http://rgetiquetas.com.br/" class="case-item">
+                        <div class="case-img-box"><img src="rg-etiquetas.png" alt="Gestão de Tráfego RG Etiquetas" loading="lazy"></div>
+                        <h4>RG Etiquetas</h4><span>Ads & Social</span>
+                    </a>
+                    <a href="https://www.dorvet.com.br/" class="case-item">
+                        <div class="case-img-box"><img src="dorvet.png" alt="Branding Visual Dorvet" loading="lazy"></div>
+                        <h4>Dorvet</h4><span>Branding Visual</span>
+                    </a>
+                    <a href="https://tiojuniortaxipet.com.br/" class="case-item">
+                        <div class="case-img-box"><img src="taxipet.png" alt="Marketing Digital Taxi Pet" loading="lazy"></div>
+                        <h4>Taxi Pet</h4><span>Digital Presence</span>
+                    </a>
+                    <a href="https://jardinpaysan.com.br/" class="case-item">
+                        <div class="case-img-box"><img src="jardin-paysan.png" alt="Social Media Jardin Paysan" loading="lazy"></div>
+                        <h4>Jardin Paysan</h4><span>Conteúdo</span>
+                    </a>
+                    <a href="https://mibportoes.com.br/" class="case-item">
+                        <div class="case-img-box"><img src="mib-portoes.png" alt="Tráfego Pago MIB Portões" loading="lazy"></div>
+                        <h4>MIB Portões</h4><span>Ads Performance</span>
+                    </a>
                 </div>
             </div>
         </section>
@@ -361,7 +372,7 @@
         <section id="contato">
             <div class="transform-box">
                 <h2>Pronto para ser a próxima autoridade digital?</h2>
-                <a href="https://wa.me/5511999778996" target="_blank" class="btn-prime">Chamar no WhatsApp</a>
+                <a href="https://wa.me/5511999778996" target="_blank" rel="noopener" class="btn-prime">Chamar no WhatsApp</a>
             </div>
             <div class="contact-grid">
                 <div>
@@ -374,9 +385,15 @@
                     </div>
                 </div>
                 <form action="https://formspree.io/f/atendimento@redesigner.com.br" method="POST">
-                    <input type="text" name="nome" placeholder="Seu Nome Completo" class="contact-input" required>
-                    <input type="email" name="email" placeholder="E-mail Corporativo" class="contact-input" required>
-                    <textarea name="mensagem" placeholder="Fale sobre seu projeto..." rows="4" class="contact-input" style="resize:none;" required></textarea>
+                    <label for="nome" class="sr-only">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu Nome Completo" class="contact-input" required>
+                    
+                    <label for="email" class="sr-only">E-mail Corporativo</label>
+                    <input type="email" id="email" name="email" placeholder="E-mail Corporativo" class="contact-input" required>
+                    
+                    <label for="mensagem" class="sr-only">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" placeholder="Fale sobre seu projeto..." rows="4" class="contact-input" style="resize:none;" required></textarea>
+                    
                     <input type="text" name="_gotcha" style="display:none">
                     <button type="submit" class="btn-prime" style="width:100%;">Enviar Mensagem</button>
                 </form>
@@ -384,10 +401,12 @@
         </section>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
     <script>
-        // PARTICLES
-        particlesJS("particles-js", { "particles": { "number": { "value": 70 }, "color": { "value": "#6e2fb5" }, "opacity": { "value": 0.2 }, "size": { "value": 2 }, "line_linked": { "enable": true, "distance": 150, "color": "#6e2fb5", "opacity": 0.1, "width": 1 }, "move": { "enable": true, "speed": 1.2 } } });
+        // PARTICLES (Carregado com defer para não travar o render)
+        window.addEventListener('load', function() {
+            particlesJS("particles-js", { "particles": { "number": { "value": 50 }, "color": { "value": "#6e2fb5" }, "opacity": { "value": 0.2 }, "size": { "value": 2 }, "line_linked": { "enable": true, "distance": 150, "color": "#6e2fb5", "opacity": 0.1, "width": 1 }, "move": { "enable": true, "speed": 1.2 } } });
+        });
         
         // TYPING EFFECT
         const words = ["CRIE", "INVENTE", "DESIGNER"];
@@ -395,7 +414,9 @@
         function type() {
             const currentWord = words[wordIndex];
             charIndex = isDeleting ? charIndex - 1 : charIndex + 1;
-            document.getElementById("text").textContent = currentWord.substring(0, charIndex);
+            const target = document.getElementById("text");
+            if(target) target.textContent = currentWord.substring(0, charIndex);
+            
             let speed = isDeleting ? 60 : 160;
             if (!isDeleting && charIndex === currentWord.length) { speed = 2000; isDeleting = true; }
             else if (isDeleting && charIndex === 0) { isDeleting = false; wordIndex = (wordIndex + 1) % words.length; speed = 500; }
