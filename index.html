@@ -203,12 +203,40 @@
         }
         .contact-input:focus { border-color: var(--purple); background: rgba(255,255,255,0.06); }
 
+        /* AJUSTES DE RESPONSIVIDADE (MOBILE) */
         @media (max-width: 900px) {
             .mobile-header { display: flex; }
             .sidebar { transform: translateX(-100%); width: 280px; background: #030303; }
             .sidebar.active { transform: translateX(0); }
             main { margin-left: 0; padding-top: 100px; }
-            .contact-grid { grid-template-columns: 1fr; }
+            
+            /* CENTRALIZAÇÃO GERAL */
+            .hero { align-items: center; text-align: center; }
+            .hero p { 
+                border-left: none; 
+                border-bottom: 3px solid var(--purple); /* Move o detalhe para baixo */
+                padding-left: 0; 
+                padding-bottom: 20px;
+                margin-top: 30px;
+            }
+            
+            h2, .section-label, .dna-grid p, .services-grid p { text-align: center; }
+            .section-label { margin-left: auto; margin-right: auto; width: max-content; }
+            
+            /* Ajuste Quem Somos */
+            #quem-somos div[style*="max-width"] { margin: 0 auto; }
+            #quem-somos p { text-align: center; }
+
+            /* Ajuste Contato */
+            .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+            .contact-grid > div:first-child { 
+                display: flex; 
+                flex-direction: column; 
+                align-items: center; 
+                text-align: center; 
+            }
+            .transform-box { padding: 60px 20px; border-radius: 40px; }
+            .btn-prime { padding: 20px 40px; width: 100%; font-size: 0.9rem; }
         }
     </style>
 </head>
@@ -325,7 +353,7 @@
                     <a href="https://tiojuniortaxipet.com.br/" class="case-item"><div class="case-img-box"><img src="taxipet.png" alt="TaxiPet"></div><h4>Taxi Pet</h4><span>Digital Presence</span></a>
                     <a href="https://jardinpaysan.com.br/" class="case-item"><div class="case-img-box"><img src="jardin-paysan.png" alt="Jardin"></div><h4>Jardin Paysan</h4><span>Conteúdo</span></a>
                     <a href="https://mibportoes.com.br/" class="case-item"><div class="case-img-box"><img src="mib-portoes.png" alt="MIB Portões"></div><h4>MIB Portões</h4><span>Ads Performance</span></a>
-                    <a href="#" class="case-item"><div class="case-img-box"><img src="ideale.png" alt="Odontologia Ideale"></div><h4>Odontologia Ideale</h4><span>Web</span></a>
+                    <a href="#" class="case-item"><div class="case-img-box"><img src="logo-ideale.png" alt="Odontologia Ideale"></div><h4>Odontologia Ideale</h4><span>Web</span></a>
                 </div>
             </div>
         </section>
