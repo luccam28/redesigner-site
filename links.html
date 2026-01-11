@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links Oficiais | Redesigner</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #030303;
+            --purple: #6e2fb5;
+            --orange: #ff6b35;
+            --yellow: #f7b733;
+            --text-main: #ffffff;
+            --glass: rgba(255, 255, 255, 0.05);
+            --gradient-brand: linear-gradient(135deg, var(--purple), var(--orange));
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body { 
+            background-color: var(--bg); 
+            color: var(--text-main); 
+            font-family: 'Inter', sans-serif; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        #particles-js { 
+            position: fixed; width: 100%; height: 100%; z-index: 1; top: 0; left: 0; pointer-events: none; 
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        /* Logo com o filtro amarelo do seu site */
+        .logo-links {
+            width: 100px;
+            margin-bottom: 20px;
+            filter: brightness(0) saturate(100%) invert(85%) sepia(50%) saturate(5000%) hue-rotate(350deg);
+        }
+
+        h1 {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 40px;
+        }
+
+        .links-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .link-card {
+            background: var(--glass);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 18px;
+            border-radius: 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .link-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--purple);
+            background: rgba(110, 47, 181, 0.1);
+        }
+
+        /* Botão de destaque (WhatsApp) */
+        .featured {
+            background: var(--gradient-brand);
+            border: none;
+            box-shadow: 0 10px 20px rgba(110, 47, 181, 0.3);
+        }
+
+        .featured:hover {
+            background: var(--gradient-brand);
+            opacity: 0.9;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 0.7rem;
+            opacity: 0.4;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    <div class="container">
+        <img src="logo.png" alt="Redesigner" class="logo-links">
+        <h1>Redesigner</h1>
+        <p>Projetando o futuro da sua autoridade digital.</p>
+
+        <div class="links-wrapper">
+            <a href="https://wa.me/5511999778996" class="link-card featured">
+                🚀 SOLICITAR ORÇAMENTO
+            </a>
+
+            <a href="index.html" class="link-card">
+                🌐 NOSSO SITE OFICIAL
+            </a>
+
+            <a href="index.html#cases" class="link-card">
+                🎨 PORTFÓLIO & CASES
+            </a>
+
+            <a href="https://www.instagram.com/agenciaredesigner" class="link-card">
+                📸 INSTAGRAM
+            </a>
+
+            <a href="mailto:atendimento@redesigner.com.br" class="link-card">
+                📩 CONTATO POR E-MAIL
+            </a>
+        </div>
+
+        <footer>
+            © REDESIGNER PPM <br> EST. 2019
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", { 
+            "particles": { 
+                "number": { "value": 50 }, 
+                "color": { "value": "#6e2fb5" }, 
+                "opacity": { "value": 0.3 }, 
+                "size": { "value": 2 }, 
+                "line_linked": { "enable": true, "distance": 150, "color": "#6e2fb5", "opacity": 0.1, "width": 1 }, 
+                "move": { "enable": true, "speed": 1.5 } 
+            } 
+        });
+    </script>
+</body>
+</html>
