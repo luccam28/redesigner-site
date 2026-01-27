@@ -2,30 +2,427 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Política de Privacidade | Redesigner</title>
-    <link rel="icon" href="cropped-fav-redesigner2-32x32.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Política de Privacidade | ReDesigner Agência Digital</title>
+    
+    <meta name="description" content="Política de Privacidade da ReDesigner Agência Digital. Conheça como protegemos seus dados pessoais.">
+    <meta name="keywords" content="privacidade, LGPD, proteção de dados, política de privacidade, ReDesigner">
+    <meta name="author" content="ReDesigner Agência Digital">
+    <meta name="robots" content="noindex, follow">
+    
+    <link rel="canonical" href="https://redesigner.com.br/privacidade.html">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
     <style>
-        body { background: #030303; color: #fff; font-family: 'Inter', sans-serif; padding: 5% 15%; line-height: 1.8; }
-        h1 { color: #6e2fb5; font-size: 2.5rem; }
-        h2 { color: #ff6b35; margin-top: 40px; }
-        p { color: rgba(255,255,255,0.7); }
-        .back { color: #fff; text-decoration: none; border-bottom: 1px solid #6e2fb5; }
+        :root {
+            --bg: #030303;
+            --purple: #6e2fb5;
+            --orange: #ff6b35;
+            --yellow: #f7b733;
+            --text-main: #ffffff;
+            --text-dim: rgba(255, 255, 255, 0.75);
+            --glass: rgba(255, 255, 255, 0.02);
+            --transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        html, body { 
+            background-color: var(--bg); 
+            color: var(--text-main); 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.6; 
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        /* Header da página de política */
+        .policy-header {
+            background: rgba(3,3,3,0.98);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding: 25px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo-box-policy {
+            width: 60px;
+            height: 60px;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .logo-box-policy:hover { transform: scale(1.05); }
+        
+        .logo-img-policy { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: contain; 
+            filter: brightness(0) saturate(100%) invert(85%) sepia(50%) saturate(5000%) hue-rotate(350deg);
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-dim);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 12px 25px;
+            border-radius: 50px;
+            background: var(--glass);
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: var(--transition);
+        }
+
+        .back-btn:hover {
+            background: var(--purple);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .back-btn i {
+            font-size: 0.9rem;
+        }
+
+        /* Conteúdo principal */
+        .policy-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 8% 120px;
+        }
+
+        .policy-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: var(--orange);
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        .policy-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-dim);
+            margin-bottom: 50px;
+            line-height: 1.7;
+            max-width: 800px;
+        }
+
+        .policy-section {
+            margin-bottom: 60px;
+            padding: 40px;
+            background: var(--glass);
+            border-radius: 25px;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: var(--transition);
+        }
+
+        .policy-section:hover {
+            border-color: rgba(110, 47, 181, 0.3);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .section-title {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.5rem;
+            color: var(--yellow);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-title i {
+            color: var(--purple);
+            font-size: 1.3rem;
+        }
+
+        .section-content {
+            color: var(--text-dim);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .section-content p {
+            margin-bottom: 20px;
+        }
+
+        .section-content strong {
+            color: white;
+            font-weight: 600;
+        }
+
+        .section-content ul {
+            margin-left: 25px;
+            margin-bottom: 20px;
+        }
+
+        .section-content li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 10px;
+        }
+
+        .section-content li:before {
+            content: "•";
+            color: var(--purple);
+            font-weight: bold;
+            position: absolute;
+            left: -15px;
+        }
+
+        /* Destaques */
+        .highlight-box {
+            background: rgba(110, 47, 181, 0.08);
+            border-left: 3px solid var(--purple);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 0 15px 15px 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            font-style: italic;
+            color: rgba(255,255,255,0.9);
+        }
+
+        /* Footer da política */
+        .policy-footer {
+            text-align: center;
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
+        .policy-footer a {
+            color: var(--orange);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .policy-footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .policy-header {
+                padding: 20px 5%;
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .policy-container {
+                padding: 60px 5% 100px;
+            }
+
+            .policy-section {
+                padding: 30px 25px;
+            }
+
+            .section-title {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .policy-section {
+                padding: 25px 20px;
+            }
+
+            .back-btn {
+                padding: 10px 20px;
+                font-size: 0.85rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <a href="index.html" class="back">← Voltar ao site</a>
-    <h1>Política de Privacidade</h1>
-    <p>A Redesigner PPM respeita a sua privacidade e a proteção dos seus dados pessoais conforme a Lei Geral de Proteção de Dados (LGPD).</p>
-    
-    <h2>1. Coleta de Dados</h2>
-    <p>Coletamos apenas informações enviadas voluntariamente por você através de nossos formulários de contato (Nome, E-mail e Mensagem).</p>
-    
-    <h2>2. Uso das Informações</h2>
-    <p>Seus dados são utilizados exclusivamente para responder às suas solicitações e prestar nossos serviços de marketing e design.</p>
-    
-    <h2>3. Cookies</h2>
-    <p>Utilizamos cookies para melhorar a navegação e entender o tráfego do nosso site via ferramentas de analytics.</p>
-    
-    <footer style="margin-top: 80px; font-size: 0.8rem; opacity: 0.4;">Última atualização: Julho/2024</footer>
+
+    <!-- Header -->
+    <header class="policy-header">
+        <a href="index.html" class="logo-box-policy" aria-label="Voltar para Home">
+            <img src="logo.png" alt="ReDesigner PPM" class="logo-img-policy">
+        </a>
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Voltar ao Site
+        </a>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="policy-container">
+        <h1 class="policy-title">Política de Privacidade</h1>
+        
+        <p class="policy-subtitle">
+            A ReDesigner PPM respeita a sua privacidade e a proteção dos seus dados pessoais 
+            conforme a Lei Geral de Proteção de Dados (LGPD) – Lei nº 13.709/2018.
+        </p>
+
+        <!-- Seção 1 -->
+        <section class="policy-section">
+            <h2 class="section-title">
+                <i class="fas fa-database"></i> 1. Coleta de Dados
+            </h2>
+            <div class="section-content">
+                <p>
+                    Coletamos apenas informações enviadas voluntariamente por você através de nossos 
+                    canais de comunicação, como:
+                </p>
+                <ul>
+                    <li><strong>Formulários de contato</strong> (Nome, E-mail, Telefone e Mensagem)</li>
+                    <li><strong>Interação via WhatsApp</strong> (quando você inicia uma conversa)</li>
+                    <li><strong>E-mails diretos</strong> para atendimento@redesigner.com.br</li>
+                </ul>
+                <p>
+                    Não coletamos dados sensíveis sem seu consentimento explícito, e todo o processo 
+                    é transparente e conforme a legislação vigente.
+                </p>
+            </div>
+        </section>
+
+        <!-- Seção 2 -->
+        <section class="policy-section">
+            <h2 class="section-title">
+                <i class="fas fa-chart-line"></i> 2. Uso das Informações
+            </h2>
+            <div class="section-content">
+                <p>
+                    Seus dados são utilizados exclusivamente para:
+                </p>
+                <ul>
+                    <li>Responder às suas solicitações de orçamento e informações</li>
+                    <li>Prestar nossos serviços de marketing digital, design e gestão</li>
+                    <li>Enviar comunicações relevantes sobre nossos serviços (com sua permissão)</li>
+                    <li>Melhorar a experiência do usuário em nosso site</li>
+                </ul>
+                <div class="highlight-box">
+                    <p>
+                        <strong>Importante:</strong> Nunca compartilhamos seus dados pessoais com terceiros 
+                        para fins comerciais não autorizados. Eventuais parcerias para prestação de serviços 
+                        seguem contratos de confidencialidade.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 3 -->
+        <section class="policy-section">
+            <h2 class="section-title">
+                <i class="fas fa-cookie-bite"></i> 3. Cookies e Analytics
+            </h2>
+            <div class="section-content">
+                <p>
+                    Utilizamos cookies para melhorar a navegação e entender o tráfego do nosso site 
+                    através de ferramentas como Google Analytics. Esses cookies <strong>não identificam 
+                    pessoalmente</strong> os usuários, mas coletam dados agregados como:
+                </p>
+                <ul>
+                    <li>Páginas mais visitadas</li>
+                    <li>Tempo de permanência no site</li>
+                    <li>Dispositivo e navegador utilizados</li>
+                    <li>Origem do tráfego</li>
+                </ul>
+                <p>
+                    Você pode gerenciar suas preferências de cookies diretamente no navegador. 
+                    Consulte nossa <a href="cookies.html" style="color: var(--orange);">Política de Cookies</a> 
+                    para mais detalhes.
+                </p>
+            </div>
+        </section>
+
+        <!-- Seção 4 -->
+        <section class="policy-section">
+            <h2 class="section-title">
+                <i class="fas fa-shield-alt"></i> 4. Segurança e Armazenamento
+            </h2>
+            <div class="section-content">
+                <p>
+                    Implementamos medidas técnicas e organizacionais para proteger seus dados contra 
+                    acesso não autorizado, alteração, divulgação ou destruição.
+                </p>
+                <p>
+                    Seus dados são armazenados pelo tempo necessário para cumprir as finalidades 
+                    descritas nesta política, ou conforme exigido por lei.
+                </p>
+            </div>
+        </section>
+
+        <!-- Seção 5 -->
+        <section class="policy-section">
+            <h2 class="section-title">
+                <i class="fas fa-user-check"></i> 5. Seus Direitos
+            </h2>
+            <div class="section-content">
+                <p>
+                    Conforme a LGPD, você tem direito a:
+                </p>
+                <ul>
+                    <li><strong>Confirmação</strong> da existência de tratamento dos seus dados</li>
+                    <li><strong>Acesso</strong> aos seus dados pessoais que detemos</li>
+                    <li><strong>Correção</strong> de dados incompletos, inexatos ou desatualizados</li>
+                    <li><strong>Eliminação</strong> de dados tratados com seu consentimento</li>
+                    <li><strong>Portabilidade</strong> dos dados a outro fornecedor de serviço</li>
+                    <li><strong>Revogação</strong> do consentimento a qualquer momento</li>
+                </ul>
+                <p>
+                    Para exercer qualquer um desses direitos, entre em contato pelo e-mail: 
+                    <strong>privacidade@redesigner.com.br</strong>
+                </p>
+            </div>
+        </section>
+
+        <!-- Seção 6 -->
+        <section class="policy-section">
+            <h2 class="section-title">
+                <i class="fas fa-file-contract"></i> 6. Alterações nesta Política
+            </h2>
+            <div class="section-content">
+                <p>
+                    Esta Política de Privacidade pode ser atualizada periodicamente para refletir 
+                    mudanças em nossas práticas ou na legislação. A versão mais recente estará sempre 
+                    disponível nesta página, com a data da última atualização.
+                </p>
+                <p>
+                    Recomendamos que você revise esta política regularmente para se manter informado 
+                    sobre como protegemos suas informações.
+                </p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <div class="policy-footer">
+            <p>
+                <strong>ReDesigner PPM Agência Digital</strong><br>
+                <small>Última atualização: Julho de 2024</small>
+            </p>
+            <p style="margin-top: 20px;">
+                <a href="index.html">Página Inicial</a> • 
+                <a href="termos.html">Termos de Uso</a> • 
+                <a href="cookies.html">Política de Cookies</a>
+            </p>
+        </div>
+    </main>
+
 </body>
 </html>
