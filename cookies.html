@@ -2,17 +2,769 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Política de Cookies | Redesigner</title>
-    <link rel="icon" href="cropped-fav-redesigner2-32x32.png" type="image/png">
-    <style>body { background: #030303; color: #fff; font-family: 'Inter', sans-serif; padding: 5% 15%; }</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Política de Cookies | ReDesigner Agência Digital</title>
+    
+    <meta name="description" content="Política de Cookies da ReDesigner Agência Digital. Entenda como usamos cookies para melhorar sua experiência.">
+    <meta name="keywords" content="cookies, política de cookies, LGPD, privacidade digital, ReDesigner">
+    <meta name="author" content="ReDesigner Agência Digital">
+    <meta name="robots" content="noindex, follow">
+    
+    <link rel="canonical" href="https://redesigner.com.br/cookies.html">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg: #030303;
+            --purple: #6e2fb5;
+            --orange: #ff6b35;
+            --yellow: #f7b733;
+            --text-main: #ffffff;
+            --text-dim: rgba(255, 255, 255, 0.75);
+            --glass: rgba(255, 255, 255, 0.02);
+            --transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --gradient-brand: linear-gradient(135deg, var(--purple), var(--orange));
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        html, body { 
+            background-color: var(--bg); 
+            color: var(--text-main); 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.6; 
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        /* Header da página de cookies */
+        .cookies-header {
+            background: rgba(3,3,3,0.98);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding: 25px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo-box-cookies {
+            width: 60px;
+            height: 60px;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .logo-box-cookies:hover { transform: scale(1.05); }
+        
+        .logo-img-cookies { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: contain; 
+            filter: brightness(0) saturate(100%) invert(85%) sepia(50%) saturate(5000%) hue-rotate(350deg);
+        }
+
+        .back-btn-cookies {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-dim);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 12px 25px;
+            border-radius: 50px;
+            background: var(--glass);
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: var(--transition);
+        }
+
+        .back-btn-cookies:hover {
+            background: var(--purple);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .back-btn-cookies i {
+            font-size: 0.9rem;
+        }
+
+        /* Conteúdo principal */
+        .cookies-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 8% 120px;
+        }
+
+        .cookies-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: var(--orange);
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        .cookies-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-dim);
+            margin-bottom: 50px;
+            line-height: 1.7;
+            max-width: 800px;
+        }
+
+        /* Hero Section de Cookies */
+        .cookies-hero {
+            background: var(--glass);
+            border-radius: 30px;
+            padding: 50px;
+            margin-bottom: 60px;
+            border: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            transition: var(--transition);
+        }
+
+        .cookies-hero:hover {
+            border-color: rgba(110, 47, 181, 0.3);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .cookie-icon {
+            font-size: 4rem;
+            color: var(--yellow);
+            flex-shrink: 0;
+        }
+
+        .cookies-hero-content h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.8rem;
+            color: var(--text-main);
+            margin-bottom: 15px;
+        }
+
+        .cookies-hero-content p {
+            color: var(--text-dim);
+            font-size: 1.00rem;
+            line-height: 1.5;
+        }
+
+        /* Seções de conteúdo */
+        .cookies-section {
+            margin-bottom: 60px;
+            padding: 40px;
+            background: var(--glass);
+            border-radius: 25px;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: var(--transition);
+        }
+
+        .cookies-section:hover {
+            border-color: rgba(110, 47, 181, 0.3);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .section-title-cookies {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.5rem;
+            color: var(--yellow);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-title-cookies i {
+            color: var(--purple);
+            font-size: 1.3rem;
+        }
+
+        .section-content-cookies {
+            color: var(--text-dim);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .section-content-cookies p {
+            margin-bottom: 20px;
+        }
+
+        .section-content-cookies strong {
+            color: white;
+            font-weight: 600;
+        }
+
+        .section-content-cookies ul {
+            margin-left: 25px;
+            margin-bottom: 20px;
+        }
+
+        .section-content-cookies li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 10px;
+        }
+
+        .section-content-cookies li:before {
+            content: "•";
+            color: var(--purple);
+            font-weight: bold;
+            position: absolute;
+            left: -15px;
+        }
+
+        /* Tabela de Cookies */
+        .cookies-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: rgba(255, 255, 255, 0.01);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .cookies-table th {
+            background: rgba(110, 47, 181, 0.1);
+            color: var(--orange);
+            font-family: 'Syne', sans-serif;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            padding: 20px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .cookies-table td {
+            padding: 20px;
+            color: var(--text-dim);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .cookies-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .cookies-table tr:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .cookie-type {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .cookie-type.essential {
+            background: rgba(110, 47, 181, 0.2);
+            color: var(--purple);
+        }
+
+        .cookie-type.analytics {
+            background: rgba(255, 107, 53, 0.2);
+            color: var(--orange);
+        }
+
+        /* Controles de Cookies */
+        .cookie-controls {
+            background: rgba(255, 255, 255, 0.02);
+            border-left: 3px solid var(--yellow);
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 0 15px 15px 0;
+        }
+
+        .cookie-controls h4 {
+            font-family: 'Syne', sans-serif;
+            color: var(--yellow);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .control-option {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .control-option:last-child {
+            border-bottom: none;
+        }
+
+        .control-info h5 {
+            color: white;
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .control-info p {
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
+        .toggle-switch {
+            position: relative;
+            width: 50px;
+            height: 26px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255,255,255,0.1);
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: var(--purple);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(24px);
+        }
+
+        /* Botão de ação */
+        .cookie-action-btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background: linear-gradient(90deg, var(--purple), var(--orange));
+            color: white;
+            text-decoration: none;
+            font-weight: 800;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+
+        .cookie-action-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(110, 47, 181, 0.4);
+        }
+
+        /* Footer da página */
+        .cookies-footer {
+            text-align: center;
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
+        .cookies-footer a {
+            color: var(--orange);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .cookies-footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .cookies-header {
+                padding: 20px 5%;
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .cookies-container {
+                padding: 60px 5% 100px;
+            }
+
+            .cookies-hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 40px 30px;
+            }
+
+            .cookie-icon {
+                font-size: 3rem;
+            }
+
+            .cookies-section {
+                padding: 30px 25px;
+            }
+
+            .section-title-cookies {
+                font-size: 1.3rem;
+            }
+
+            .cookies-table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            .control-option {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .toggle-switch {
+                align-self: flex-end;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cookies-section {
+                padding: 25px 20px;
+            }
+
+            .back-btn-cookies {
+                padding: 10px 20px;
+                font-size: 0.85rem;
+            }
+
+            .cookies-hero {
+                padding: 30px 20px;
+            }
+
+            .cookie-action-btn {
+                width: 100%;
+                text-align: center;
+                padding: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>O que são Cookies?</h1>
-    <p>Cookies são pequenos arquivos de texto armazenados no seu navegador para otimizar sua experiência.</p>
-    <h2>Cookies que usamos:</h2>
-    <ul>
-        <li><strong>Técnicos:</strong> Necessários para o funcionamento do site.</li>
-        <li><strong>Analíticos:</strong> Para entender como os visitantes interagem com o site.</li>
-    </ul>
+
+    <!-- Header -->
+    <header class="cookies-header">
+        <a href="index.html" class="logo-box-cookies" aria-label="Voltar para Home">
+            <img src="logo.png" alt="ReDesigner PPM" class="logo-img-cookies">
+        </a>
+        <a href="index.html" class="back-btn-cookies">
+            <i class="fas fa-arrow-left"></i> Voltar ao Site
+        </a>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="cookies-container">
+        <h1 class="cookies-title">Política de Cookies</h1>
+        
+        <p class="cookies-subtitle">
+            Esta política explica o que são cookies, como os utilizamos e como você pode gerenciar suas preferências.
+            Ao usar nosso site, você concorda com o uso de cookies de acordo com esta política.
+        </p>
+
+        <!-- Hero Section -->
+        <section class="cookies-hero">
+            <div class="cookie-icon">
+                <i class="fas fa-cookie-bite"></i>
+            </div>
+            <div class="cookies-hero-content">
+                <h3>O que são Cookies?</h3>
+                <p>
+                    Cookies são pequenos arquivos de texto armazenados no seu navegador quando você visita um site. 
+                    Eles são amplamente usados para tornar os sites mais eficientes, lembrar suas preferências e 
+                    melhorar sua experiência de navegação.
+                </p>
+            </div>
+        </section>
+
+        <!-- Seção 1 -->
+        <section class="cookies-section">
+            <h2 class="section-title-cookies">
+                <i class="fas fa-filter"></i> Tipos de Cookies que Utilizamos
+            </h2>
+            <div class="section-content-cookies">
+                <p>
+                    Utilizamos diferentes tipos de cookies para várias finalidades:
+                </p>
+                
+                <table class="cookies-table">
+                    <thead>
+                        <tr>
+                            <th>Tipo de Cookie</th>
+                            <th>Finalidade</th>
+                            <th>Duração</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span class="cookie-type essential">Essenciais</span>
+                            </td>
+                            <td>
+                                <strong>Necessários para o funcionamento básico do site</strong><br>
+                                Permitem navegação e uso de funcionalidades essenciais
+                            </td>
+                            <td>Sessão ou até 24 meses</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="cookie-type analytics">Analíticos</span>
+                            </td>
+                            <td>
+                                <strong>Coletam informações anônimas sobre o uso do site</strong><br>
+                                Ajudam-nos a entender como os visitantes interagem com nosso conteúdo
+                            </td>
+                            <td>Até 24 meses</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="cookie-type">Preferências</span>
+                            </td>
+                            <td>
+                                <strong>Lembram suas escolhas e personalizações</strong><br>
+                                Como idioma preferido ou configurações de região
+                            </td>
+                            <td>Até 12 meses</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="cookie-type">Performance</span>
+                            </td>
+                            <td>
+                                <strong>Monitoram o desempenho do site</strong><br>
+                                Identificam problemas técnicos e áreas de melhoria
+                            </td>
+                            <td>Até 12 meses</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Seção 2 -->
+        <section class="cookies-section">
+            <h2 class="section-title-cookies">
+                <i class="fas fa-chart-line"></i> Por que Usamos Cookies?
+            </h2>
+            <div class="section-content-cookies">
+                <p>
+                    Os cookies nos ajudam a:
+                </p>
+                <ul>
+                    <li><strong>Melhorar a performance do site</strong> - Identificando e corrigindo problemas técnicos</li>
+                    <li><strong>Personalizar sua experiência</strong> - Lembrando suas preferências e configurações</li>
+                    <li><strong>Entender nosso público</strong> - Analisando padrões de uso de forma agregada e anônima</li>
+                    <li><strong>Otimizar nosso conteúdo</strong> - Sabendo quais páginas e serviços são mais relevantes</li>
+                    <li><strong>Garantir segurança</strong> - Prevenindo atividades fraudulentas</li>
+                </ul>
+                
+                <div class="cookie-controls">
+                    <h4>Controle de Cookies</h4>
+                    
+                    <div class="control-option">
+                        <div class="control-info">
+                            <h5>Cookies Essenciais</h5>
+                            <p>Necessários para o funcionamento do site. Não podem ser desativados.</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked disabled>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="control-option">
+                        <div class="control-info">
+                            <h5>Cookies Analíticos</h5>
+                            <p>Nos ajudam a melhorar o site analisando o uso anônimo.</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="analyticsToggle" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="control-option">
+                        <div class="control-info">
+                            <h5>Cookies de Preferências</h5>
+                            <p>Lembram suas escolhas para personalizar sua experiência.</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="preferencesToggle" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    
+                    <button class="cookie-action-btn" onclick="saveCookiePreferences()">
+                        Salvar Preferências
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 3 -->
+        <section class="cookies-section">
+            <h2 class="section-title-cookies">
+                <i class="fas fa-cog"></i> Como Gerenciar Cookies
+            </h2>
+            <div class="section-content-cookies">
+                <p>
+                    Você tem controle total sobre os cookies. Aqui estão as maneiras de gerenciá-los:
+                </p>
+                
+                <h4 style="color: var(--yellow); margin: 25px 0 15px 0;">1. Configurações do Navegador</h4>
+                <p>
+                    A maioria dos navegadores permite que você:
+                </p>
+                <ul>
+                    <li>Veja quais cookies estão armazenados</li>
+                    <li>Exclua cookies individuais ou todos eles</li>
+                    <li>Bloqueie cookies de terceiros ou de todos os sites</li>
+                    <li>Configure alertas quando cookies são enviados</li>
+                </ul>
+                
+                <h4 style="color: var(--yellow); margin: 25px 0 15px 0;">2. Ferramentas de Controle</h4>
+                <p>
+                    Para optar por não participar de cookies analíticos de terceiros:
+                </p>
+                <ul>
+                    <li><strong>Google Analytics:</strong> Use o <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" style="color: var(--orange);">Google Analytics Opt-out Browser Add-on</a></li>
+                    <li><strong>Facebook:</strong> Ajuste suas preferências de anúncios nas configurações do Facebook</li>
+                </ul>
+                
+                <h4 style="color: var(--yellow); margin: 25px 0 15px 0;">3. Nosso Gerenciador</h4>
+                <p>
+                    Use os controles nesta página para ajustar suas preferências de cookies específicas do nosso site.
+                </p>
+            </div>
+        </section>
+
+        <!-- Seção 4 -->
+        <section class="cookies-section">
+            <h2 class="section-title-cookies">
+                <i class="fas fa-question-circle"></i> Perguntas Frequentes
+            </h2>
+            <div class="section-content-cookies">
+                <div style="margin-bottom: 25px;">
+                    <h4 style="color: white; margin-bottom: 10px;">Os cookies armazenam meus dados pessoais?</h4>
+                    <p>
+                        Os cookies que utilizamos não armazenam informações pessoais identificáveis como nome, 
+                        endereço ou dados de pagamento. Coletamos apenas dados agregados e anônimos para análise.
+                    </p>
+                </div>
+                
+                <div style="margin-bottom: 25px;">
+                    <h4 style="color: white; margin-bottom: 10px;">Desativar cookies afeta minha experiência?</h4>
+                    <p>
+                        Se desativar cookies essenciais, algumas funcionalidades do site podem não funcionar 
+                        corretamente. Cookies analíticos e de preferência podem ser desativados sem afetar 
+                        a funcionalidade básica.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 style="color: white; margin-bottom: 10px;">Como sei que meus dados estão seguros?</h4>
+                    <p>
+                        Implementamos medidas de segurança rigorosas e seguimos as melhores práticas de proteção 
+                        de dados. Nossos cookies são configurados com segurança máxima e validade limitada.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <div class="cookies-footer">
+            <p>
+                <strong>ReDesigner PPM Agência Digital</strong><br>
+                <small>Última atualização: Julho de 2024</small>
+            </p>
+            <p style="margin-top: 20px;">
+                <a href="index.html">Página Inicial</a> • 
+                <a href="privacidade.html">Política de Privacidade</a> • 
+                <a href="termos.html">Termos de Uso</a>
+            </p>
+            <p style="margin-top: 20px; font-size: 0.8rem; opacity: 0.6;">
+                Para mais informações sobre cookies, visite <a href="https://www.allaboutcookies.org" target="_blank" style="color: var(--text-dim);">AllAboutCookies.org</a>
+            </p>
+        </div>
+    </main>
+
+    <script>
+        // Função para salvar preferências de cookies
+        function saveCookiePreferences() {
+            const analyticsToggle = document.getElementById('analyticsToggle').checked;
+            const preferencesToggle = document.getElementById('preferencesToggle').checked;
+            
+            // Salvar preferências no localStorage
+            localStorage.setItem('cookie_analytics', analyticsToggle ? 'accepted' : 'rejected');
+            localStorage.setItem('cookie_preferences', preferencesToggle ? 'accepted' : 'rejected');
+            
+            // Mostrar feedback
+            alert('Preferências de cookies salvas com sucesso!');
+            
+            // Atualizar cookies reais (em um cenário real, você implementaria isso no backend)
+            updateCookies(analyticsToggle, preferencesToggle);
+        }
+        
+        function updateCookies(analytics, preferences) {
+            // Esta função seria implementada no backend para configurar os cookies reais
+            // Por enquanto, apenas simulamos o comportamento
+            console.log('Cookies atualizados:');
+            console.log('Analíticos:', analytics ? 'Ativados' : 'Desativados');
+            console.log('Preferências:', preferences ? 'Ativadas' : 'Desativadas');
+        }
+        
+        // Carregar preferências salvas
+        window.onload = function() {
+            const analyticsSaved = localStorage.getItem('cookie_analytics');
+            const preferencesSaved = localStorage.getItem('cookie_preferences');
+            
+            if (analyticsSaved) {
+                document.getElementById('analyticsToggle').checked = analyticsSaved === 'accepted';
+            }
+            
+            if (preferencesSaved) {
+                document.getElementById('preferencesToggle').checked = preferencesSaved === 'accepted';
+            }
+        };
+    </script>
+
 </body>
 </html>
