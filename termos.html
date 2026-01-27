@@ -2,24 +2,752 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Termos de Uso | Redesigner</title>
-    <link rel="icon" href="cropped-fav-redesigner2-32x32.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Termos de Uso | ReDesigner Agência Digital</title>
+    
+    <meta name="description" content="Termos de Uso da ReDesigner Agência Digital. Conheça as condições para utilização de nossos serviços.">
+    <meta name="keywords" content="termos de uso, condições de serviço, ReDesigner, agência digital, contratos">
+    <meta name="author" content="ReDesigner Agência Digital">
+    <meta name="robots" content="noindex, follow">
+    
+    <link rel="canonical" href="https://redesigner.com.br/termos.html">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
     <style>
-        body { background: #030303; color: #fff; font-family: 'Inter', sans-serif; padding: 5% 15%; line-height: 1.8; }
-        h1 { color: #6e2fb5; font-size: 2.5rem; }
-        h2 { color: #ff6b35; margin-top: 40px; }
-        p { color: rgba(255,255,255,0.7); }
+        :root {
+            --bg: #030303;
+            --purple: #6e2fb5;
+            --orange: #ff6b35;
+            --yellow: #f7b733;
+            --text-main: #ffffff;
+            --text-dim: rgba(255, 255, 255, 0.75);
+            --glass: rgba(255, 255, 255, 0.02);
+            --transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --gradient-brand: linear-gradient(135deg, var(--purple), var(--orange));
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        html, body { 
+            background-color: var(--bg); 
+            color: var(--text-main); 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.6; 
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        /* Header da página de termos */
+        .termos-header {
+            background: rgba(3,3,3,0.98);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding: 25px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo-box-termos {
+            width: 60px;
+            height: 60px;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .logo-box-termos:hover { transform: scale(1.05); }
+        
+        .logo-img-termos { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: contain; 
+            filter: brightness(0) saturate(100%) invert(85%) sepia(50%) saturate(5000%) hue-rotate(350deg);
+        }
+
+        .back-btn-termos {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-dim);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 12px 25px;
+            border-radius: 50px;
+            background: var(--glass);
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: var(--transition);
+        }
+
+        .back-btn-termos:hover {
+            background: var(--purple);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .back-btn-termos i {
+            font-size: 0.9rem;
+        }
+
+        /* Conteúdo principal */
+        .termos-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 80px 8% 120px;
+        }
+
+        .termos-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: var(--orange);
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        .termos-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-dim);
+            margin-bottom: 60px;
+            line-height: 1.7;
+            max-width: 800px;
+        }
+
+        /* Hero Section */
+        .termos-hero {
+            background: linear-gradient(135deg, rgba(110, 47, 181, 0.1), rgba(255, 107, 53, 0.1));
+            border-radius: 30px;
+            padding: 50px;
+            margin-bottom: 60px;
+            border: 1px solid rgba(110, 47, 181, 0.3);
+            text-align: center;
+        }
+
+        .termos-hero h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.8rem;
+            color: var(--text-main);
+            margin-bottom: 20px;
+        }
+
+        .termos-hero p {
+            color: var(--text-dim);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Índice */
+        .termos-index {
+            background: var(--glass);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 60px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .termos-index h4 {
+            font-family: 'Syne', sans-serif;
+            color: var(--yellow);
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+        }
+
+        .index-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            list-style: none;
+        }
+
+        .index-list li {
+            margin-bottom: 10px;
+        }
+
+        .index-list a {
+            color: var(--text-dim);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition);
+            padding: 8px 15px;
+            border-radius: 10px;
+        }
+
+        .index-list a:hover {
+            color: var(--orange);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .index-list i {
+            color: var(--purple);
+            font-size: 0.9rem;
+        }
+
+        /* Seções de conteúdo */
+        .termos-section {
+            margin-bottom: 60px;
+            padding: 40px;
+            background: var(--glass);
+            border-radius: 25px;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: var(--transition);
+        }
+
+        .termos-section:hover {
+            border-color: rgba(110, 47, 181, 0.3);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .section-title-termos {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.5rem;
+            color: var(--yellow);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-title-termos i {
+            color: var(--purple);
+            font-size: 1.3rem;
+        }
+
+        .section-content-termos {
+            color: var(--text-dim);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .section-content-termos p {
+            margin-bottom: 20px;
+        }
+
+        .section-content-termos strong {
+            color: white;
+            font-weight: 600;
+        }
+
+        .section-content-termos ul {
+            margin-left: 25px;
+            margin-bottom: 20px;
+        }
+
+        .section-content-termos li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 10px;
+        }
+
+        .section-content-termos li:before {
+            content: "•";
+            color: var(--purple);
+            font-weight: bold;
+            position: absolute;
+            left: -15px;
+        }
+
+        /* Destaques importantes */
+        .important-note {
+            background: rgba(255, 107, 53, 0.08);
+            border-left: 3px solid var(--orange);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 0 15px 15px 0;
+        }
+
+        .important-note h5 {
+            color: var(--orange);
+            font-family: 'Syne', sans-serif;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        /* Tabela de informações */
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: rgba(255, 255, 255, 0.01);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .info-table th {
+            background: rgba(110, 47, 181, 0.1);
+            color: var(--orange);
+            font-family: 'Syne', sans-serif;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            padding: 20px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .info-table td {
+            padding: 20px;
+            color: var(--text-dim);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .info-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .info-table tr:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        /* Aceitação dos Termos */
+        .acceptance-box {
+            background: var(--glass);
+            border: 2px solid var(--purple);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .acceptance-box h4 {
+            font-family: 'Syne', sans-serif;
+            color: var(--orange);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .acceptance-box p {
+            color: var(--text-dim);
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer da página */
+        .termos-footer {
+            text-align: center;
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
+        .termos-footer a {
+            color: var(--orange);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .termos-footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .termos-header {
+                padding: 20px 5%;
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .termos-container {
+                padding: 60px 5% 100px;
+            }
+
+            .termos-hero {
+                padding: 40px 30px;
+            }
+
+            .termos-section {
+                padding: 30px 25px;
+            }
+
+            .section-title-termos {
+                font-size: 1.3rem;
+            }
+
+            .termos-index {
+                padding: 30px 25px;
+            }
+
+            .index-list {
+                grid-template-columns: 1fr;
+            }
+
+            .info-table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            .acceptance-box {
+                padding: 30px 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .termos-section {
+                padding: 25px 20px;
+            }
+
+            .back-btn-termos {
+                padding: 10px 20px;
+                font-size: 0.85rem;
+            }
+
+            .termos-hero {
+                padding: 30px 20px;
+            }
+        }
     </style>
 </head>
 <body>
-    <a href="index.html" style="color:#fff; text-decoration:none;">← Home</a>
-    <h1>Termos de Uso</h1>
-    <p>Ao acessar o site da Redesigner, você concorda com os termos abaixo descritos.</p>
-    
-    <h2>1. Propriedade Intelectual</h2>
-    <p>Todo o conteúdo visual, logos e textos são de propriedade exclusiva da Redesigner PPM ou de seus respectivos parceiros de marca.</p>
-    
-    <h2>2. Limitação de Responsabilidade</h2>
-    <p>Nos empenhamos para manter as informações atualizadas, mas não garantimos a ausência de erros técnicos eventuais.</p>
+
+    <!-- Header -->
+    <header class="termos-header">
+        <a href="index.html" class="logo-box-termos" aria-label="Voltar para Home">
+            <img src="logo.png" alt="ReDesigner PPM" class="logo-img-termos">
+        </a>
+        <a href="index.html" class="back-btn-termos">
+            <i class="fas fa-arrow-left"></i> Voltar ao Site
+        </a>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="termos-container">
+        <h1 class="termos-title">Termos de Uso</h1>
+        
+        <p class="termos-subtitle">
+            Estes Termos de Uso regulam a utilização dos serviços da ReDesigner PPM Agência Digital.
+            Ao contratar nossos serviços, você concorda integralmente com estas condições.
+        </p>
+
+        <!-- Hero Section -->
+        <section class="termos-hero">
+            <h3>Informações Importantes</h3>
+            <p>
+                Por favor, leia atentamente estes Termos de Uso antes de utilizar nossos serviços.
+                Estes termos estabelecem os direitos e obrigações entre a ReDesigner PPM e nossos clientes.
+            </p>
+        </section>
+
+        <!-- Índice -->
+        <nav class="termos-index">
+            <h4>Índice do Documento</h4>
+            <ul class="index-list">
+                <li><a href="#1-objeto"><i class="fas fa-file-contract"></i> 1. Objeto</a></li>
+                <li><a href="#2-cadastro"><i class="fas fa-user-plus"></i> 2. Cadastro</a></li>
+                <li><a href="#3-servicos"><i class="fas fa-cogs"></i> 3. Serviços</a></li>
+                <li><a href="#4-prazos"><i class="fas fa-calendar-alt"></i> 4. Prazos e Entregas</a></li>
+                <li><a href="#5-pagamentos"><i class="fas fa-credit-card"></i> 5. Pagamentos</a></li>
+                <li><a href="#6-propriedade"><i class="fas fa-copyright"></i> 6. Propriedade Intelectual</a></li>
+                <li><a href="#7-confidencialidade"><i class="fas fa-lock"></i> 7. Confidencialidade</a></li>
+                <li><a href="#8-responsabilidades"><i class="fas fa-balance-scale"></i> 8. Responsabilidades</a></li>
+                <li><a href="#9-rescisao"><i class="fas fa-ban"></i> 9. Rescisão</a></li>
+                <li><a href="#10-disposicoes"><i class="fas fa-gavel"></i> 10. Disposições Gerais</a></li>
+            </ul>
+        </nav>
+
+        <!-- Seção 1 -->
+        <section id="1-objeto" class="termos-section">
+            <h2 class="section-title-termos">
+                <i class="fas fa-file-contract"></i> 1. Objeto
+            </h2>
+            <div class="section-content-termos">
+                <p>
+                    Estes Termos de Uso regulamentam a prestação de serviços de marketing digital, design e gestão 
+                    de redes sociais oferecidos pela <strong>ReDesigner PPM Agência Digital</strong>, doravante 
+                    denominada simplesmente "ReDesigner".
+                </p>
+                <p>
+                    Os serviços oferecidos incluem, mas não se limitam a:
+                </p>
+                <ul>
+                    <li>Gestão de redes sociais (Instagram, Facebook, LinkedIn)</li>
+                    <li>Criação de conteúdo visual e textual</li>
+                    <li>Desenvolvimento de estratégias de marketing digital</li>
+                    <li>Otimização de perfis e presença online</li>
+                    <li>Consultoria em marketing digital</li>
+                    <li>Relatórios de performance e análise de métricas</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Seção 2 -->
+        <section id="2-cadastro" class="termos-section">
+            <h2 class="section-title-termos">
+                <i class="fas fa-user-plus"></i> 2. Cadastro
+            </h2>
+            <div class="section-content-termos">
+                <p>
+                    Para contratação dos serviços, o cliente deverá fornecer informações completas e verdadeiras, 
+                    incluindo:
+                </p>
+                <ul>
+                    <li>Nome completo ou razão social</li>
+                    <li>Endereço de e-mail válido</li>
+                    <li>Telefone para contato</li>
+                    <li>Informações necessárias para execução dos serviços contratados</li>
+                </ul>
+                
+                <div class="important-note">
+                    <h5>Importante</h5>
+                    <p>
+                        O cliente é responsável pela veracidade das informações fornecidas. Informações incorretas 
+                        podem resultar em atrasos ou cancelamento dos serviços.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 3 -->
+        <section id="3-servicos" class="termos-section">
+            <h2 class="section-title-termos">
+                <i class="fas fa-cogs"></i> 3. Serviços
+            </h2>
+            <div class="section-content-termos">
+                <p>
+                    A ReDesigner se compromete a prestar os serviços contratados com qualidade técnica e 
+                    profissionalismo, observando os prazos acordados.
+                </p>
+                
+                <table class="info-table">
+                    <thead>
+                        <tr>
+                            <th>Tipo de Serviço</th>
+                            <th>Descrição</th>
+                            <th>Forma de Entrega</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Gestão Completa</strong></td>
+                            <td>Gestão diária de redes sociais, criação de conteúdo e interação</td>
+                            <td>Plano mensal com relatórios semanais</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Consultoria</strong></td>
+                            <td>Análise estratégica e planejamento de marketing digital</td>
+                            <td>Reuniões semanais + relatório mensal</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Projeto Específico</strong></td>
+                            <td>Desenvolvimento de projeto único (site, campanha, etc.)</td>
+                            <td>Entregas conforme cronograma acordado</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Seção 4 -->
+        <section id="4-prazos" class="termos-section">
+            <h2 class="section-title-termos">
+                <i class="fas fa-calendar-alt"></i> 4. Prazos e Entregas
+            </h2>
+            <div class="section-content-termos">
+                <p>
+                    Os prazos para execução dos serviços serão acordados previamente e constarão no contrato 
+                    ou proposta comercial.
+                </p>
+                <ul>
+                    <li><strong>Serviços contínuos:</strong> Início imediato após formalização e pagamento</li>
+                    <li><strong>Projetos específicos:</strong> Cronograma detalhado será fornecido</li>
+                    <li><strong>Materiais do cliente:</strong> Atraso na entrega de materiais pelo cliente pode impactar prazos</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Seção 5 -->
+        <section id="5-pagamentos" class="termos-section">
+            <h2 class="section-title-termos">
+                <i class="fas fa-credit-card"></i> 5. Pagamentos
+            </h2>
+            <div class="section-content-termos">
+                <p>
+                    As condições de pagamento serão estabelecidas na proposta comercial, podendo incluir:
+                </p>
+                <ul>
+                    <li>Pagamento antecipado para serviços avulsos</li>
+                    <li>Pagamento mensal para serviços contínuos</li>
+                    <li>Parcelamento mediante análise</li>
+                </ul>
+                
+                <div class="important-note">
+                    <h5>Política de Reembolso</h5>
+                    <p>
+                        Em caso de cancelamento por iniciativa do cliente, serão reembolsados valores 
+                        relativos a serviços não prestados. Serviços já executados não são reembolsáveis.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 6 -->
+        <section id="6-propriedade" class="termos-section">
+            <h2 class="section-title-termos">
+                <i class="fas fa-copyright"></i> 6. Propriedade Intelectual
+            </h2>
+            <div class="section-content-termos">
+                <p>
+                    Todos os direitos de propriedade intelectual sobre materiais desenvolvidos pela 
+                    ReDesigner permanecem com a empresa até a quitação total dos serviços.
+                </p>
+                <p>
+                    Após o pagamento integral, os direitos de uso dos materiais desenvolvidos 
+                    especificamente para o cliente serão transferidos, exceto:
+                </p>
+                <ul>
+                    <li>Metodologias e processos internos da ReDesigner</li>
+                    <li>Software e ferramentas proprietárias</li>
+                    <li>Materiais de terceiros com direitos autorais específicos</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Seção 7 -->
+        <section id="7-confidencialidade" class="termos-section">
+            <h2 class="section-title-termos">
+                <i class="fas fa-lock"></i> 7. Confidencialidade
+            </h2>
+            <div class="section-content-termos">
+                <p>
+                    Ambas as partes se comprometem a manter em sigilo todas as informações confidenciais 
+                    trocadas durante a prestação dos serviços.
+                </p>
+                <p>
+                    Consideram-se informações confidenciais:
+                </p>
+                <ul>
+                    <li>Estratégias de negócio do cliente</li>
+                    <li>Dados financeiros e de desempenho</li>
+                    <li>Listas de clientes e fornecedores</li>
+                    <li>Processos e metodologias internas da ReDesigner</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Seção 8 -->
+        <section id="8-responsabilidades" class="termos-section">
+            <h2 class="section-title-termos">
+                <i class="fas fa-balance-scale"></i> 8. Responsabilidades
+            </h2>
+            <div class="section-content-termos">
+                <p>
+                    <strong>Responsabilidades da ReDesigner:</strong>
+                </p>
+                <ul>
+                    <li>Executar os serviços com diligência e competência técnica</li>
+                    <li>Cumprir prazos acordados</li>
+                    <li>Manter confidencialidade das informações do cliente</li>
+                    <li>Fornecer relatórios de acordo com o combinado</li>
+                </ul>
+                
+                <p>
+                    <strong>Responsabilidades do Cliente:</strong>
+                </p>
+                <ul>
+                    <li>Fornecer informações completas e verdadeiras</li>
+                    <li>Entregar materiais necessários dentro dos prazos</li>
+                    <li>Realizar pagamentos conforme acordado</li>
+                    <li>Fornecer feedbacks construtivos em tempo hábil</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Seção 9 -->
+        <section id="9-rescisao" class="termos-section">
+            <h2 class="section-title-termos">
+                <i class="fas fa-ban"></i> 9. Rescisão
+            </h2>
+            <div class="section-content-termos">
+                <p>
+                    O contrato poderá ser rescindido por qualquer das partes mediante aviso prévio de 30 dias.
+                </p>
+                <p>
+                    A ReDesigner poderá rescindir imediatamente o contrato em caso de:
+                </p>
+                <ul>
+                    <li>Inadimplência do cliente por mais de 15 dias</li>
+                    <li>Fornecimento de informações falsas pelo cliente</li>
+                    <li>Descumprimento grave dos termos por parte do cliente</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Seção 10 -->
+        <section id="10-disposicoes" class="termos-section">
+            <h2 class="section-title-termos">
+                <i class="fas fa-gavel"></i> 10. Disposições Gerais
+            </h2>
+            <div class="section-content-termos">
+                <p>
+                    <strong>Foro:</strong> Fica eleito o foro da Comarca de São Paulo/SP para dirimir 
+                    quaisquer controvérsias decorrentes destes Termos.
+                </p>
+                <p>
+                    <strong>Alterações:</strong> Estes Termos poderão ser alterados a qualquer tempo, 
+                    sendo a nova versão disponibilizada em nosso site.
+                </p>
+                <p>
+                    <strong>Integralidade:</strong> Estes Termos, juntamente com a proposta comercial, 
+                    constituem o acordo completo entre as partes.
+                </p>
+                <p>
+                    <strong>Lei Aplicável:</strong> Estes Termos são regidos pelas leis brasileiras, 
+                    em especial o Código de Defesa do Consumidor quando aplicável.
+                </p>
+            </div>
+        </section>
+
+        <!-- Aceitação -->
+        <div class="acceptance-box">
+            <h4>Aceitação dos Termos</h4>
+            <p>
+                Ao contratar nossos serviços, você declara ter lido, compreendido e aceitado integralmente 
+                estes Termos de Uso. Caso tenha alguma dúvida, entre em contato antes de proceder.
+            </p>
+            <a href="index.html" class="back-btn-termos" style="background: var(--purple); color: white;">
+                <i class="fas fa-check-circle"></i> Voltar ao Site Principal
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <div class="termos-footer">
+            <p>
+                <strong>ReDesigner PPM Agência Digital</strong><br>
+                <small>CNPJ:41.142.331/0001-43 • Última atualização: Julho de 2024</small>
+            </p>
+            <p style="margin-top: 20px;">
+                <a href="index.html">Página Inicial</a> • 
+                <a href="privacidade.html">Política de Privacidade</a> • 
+                <a href="cookies.html">Política de Cookies</a>
+            </p>
+            <p style="margin-top: 20px; font-size: 0.8rem; opacity: 0.6;">
+                Para questões sobre estes Termos, entre em contato: 
+                <a href="mailto:juridico@redesigner.com.br">juridico@redesigner.com.br</a>
+            </p>
+        </div>
+    </main>
+
 </body>
 </html>
