@@ -2,10 +2,15 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXX');
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Redesigner Comunicação e Marketing | Agência de Marketing Digital e Performance</title>
-    
     <meta name="description" content="Oferecemos suporte de ideias e soluções em marketing para um crescimento planejado. Foco na geração de valor para sua marca no mercado.">
     <meta name="keywords" content="marketing digital, gestão de redes sociais, estratégias personalizadas, ReDesigner, branding, agência digital">
     <meta name="author" content="ReDesigner Agência Digital">
@@ -13,20 +18,24 @@
     <meta name="theme-color" content="#6e2fb5">
     <link rel="canonical" href="https://redesigner.com.br/">
 
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+
     <meta property="og:type" content="website">
     <meta property="og:title" content="ReDesigner | Agência Digital">
     <meta property="og:description" content="Estratégias personalizadas e criatividade para transformar sua presença online.">
     <meta property="og:url" content="https://redesigner.com.br/">
-    <meta property="og:image" content="logo.png">
+    <meta property="og:image" content="logo(1).png"> 
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="ReDesigner | Agência Digital">
     <meta name="twitter:description" content="Soluções de marketing para um crescimento planejado.">
-    <meta name="twitter:image" content="logo.png">
+    <meta name="twitter:image" content="logo(1).png">
 
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="apple-touch-icon" href="logo.png">
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
@@ -37,7 +46,7 @@
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "ReDesigner Agência Digital",
-      "image": "https://redesigner.com.br/logo.png",
+      "image": "https://redesigner.com.br/logo(1).png",
       "@id": "https://redesigner.com.br",
       "url": "https://redesigner.com.br",
       "telephone": "+5511999778996",
@@ -65,16 +74,32 @@
             --orange: #ff6b35;
             --yellow: #f7b733;
             --text-main: #ffffff;
-            --text-dim: rgba(255, 255, 255, 0.75);
+            --text-dim: rgba(255, 255, 255, 0.8);
             --sidebar-w: 130px;
             --glass: rgba(255, 255, 255, 0.02);
             --transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             --gradient-brand: linear-gradient(135deg, var(--purple), var(--orange));
+            
+            --spacing-section: clamp(80px, 12vw, 160px);  
+            --spacing-card: 30px;
+            --line-height-text: 1.8;
+            
+            /* PADRONIZAÇÃO DE CARDS */
+            --card-radius: 30px;
+            --card-padding: clamp(30px, 4vw, 40px);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        html { scroll-padding-top: 80px; } 
         html, body { overflow-x: hidden; width: 100%; max-width: 100vw; }
-        body { background-color: var(--bg); color: var(--text-main); font-family: 'Inter', sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        body { 
+            background-color: var(--bg); 
+            color: var(--text-main); 
+            font-family: 'Inter', sans-serif; 
+            line-height: var(--line-height-text); 
+            -webkit-font-smoothing: antialiased; 
+            overflow-wrap: break-word; 
+        }
         
         #particles-js { position: fixed; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
 
@@ -85,6 +110,10 @@
             padding: 15px 25px; z-index: 1000; justify-content: space-between; align-items: center;
             border-bottom: 1px solid rgba(255,255,255,0.1);
         }
+        .mobile-header img { 
+            width: 90px; height: auto; object-fit: contain;
+            filter: brightness(0) saturate(100%) invert(85%) sepia(100%) saturate(1000%) hue-rotate(0deg); /* DOURADO */
+        }
         .burger-btn { background: none; border: none; cursor: pointer; display: flex; flex-direction: column; gap: 6px; }
         .burger-btn span { display: block; width: 25px; height: 2px; background: var(--text-main); transition: 0.3s; }
 
@@ -94,275 +123,253 @@
             background: rgba(255, 255, 255, 0.01); backdrop-filter: blur(25px);
             border-right: 1px solid rgba(255, 255, 255, 0.05);
             display: flex; flex-direction: column; justify-content: space-between; align-items: center; 
-            padding: 40px 0; z-index: 1001; transition: var(--transition);
+            padding: 50px 0; z-index: 1001; transition: var(--transition);
         }
-        .logo-box { width: 90px; height: 90px; transition: 0.3s; display: block; }
+        .logo-box { width: 90px; height: 90px; transition: 0.3s; display: block; margin-bottom: 20px; }
         .logo-img { 
-            width: 100%; height: 100%; object-fit: contain; 
-            filter: brightness(0) saturate(100%) invert(85%) sepia(50%) saturate(5000%) hue-rotate(350deg);
+            width: 100%; height: 100%; object-fit: contain;
+            filter: brightness(0) saturate(100%) invert(85%) sepia(100%) saturate(1000%) hue-rotate(0deg); /* DOURADO */
         }
+        
         .nav-items { list-style: none; width: 100%; text-align: center; }
         .nav-items a { 
-            color: rgba(255, 255, 255, 0.4); text-decoration: none; font-size: 0.58rem; 
-            font-weight: 700; text-transform: uppercase; letter-spacing: 1px; 
-            transition: 0.4s; display: block; margin: 25px 0;
+            color: rgba(255, 255, 255, 0.4); text-decoration: none; font-size: 0.65rem; 
+            font-weight: 700; text-transform: uppercase; letter-spacing: 2px; 
+            transition: 0.4s; display: block; margin: 30px 0; line-height: 1.4;
         }
         .nav-items a:hover, .nav-items a.active { color: var(--orange); }
         .sidebar-footer { text-align: center; width: 100%; }
-        .back-to-top { width: 40px; height: 40px; border-radius: 50%; background: var(--glass); border: 1px solid rgba(255,255,255,0.1); color: #fff; display: flex; align-items: center; justify-content: center; text-decoration: none; margin: 0 auto 20px; transition: 0.4s; cursor: pointer; }
+        .back-to-top { 
+            width: 45px; height: 45px; border-radius: 50%; background: var(--glass); 
+            border: 1px solid rgba(255,255,255,0.1); color: #fff; 
+            display: flex; align-items: center; justify-content: center; text-decoration: none; 
+            margin: 0 auto 25px; transition: 0.4s; cursor: pointer; 
+        }
         .back-to-top:hover { background: var(--purple); transform: translateY(-5px); }
-        .copyright { font-size: 8px; opacity: 0.4; text-transform: uppercase; line-height: 1.5; }
+        .copyright { font-size: 9px; opacity: 0.5; text-transform: uppercase; line-height: 1.6; }
 
         /* COOKIES */
-        .cookie-popup { position: fixed; bottom: -100%; left: 50%; transform: translateX(-50%); width: 90%; max-width: 600px; background: rgba(20, 20, 20, 0.98); backdrop-filter: blur(15px); border: 1px solid var(--purple); padding: 25px; border-radius: 20px; z-index: 9999; display: flex; flex-direction: column; gap: 15px; transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1); }
+        .cookie-popup { 
+            position: fixed; bottom: -100%; left: 50%; transform: translateX(-50%); 
+            width: 90%; max-width: 650px; background: rgba(20, 20, 20, 0.98); backdrop-filter: blur(15px); 
+            border: 1px solid var(--purple); padding: 30px; border-radius: 20px; z-index: 9999; 
+            display: flex; flex-direction: column; gap: 20px; transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1); 
+        }
         .cookie-popup.show { bottom: 30px; }
-        .btn-cookie { padding: 10px 20px; border-radius: 10px; border: none; cursor: pointer; font-weight: 700; font-size: 0.8rem; }
+        .btn-cookie { padding: 12px 25px; border-radius: 10px; border: none; cursor: pointer; font-weight: 700; font-size: 0.85rem; }
         .btn-accept { background: var(--purple); color: white; }
-        .btn-decline { background: transparent; color: white; border: 1px solid rgba(255,255,255,0.1); }
+        .btn-decline { background: transparent; color: white; border: 1px solid rgba(255,255,255,0.2); }
 
         /* MAIN CONTENT */
-        main { position: relative; z-index: 2; margin-left: var(--sidebar-w); padding: 0 8%; transition: 0.4s; }
-        .section-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 5px; color: var(--purple); margin-bottom: 25px; display: block; font-weight: 800; }
+        main { position: relative; z-index: 2; margin-left: var(--sidebar-w); padding: 0 10%; transition: 0.4s; }
+        .section-label { 
+            font-size: 0.8rem; text-transform: uppercase; letter-spacing: 6px; color: var(--purple); 
+            margin-bottom: 20px; display: block; font-weight: 800; 
+        }
 
         /* HERO */
         .hero { min-height: 100vh; height: auto; display: flex; flex-direction: column; justify-content: center; padding: 100px 0; }
-        .typing-container { font-family: 'Syne', sans-serif; font-size: clamp(2.0rem, 8vw, 5.0rem); text-transform: uppercase; line-height: 1.1; letter-spacing: -2px; }
+        .typing-container { 
+            font-family: 'Syne', sans-serif; font-size: clamp(2.2rem, 9vw, 5.5rem); 
+            text-transform: uppercase; line-height: 1.2; letter-spacing: -2px; 
+        }
         .dynamic-text { background: linear-gradient(90deg, var(--purple), var(--orange), var(--yellow)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .cursor { display: inline-block; width: 10px; height: 0.8em; background-color: var(--yellow); margin-left: 5px; vertical-align: middle; animation: blink 0.7s infinite; }
+        .cursor { display: inline-block; width: 10px; height: 0.9em; background-color: var(--yellow); margin-left: 8px; vertical-align: middle; animation: blink 0.7s infinite; }
         @keyframes blink { 50% { opacity: 0; } }
         
-        .hero p { max-width: 600px; font-size: clamp(1rem, 2vw, 1.2rem); color: var(--text-dim); margin-top: 40px; border-left: 3px solid var(--purple); padding-left: 30px; }
-
-        /* CARDS GERAIS */
-        section { padding: 120px 0; border-bottom: 1px solid rgba(255,255,255,0.03); width: 100%; }
-        h2 { font-family: 'Syne'; font-size: clamp(1.8rem, 5vw, 3.5rem); margin-bottom: 40px; text-transform: uppercase; line-height: 1.2; }
-
-        .dna-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 50px; }
-        .dna-card { background: var(--glass); border: 1px solid rgba(255,255,255,0.05); border-radius: 20px; padding: 25px; transition: var(--transition); }
-        .dna-card:hover { background: var(--gradient-brand); transform: translateY(-10px); border-color: transparent; }
-        .dna-card h3 { font-family: 'Syne'; font-size: 0.95rem; margin-bottom: 15px; color: var(--orange); text-transform: uppercase; }
-
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 35px; }
-        .service-card { background: var(--glass); border: 1px solid rgba(255,255,255,0.05); border-radius: 40px; padding: clamp(30px, 5vw, 60px); position: relative; overflow: hidden; transition: var(--transition); }
-        
-        /* Remove o fundo sólido que encobre o texto e destaca apenas a borda */
-        .service-card:hover {
-            background: rgba(110, 47, 181, 0.05); /* Um fundo bem sutil para não sumir o texto */
-            transform: translateY(-10px);
-            border-color: var(--orange); /* Destaca a borda com a cor da ReDesigner */
-            box-shadow: 0 10px 30px rgba(110, 47, 181, 0.2); /* Sombra suave */
+        .hero p { 
+            max-width: 700px; font-size: clamp(1rem, 2vw, 1.2rem); color: var(--text-dim); 
+            margin-top: 40px; margin-bottom: 40px; border-left: 4px solid var(--purple); padding-left: 30px; 
         }
 
-        .card-number { font-family: 'Syne'; font-size: clamp(3.5rem, 10vw, 4.5rem); color: rgba(255, 255, 255, 0.02); position: absolute; top: 15px; right: 25px; font-weight: 800; z-index: 0; }
+        /* SEÇÕES GERAIS E GRIDS */
+        section { padding: var(--spacing-section) 0; border-bottom: 1px solid rgba(255,255,255,0.03); width: 100%; }
+        h2 { 
+            font-family: 'Syne'; font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 50px; 
+            text-transform: uppercase; line-height: 1.2; word-break: break-word;
+        }
+
+        .dna-grid, .services-grid, .investimento-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 30px; 
+            margin-top: 50px; 
+            align-items: stretch; 
+        }
+
+        /* ESTILO PADRÃO DOS CARDS */
+        .dna-card, .service-card, .inv-card, .testi-card {
+            background: var(--glass); 
+            border: 1px solid rgba(255,255,255,0.05); 
+            border-radius: var(--card-radius); 
+            padding: var(--card-padding); 
+            transition: var(--transition); 
+            display: flex; 
+            flex-direction: column; 
+            height: 100%; 
+            word-wrap: break-word; 
+            overflow-wrap: break-word; 
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dna-card:hover { background: var(--gradient-brand); transform: translateY(-10px); border-color: transparent; }
+        .dna-card h3 { font-family: 'Syne'; font-size: 1.1rem; margin-bottom: 15px; color: var(--orange); text-transform: uppercase; }
+        .dna-card p { line-height: var(--line-height-text); font-size: 0.95rem; color: var(--text-dim); flex-grow: 1; }
+
+        /* SERVIÇOS */
+        .service-card:hover {
+            background: rgba(110, 47, 181, 0.05);
+            transform: translateY(-10px);
+            border-color: var(--orange);
+            box-shadow: 0 15px 40px rgba(110, 47, 181, 0.3);
+        }
+        .service-card .content-wrapper { position: relative; z-index: 2; display: flex; flex-direction: column; height: 100%; }
+        .service-card p { line-height: var(--line-height-text); font-size: 0.95rem; color: var(--text-dim); flex-grow: 1; }
+        .card-number { 
+            font-family: 'Syne'; font-size: clamp(3.5rem, 10vw, 5rem); color: rgba(255, 255, 255, 0.03); 
+            position: absolute; top: 15px; right: 25px; font-weight: 800; z-index: 0; pointer-events: none;
+        }
+        #services .service-card h3 {
+            background: linear-gradient(135deg, #6e2fb5, #ff6b35);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
 
         /* INVESTIMENTO */
-        .investimento-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .inv-card { background: var(--glass); border: 1px solid rgba(255,255,255,0.05); padding: 40px; border-radius: 30px; }
-        .inv-card.featured { border-color: rgba(255, 107, 53, 0.3); background: linear-gradient(135deg, rgba(110, 47, 181, 0.05), rgba(255, 107, 53, 0.05)); }
-        .inv-category { font-family: 'Syne'; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; color: var(--orange); display: block; margin-bottom: 25px; }
-        .check { color: var(--yellow); font-weight: bold; margin-right: 8px; }
+        .inv-card.featured { 
+            border-color: rgba(255, 107, 53, 0.4); 
+            background: linear-gradient(135deg, rgba(110, 47, 181, 0.1), rgba(255, 107, 53, 0.1)); 
+        }
+        .inv-category { 
+            font-family: 'Syne'; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 3px; 
+            color: var(--orange); display: block; margin-bottom: 25px; 
+        }
+        .inv-card p { margin: 10px 0; line-height: var(--line-height-text); font-size: 0.95rem; color: var(--text-dim); }
+        .check { color: var(--yellow); font-weight: bold; margin-right: 12px; }
 
         /* TESTIMONIALS */
-        .testi-carousel-wrapper { width: 100%; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding-bottom: 20px; }
+        .testi-carousel-wrapper { width: 100%; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding-bottom: 30px; }
         .testi-track { display: flex; gap: 30px; }
-        .testi-card { flex: 0 0 350px; scroll-snap-align: center; background: var(--glass); border: 1px solid rgba(255,255,255,0.05); border-radius: 30px; padding: 40px; transition: 0.3s; }
-        .dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.2); display: inline-block; margin: 0 5px; cursor: pointer; transition: 0.3s; }
-        .dot.active { background: var(--orange); width: 25px; border-radius: 10px; }
+        .testi-card { 
+            flex: 0 0 min(350px, 85vw); 
+            scroll-snap-align: center; 
+        }
+        .testi-card p.quote { font-style: italic; line-height: var(--line-height-text); font-size: 1rem; color: var(--text-dim); flex-grow: 1; }
+        .testi-card p.author { margin-top: 25px; color: var(--orange); font-weight: bold; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
+        .dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.2); display: inline-block; margin: 0 6px; cursor: pointer; transition: 0.3s; }
+        .dot.active { background: var(--orange); width: 30px; border-radius: 10px; }
 
         /* CASES */
-        .carousel-viewport { width: 100%; overflow: hidden; padding: 60px 0; mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent); }
+        .carousel-viewport { 
+            width: 100%; overflow: hidden; padding: 50px 0; 
+            mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+        }
         .carousel-track { display: flex; width: max-content; animation: scroll 40s linear infinite; }
-        .case-item { width: 260px; margin: 0 20px; text-align: center; text-decoration: none; flex-shrink: 0; }
-        .case-img-box { width: 100%; height: 150px; border-radius: 25px; background: rgba(255,255,255,0.02); display: flex; align-items: center; justify-content: center; transition: 0.5s; filter: grayscale(1); border: 1px solid rgba(255,255,255,0.05); margin-bottom: 20px; }
-        .case-item:hover .case-img-box { filter: grayscale(0); border-color: var(--purple); transform: translateY(-5px); }
-        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-300px * 7)); } }
+        .carousel-track:hover { animation-play-state: paused; }
+        .case-item { 
+            width: 280px; margin: 0 25px; text-decoration: none; text-align: center;
+            display: flex; flex-direction: column; align-items: center; flex-shrink: 0;
+        }
+        .case-img-box { 
+            width: 100%; height: 160px; border-radius: 20px; overflow: hidden; margin-bottom: 20px; 
+            filter: grayscale(1); transition: 0.5s; display: flex; align-items: center; justify-content: center;
+            background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05);
+        }
+        .case-item:hover .case-img-box { 
+            filter: grayscale(0); transform: translateY(-10px) scale(1.05); border-color: var(--purple); 
+        }
+        .case-img-box img { max-width: 80%; max-height: 70%; object-fit: contain; width: auto; height: auto; }
+        .case-item h4 { 
+            font-family: 'Syne'; color: #fff; text-transform: uppercase; 
+            font-size: 1rem; line-height: 1.4; max-width: 100%; word-wrap: break-word; margin-bottom: 5px;
+        }
+        .case-item span { color: var(--purple); font-size: 0.85rem; font-weight: 700; display: block; }
+        @keyframes scroll { 
+            0% { transform: translateX(0); } 
+            100% { transform: translateX(calc(-330px * 7)); } 
+        }
 
-        /* SEÇÃO CONTATO (RESTAURADA) */
-        .contact-clean-box { max-width: 700px; width: 100%; padding: 80px 40px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 50px; backdrop-filter: blur(10px); margin: 0 auto; text-align: center; }
-        .social-links-minimal { margin-top: 30px; display: flex; justify-content: center; gap: 25px; }
-        .social-links-minimal a { color: #fff; font-size: 1.2rem; transition: 0.3s; opacity: 0.7; }
-        .social-links-minimal a:hover { opacity: 1; color: var(--orange); }
+        /* SEÇÃO CONTATO */
+        .contact-clean-box { 
+            max-width: 800px; width: 100%; padding: clamp(50px, 8vw, 100px) clamp(30px, 5vw, 50px); 
+            background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); 
+            border-radius: var(--card-radius); backdrop-filter: blur(10px); margin: 0 auto; text-align: center; 
+        }
+        .contact-clean-box h2 { margin-bottom: 50px; }
+        .social-links-minimal { margin-top: 50px; display: flex; justify-content: center; gap: 30px; }
+        .social-links-minimal a { color: #fff; font-size: 1.5rem; transition: 0.3s; opacity: 0.7; }
+        .social-links-minimal a:hover { opacity: 1; color: var(--orange); transform: translateY(-3px); }
 
         /* WHATSAPP FLOAT */
-        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 9998; cursor: pointer; transition: 0.3s; }
-        .whatsapp-modal { position: fixed; bottom: -100%; right: 30px; width: 350px; background: rgba(20, 20, 20, 0.98); backdrop-filter: blur(15px); border: 1px solid #25D366; border-radius: 20px; padding: 25px; z-index: 9999; transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1); }
-        .whatsapp-modal.show { bottom: 100px; }
+        .whatsapp-float { 
+            position: fixed; bottom: 35px; right: 35px; width: 60px; height: 60px; 
+            background: #25D366; border-radius: 50%; display: flex; align-items: center; 
+            justify-content: center; z-index: 9998; cursor: pointer; transition: 0.3s; 
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
+        }
+        .whatsapp-float:hover { transform: scale(1.1); }
+        .whatsapp-modal { 
+            position: fixed; bottom: -100%; right: 35px; width: calc(100% - 70px); max-width: 350px;
+            background: rgba(20, 20, 20, 0.98); backdrop-filter: blur(15px); 
+            border: 1px solid #25D366; border-radius: 20px; padding: 30px; z-index: 9999; 
+            transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1); 
+        }
+        .whatsapp-modal.show { bottom: 110px; }
+        .whatsapp-modal h4 { font-family: 'Syne'; color: #25D366; margin-bottom: 15px; font-size: 1.1rem; }
+        .whatsapp-modal p { margin-bottom: 25px; font-size: 0.9rem; line-height: 1.6; }
 
         /* BOTÕES */
-        .btn-prime { display: inline-block; padding: 18px 36px; background: var(--gradient-brand); color: white; text-decoration: none; font-weight: 800; border-radius: 60px; text-transform: uppercase; letter-spacing: 2px; transition: 0.4s; border: none; cursor: pointer; }
-        .btn-prime:hover { transform: scale(1.05); box-shadow: 0 15px 40px rgba(110, 47, 181, 0.4); }
+        .btn-prime { 
+            display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+            padding: 18px 35px; background: var(--gradient-brand); 
+            color: white; text-decoration: none; font-weight: 700; font-size: 0.9rem; border-radius: 60px; 
+            text-transform: uppercase; letter-spacing: 1.5px; transition: 0.4s; border: none; cursor: pointer; 
+        }
+        .btn-prime:hover { transform: scale(1.05); box-shadow: 0 15px 30px rgba(110, 47, 181, 0.4); }
 
         @media (max-width: 900px) {
             .mobile-header { display: flex; }
             .sidebar { transform: translateX(-100%); width: 280px; background: #030303; }
             .sidebar.active { transform: translateX(0); }
-            main { margin-left: 0; padding: 100px 5% 0 5%; }
-            .dna-grid { grid-template-columns: 1fr; }
-            h2 { font-size: 2rem; }
+            main { margin-left: 0; padding: 0 5%; }
+            .dna-grid, .services-grid, .investimento-grid { grid-template-columns: 1fr; }
         }
         .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
-        
-        /* CARROSSEL CASES - Estilos completos */
-.carousel-viewport { 
-    width: 100%; 
-    overflow: hidden; 
-    padding: 60px 0; 
-    position: relative; 
-    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-}
-
-.carousel-track { 
-    display: flex; 
-    width: max-content; 
-    animation: scroll 40s linear infinite; 
-}
-
-.carousel-track:hover { 
-    animation-play-state: paused; 
-}
-
-.case-item { 
-    width: 260px; 
-    margin: 0 20px; 
-    text-decoration: none; 
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-shrink: 0;
-}
-
-.case-img-box { 
-    width: 100%; 
-    height: 150px; 
-    border-radius: 25px; 
-    overflow: hidden; 
-    margin-bottom: 20px; 
-    filter: grayscale(1); 
-    transition: 0.5s;
-    display: flex; 
-    align-items: center; 
-    justify-content: center;
-    background: rgba(255,255,255,0.02); 
-    border: 1px solid rgba(255,255,255,0.05);
-}
-
-.case-item:hover .case-img-box { 
-    filter: grayscale(0); 
-    transform: translateY(-10px) scale(1.05); 
-    border-color: var(--purple); 
-}
-
-.case-img-box img { 
-    max-width: 80%; 
-    max-height: 70%; 
-    object-fit: contain; 
-    width: auto; 
-    height: auto; 
-}
-
-.case-item h4 { 
-    font-family: 'Syne'; 
-    color: #fff; 
-    margin-bottom: 8px; 
-    text-transform: uppercase; 
-    font-size: 0.9rem;
-    line-height: 1.4;
-    max-width: 100%;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-}
-
-.case-item span { 
-    color: var(--purple); 
-    font-size: 0.8rem; 
-    font-weight: 700; 
-    display: block; 
-    margin-top: 5px;
-    word-wrap: break-word;
-}
-
-@keyframes scroll { 
-    0% { transform: translateX(0); } 
-    100% { transform: translateX(calc(-300px * 7)); } 
-}
-
-/* RESPONSIVIDADE PARA CASES */
-@media (max-width: 900px) {
-    .carousel-viewport {
-        padding: 40px 0;
-    }
-    
-    .case-item {
-        width: 220px;
-        margin: 0 15px;
-    }
-    
-    @keyframes scroll { 
-        0% { transform: translateX(0); } 
-        100% { transform: translateX(calc(-250px * 7)); } 
-    }
-}
-
-@media (max-width: 600px) {
-    .case-item {
-        width: 180px;
-        margin: 0 10px;
-    }
-    
-    .case-img-box {
-        height: 120px;
-    }
-    
-    @keyframes scroll { 
-        0% { transform: translateX(0); } 
-        100% { transform: translateX(calc(-200px * 7)); } 
-    }
-}
-
-/* Títulos com Degradê ReDesigner - Exclusivo Seção Services */
-#services .service-card h3 {
-    background: linear-gradient(135deg, #6e2fb5, #ff6b35); /* Cores da ReDesigner */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-family: 'Syne', sans-serif;
-    font-weight: 800;
-    font-size: 1.0rem;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-    display: inline-block; /* Garante que o degradê siga apenas o texto */
-}
-
     </style>
 </head>
 <body>
-
-    <h1 class="sr-only">ReDesigner Agência Digital - Estratégias em Marketing e Social Media</h1>
-
+    <h1 class="sr-only">Redesigner Agência Digital - Estratégias em Marketing e Social Media</h1>
     <div id="particles-js"></div>
 
     <div class="whatsapp-float" onclick="toggleWhatsAppModal()" role="button" aria-label="Abrir WhatsApp">
-        <i class="fab fa-whatsapp" style="font-size:35px; color:white;"></i>
+        <i class="fab fa-whatsapp" style="font-size:32px; color:white;"></i>
     </div>
-
     <div class="whatsapp-modal" id="whatsappModal">
-        <button onclick="toggleWhatsAppModal()" style="position:absolute; top:15px; right:15px; background:none; border:none; color:#fff; font-size:1.5rem; cursor:pointer;">&times;</button>
-        <h4 style="font-family:'Syne'; color:#25D366; margin-bottom:15px;">Conversar no WhatsApp</h4>
-        <p style="font-size:0.95rem; color:var(--text-dim); margin-bottom:20px;">Sua presença digital merece estratégia. Vamos projetar o futuro da sua marca?</p>
-        <a href="https://wa.me/5511999778996" target="_blank" rel="noopener" class="btn-prime" style="width:100%; text-align:center;">Iniciar Conversa</a>
+        <button onclick="toggleWhatsAppModal()" style="position:absolute; top:15px; right:15px; background:none; border:none; color:#fff; font-size:1.8rem; cursor:pointer;">&times;</button>
+        <h4>Conversar no WhatsApp</h4>
+        <p>Sua presença digital merece estratégia. Vamos projetar o futuro da sua marca?</p>
+        <a href="https://wa.me/5511999778996" target="_blank" rel="noopener" class="btn-prime" style="width:100%;">Iniciar Conversa</a>
     </div>
 
     <div class="cookie-popup" id="cookiePopup">
-        <p style="font-size:0.85rem;">Utilizamos cookies para personalizar sua experiência. Ao continuar, você concorda com nossa Política de Privacidade.</p>
-        <div style="display:flex; gap:10px;">
+        <p style="font-size:0.9rem;">Utilizamos cookies para personalizar sua experiência. Ao continuar, você concorda com nossa Política de Privacidade.</p>
+        <div style="display:flex; gap:15px;">
             <button class="btn-cookie btn-accept" onclick="acceptCookies()">Aceitar</button>
             <button class="btn-cookie btn-decline" onclick="closeCookie()">Fechar</button>
         </div>
     </div>
 
     <header class="mobile-header">
-        <img src="logo.png" alt="Logo ReDesigner" width="50" height="50">
+        <img src="logo.png" alt="Logo ReDesigner" width="90" height="90">
         <button class="burger-btn" onclick="toggleMenu()" aria-label="Menu">
             <span></span><span></span><span></span>
         </button>
@@ -401,9 +408,9 @@
         <section id="quem-somos">
             <span class="section-label">DNA ReDesigner</span>
             <h2>Impulsionando sua Presença Digital</h2>
-            <div style="max-width: 850px;">
-                <p style="margin-bottom: 25px; font-size: 1.15rem; color: var(--text-dim);">
-                    Somos a <strong>Redesigner - Agência Digital </strong>, uma empresa especializada em criar estratégias eficazes e construir uma presença online relevante.
+            <div style="max-width: 950px;">
+                <p style="margin-bottom: 35px; font-size: 1.1rem; color: var(--text-dim); line-height: 1.8;">
+                    Somos a <strong>Redesigner - Agência Digital</strong>, uma empresa especializada em criar estratégias eficazes e construir uma presença online relevante.
                 </p>
                 <div class="dna-grid">
                     <div class="dna-card">
@@ -428,18 +435,24 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="card-number">01</div>
-                    <h3>PESQUISA & CRIAÇÃO</h3>
-                    <p>Pesquisa de mercado, definição estratégica da linguagem e produção de peças visuais de impacto.</p>
+                    <div class="content-wrapper">
+                        <h3>PESQUISA & CRIAÇÃO</h3>
+                        <p>Pesquisa de mercado, definição estratégica da linguagem e produção de peças visuais de impacto.</p>
+                    </div>
                 </div>
                 <div class="service-card">
                     <div class="card-number">02</div>
-                    <h3>CONTEÚDO E GESTÃO</h3>
-                    <p>Elaboração de cronograma estratégico, redação persuasiva e uso inteligente de hashtags.</p>
+                    <div class="content-wrapper">
+                        <h3>CONTEÚDO E GESTÃO</h3>
+                        <p>Elaboração de cronograma estratégico, redação persuasiva e uso inteligente de hashtags.</p>
+                    </div>
                 </div>
                 <div class="service-card">
                     <div class="card-number">03</div>
-                    <h3>MONITORAMENTO E ANÁLISE</h3>
-                    <p>Relatórios mensais detalhados de resultados e monitoramento ativo da relação com seu público.</p>
+                    <div class="content-wrapper">
+                        <h3>MONITORAMENTO E ANÁLISE</h3>
+                        <p>Relatórios mensais detalhados de resultados e monitoramento ativo da relação com seu público.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -450,15 +463,19 @@
             <div class="investimento-grid">
                 <div class="inv-card">
                     <span class="inv-category">Setup & Identidade</span>
-                    <p><span class="check">✓</span> Otimização de Perfil (Bio/Foto)</p>
-                    <p><span class="check">✓</span> Presença no Facebook</p>
-                    <p><span class="check">✓</span> Curadoria de Imagens Profissionais</p>
+                    <div>
+                        <p><span class="check">✓</span> Otimização de Perfil (Bio/Foto)</p>
+                        <p><span class="check">✓</span> Presença no Facebook</p>
+                        <p><span class="check">✓</span> Curadoria de Imagens Profissionais</p>
+                    </div>
                 </div>
                 <div class="inv-card featured">
                     <span class="inv-category">Gestão & Escala</span>
-                    <p><span class="check">✓</span> Copywriting Estratégico</p>
-                    <p><span class="check">✓</span> Relatórios de Performance Mensais</p>
-                    <p><span class="check">✓</span> Consultoria e Suporte Prioritário</p>
+                    <div>
+                        <p><span class="check">✓</span> Copywriting Estratégico</p>
+                        <p><span class="check">✓</span> Relatórios de Performance Mensais</p>
+                        <p><span class="check">✓</span> Consultoria e Suporte Prioritário</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -469,12 +486,12 @@
             <div class="testi-carousel-wrapper">
                 <div class="testi-track">
                     <div class="testi-card">
-                        <p style="font-style:italic;">"A visibilidade que ganhamos com o trabalho estratégico da ReDesigner superou todas as expectativas."</p>
-                        <p style="margin-top:20px; color:var(--orange); font-weight:bold;">Ricardo S. - Diretor Industrial</p>
+                        <p class="quote">"A visibilidade que ganhamos com o trabalho estratégico da ReDesigner superou todas as expectativas."</p>
+                        <p class="author">Ricardo S. - Diretor Industrial</p>
                     </div>
                     <div class="testi-card">
-                        <p style="font-style:italic;">"Pela primeira vez temos uma identidade visual que realmente passa confiança ao mercado."</p>
-                        <p style="margin-top:20px; color:var(--orange); font-weight:bold;">Ana Paula M. - Proprietária</p>
+                        <p class="quote">"Pela primeira vez temos uma identidade visual que realmente passa confiança ao mercado."</p>
+                        <p class="author">Ana Paula M. - Proprietária</p>
                     </div>
                 </div>
             </div>
@@ -484,93 +501,82 @@
         </section>
 
         <section id="cases">
-    <span class="section-label">Portfólio Ativo</span>
-    <h2>Cases de Sucesso</h2>
-    
-    <div class="carousel-viewport">
-        <div class="carousel-track">
-            <a href="https://hotelparadiesexpress.com.br/" class="case-item" target="_blank" rel="noopener noreferrer">
-                <div class="case-img-box">
-                    <img src="paradies.png" alt="Projeto SEO Hotel Paradies" loading="lazy" width="200" height="100">
+            <span class="section-label">Portfólio Ativo</span>
+            <h2>Cases de Sucesso</h2>
+            <div class="carousel-viewport">
+                <div class="carousel-track">
+                    <a href="https://hotelparadiesexpress.com.br/" class="case-item" target="_blank" rel="noopener noreferrer">
+                        <div class="case-img-box">
+                            <img src="paradies.png" alt="Projeto SEO Hotel Paradies" loading="lazy" width="200" height="100">
+                        </div>
+                        <h4>Hotel Paradies</h4>
+                        <span>Performance Web</span>
+                    </a>
+                    <a href="http://rgetiquetas.com.br/" class="case-item" target="_blank" rel="noopener noreferrer">
+                        <div class="case-img-box">
+                            <img src="rg-etiquetas.png" alt="Gestão de Tráfego RG Etiquetas" loading="lazy" width="200" height="100">
+                        </div>
+                        <h4>RG Etiquetas</h4>
+                        <span>Ads & Social</span>
+                    </a>
+                    <a href="https://www.dorvet.com.br/" class="case-item" target="_blank" rel="noopener noreferrer">
+                        <div class="case-img-box">
+                            <img src="dorvet.png" alt="Branding Visual Dorvet" loading="lazy" width="200" height="100">
+                        </div>
+                        <h4>Dorvet</h4>
+                        <span>Identidade Visual</span>
+                    </a>
+                    <a href="https://tiojuniortaxipet.com.br/" class="case-item" target="_blank" rel="noopener noreferrer">
+                        <div class="case-img-box">
+                            <img src="taxipet.png" alt="Marketing Digital Taxi Pet" loading="lazy" width="200" height="100">
+                        </div>
+                        <h4>Tio Júnior Taxi Pet</h4>
+                        <span>Assessoria & Tráfego</span>
+                    </a>
+                    <a href="https://jardinpaysan.com.br/" class="case-item" target="_blank" rel="noopener noreferrer">
+                        <div class="case-img-box">
+                            <img src="jardin-paysan.png" alt="Social Media Jardin Paysan" loading="lazy" width="200" height="100">
+                        </div>
+                        <h4>Jardin Paysan</h4>
+                        <span>Gestão de Conteúdo</span>
+                    </a>
+                    <a href="https://mibportoes.com.br/" class="case-item" target="_blank" rel="noopener noreferrer">
+                        <div class="case-img-box">
+                            <img src="mib-portoes.png" alt="Tráfego Pago MIB Portões" loading="lazy" width="200" height="100">
+                        </div>
+                        <h4>MIB Portões</h4>
+                        <span>Ads Performance</span>
+                    </a>
+                    <a href="#/" class="case-item">
+                        <div class="case-img-box">
+                            <img src="logo-ideale.png" alt="Criação de Site da Odontologia Ideale" loading="lazy" width="200" height="100">
+                        </div>
+                        <h4>Odontologia Ideale</h4>
+                        <span>Criação de Site</span>
+                    </a>
+                    <a href="#/" class="case-item">
+                        <div class="case-img-box">
+                            <img src="mondo-felice.png" alt="Criação de Site para Mondo Felice - Creche e Hotel Pet" loading="lazy" width="200" height="100">
+                        </div>
+                        <h4>Mondo Felice Pet</h4>
+                        <span>Site & Social Media</span>
+                    </a>
                 </div>
-                <h4>Hotel Paradies</h4>
-                <span>Performance Web</span>
-            </a>
-            
-            <a href="http://rgetiquetas.com.br/" class="case-item" target="_blank" rel="noopener noreferrer">
-                <div class="case-img-box">
-                    <img src="rg-etiquetas.png" alt="Gestão de Tráfego RG Etiquetas" loading="lazy" width="200" height="100">
-                </div>
-                <h4>RG Etiquetas</h4>
-                <span>Ads & Social</span>
-            </a>
-            
-            <a href="https://www.dorvet.com.br/" class="case-item" target="_blank" rel="noopener noreferrer">
-                <div class="case-img-box">
-                    <img src="dorvet.png" alt="Branding Visual Dorvet" loading="lazy" width="200" height="100">
-                </div>
-                <h4>Dorvet</h4>
-                <span>Identidade Visual</span>
-            </a>
-            
-            <a href="https://tiojuniortaxipet.com.br/" class="case-item" target="_blank" rel="noopener noreferrer">
-                <div class="case-img-box">
-                    <img src="taxipet.png" alt="Marketing Digital Taxi Pet" loading="lazy" width="200" height="100">
-                </div>
-                <h4>Tio Júnior Taxi Pet</h4>
-                <span>Assessoria & Tráfego</span>
-            </a>
-            
-            <a href="https://jardinpaysan.com.br/" class="case-item" target="_blank" rel="noopener noreferrer">
-                <div class="case-img-box">
-                    <img src="jardin-paysan.png" alt="Social Media Jardin Paysan" loading="lazy" width="200" height="100">
-                </div>
-                <h4>Jardin Paysan</h4>
-                <span>Gestão de Conteúdo</span>
-            </a>
-            
-            <a href="https://mibportoes.com.br/" class="case-item" target="_blank" rel="noopener noreferrer">
-                <div class="case-img-box">
-                    <img src="mib-portoes.png" alt="Tráfego Pago MIB Portões" loading="lazy" width="200" height="100">
-                </div>
-                <h4>MIB Portões</h4>
-                <span>Ads Performance</span>
-            </a>
-            
-            <a href="#/" class="case-item">
-                <div class="case-img-box">
-                    <img src="logo-ideale.png" alt="Criação de Site da Odontologia Ideale" loading="lazy" width="200" height="100">
-                </div>
-                <h4>Odontologia Ideale</h4>
-                <span>Criação de Site</span>
-            </a>
-
-             <a href="#/" class="case-item">
-                <div class="case-img-box">
-                    <img src="mondo-felice.png" alt="Criação de Site para Mondo Felice - Creche e Hotel Pet" loading="lazy" width="200" height="100">
-                </div>
-                <h4>Mondo Felice Pet</h4>
-                <span>Criação de Site, Ads e Redes Sociais</span>
-            </a>
-
-
-        </div>
-    </div>
-    
-    <div style="text-align: center; margin-top: 60px;">
-        <a href="https://wa.me/5511999778996?text=Olá! Vi os cases da ReDesigner e gostaria de um projeto similar para minha empresa." 
-           target="_blank" rel="noopener noreferrer" class="btn-prime">
-            Quero um Case Como Esses
-        </a>
-    </div>
-</section>
+            </div>
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="https://wa.me/5511999778996?text=Olá! Vi os cases da ReDesigner e gostaria de um projeto similar para minha empresa." 
+                   target="_blank" rel="noopener noreferrer" class="btn-prime">
+                    Quero um Case Como Esses
+                </a>
+            </div>
+        </section>
 
         <section id="contato">
             <div class="contact-clean-box">
                 <span class="section-label">Contato Direto</span>
                 <h2>Vamos projetar o seu próximo nível?</h2>
-                <a href="https://wa.me/5511999778996" target="_blank" rel="noopener" class="btn-prime" style="margin-bottom:30px;">
-                    <i class="fab fa-whatsapp"></i> Iniciar Conversa no WhatsApp
+                <a href="https://wa.me/5511999778996" target="_blank" rel="noopener" class="btn-prime" style="margin-bottom:20px;">
+                    <i class="fab fa-whatsapp"></i> Iniciar Conversa
                 </a>
                 <div class="social-links-minimal">
                     <a href="https://www.instagram.com/agenciaredesigner" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -585,33 +591,70 @@
     <script>
         window.addEventListener('load', function() {
             if(window.particlesJS) {
-                particlesJS("particles-js", { "particles": { "number": { "value": 40 }, "color": { "value": "#6e2fb5" }, "opacity": { "value": 0.2 }, "size": { "value": 2 }, "line_linked": { "enable": true, "distance": 150, "color": "#6e2fb5", "opacity": 0.1, "width": 1 }, "move": { "enable": true, "speed": 1 } } });
+                particlesJS("particles-js", { 
+                    "particles": { 
+                        "number": { "value": 40 }, 
+                        "color": { "value": "#6e2fb5" }, 
+                        "opacity": { "value": 0.2 }, 
+                        "size": { "value": 2 }, 
+                        "line_linked": { "enable": true, "distance": 150, "color": "#6e2fb5", "opacity": 0.1, "width": 1 }, 
+                        "move": { "enable": true, "speed": 1 } 
+                    } 
+                });
             }
         });
 
+        // Typing effect
         const words = ["CRIE", "INVENTE", "DESIGNER"];
         let wordIdx = 0, charIdx = 0, deleting = false;
+        
         function type() {
-            const word = words[wordIdx];
             const target = document.getElementById("text");
             if(!target) return;
+            
+            const word = words[wordIdx];
             target.textContent = word.substring(0, charIdx);
+            
             let speed = deleting ? 50 : 150;
             if(!deleting && charIdx === word.length) { speed = 2000; deleting = true; }
             else if(deleting && charIdx === 0) { deleting = false; wordIdx = (wordIdx+1)%words.length; speed = 500; }
+            
             charIdx = deleting ? charIdx - 1 : charIdx + 1;
             setTimeout(type, speed);
         }
 
+        // Funções globais
         function toggleWhatsAppModal() { document.getElementById('whatsappModal').classList.toggle('show'); }
         function toggleMenu() { document.getElementById('sidebar').classList.toggle('active'); }
         function closeMenu() { document.getElementById('sidebar').classList.remove('active'); }
-        function acceptCookies() { localStorage.setItem('redesigner_cookies', 'true'); document.getElementById('cookiePopup').classList.remove('show'); }
-        function closeCookie() { document.getElementById('cookiePopup').classList.remove('show'); }
+        
+        function acceptCookies() { 
+            localStorage.setItem('redesigner_cookies', 'true'); 
+            document.getElementById('cookiePopup').classList.remove('show'); 
+        }
+        function closeCookie() { 
+            document.getElementById('cookiePopup').classList.remove('show'); 
+        }
+
+        function trackWhatsAppClick() {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'conversion', {
+                    'event_category': 'Contato',
+                    'event_label': 'Botão WhatsApp Flutuante',
+                    'value': 1.0
+                });
+            }
+        }
 
         window.onload = function() { 
             type(); 
-            if(!localStorage.getItem('redesigner_cookies')) setTimeout(() => document.getElementById('cookiePopup').classList.add('show'), 3000); 
+            if(!localStorage.getItem('redesigner_cookies')) {
+                setTimeout(() => document.getElementById('cookiePopup').classList.add('show'), 3000);
+            }
+            const floatBtn = document.querySelector('.whatsapp-float');
+            if(floatBtn) floatBtn.addEventListener('click', trackWhatsAppClick);
+            const modalBtn = document.querySelector('#whatsappModal .btn-prime');
+            if(modalBtn) modalBtn.addEventListener('click', trackWhatsAppClick);
         };
     </script>
 </body>
