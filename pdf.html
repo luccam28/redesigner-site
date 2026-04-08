@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Redesigner | Media Press Kit 2026 — Estratégia e Performance</title>
+    <meta name="description" content="Media Press Kit oficial da Redesigner. Posicionamento, metodologia R3, cases reais e diferenciais de uma agência que pensa antes de criar.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-deep: #030303;
+            --purple-core: #6e2fb5;
+            --purple-dark: #4a1d7a;
+            --yellow-signal: #f7b733;
+            --orange-ignite: #ff6b35;
+            --grad-brand: linear-gradient(135deg, var(--purple-core), var(--orange-ignite));
+            --grad-glow: radial-gradient(circle at 20% 30%, rgba(110,47,181,0.2), transparent 70%);
+            --text-white: #ffffff;
+            --text-dim: rgba(255,255,255,0.75);
+            --glass-panel: rgba(255, 255, 255, 0.02);
+            --border-glow: rgba(255, 255, 255, 0.06);
+            --spacer: clamp(40px, 8vw, 100px);
+            --card-radius: 32px;
+        }
+
+        body {
+            background: var(--bg-deep);
+            color: var(--text-white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .press-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        section {
+            margin-bottom: var(--spacer);
+            border-bottom: 1px solid var(--border-glow);
+            padding-bottom: var(--spacer);
+        }
+
+        h1, h2, h3, .logo-title {
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 8vw, 5.6rem);
+            line-height: 1.1;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            margin-bottom: 1.8rem;
+            background: linear-gradient(120deg, #fff, var(--yellow-signal));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--orange-ignite);
+        }
+
+        .overline {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--purple-core);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: inline-block;
+            background: rgba(110,47,181,0.15);
+            padding: 0.3rem 0.9rem;
+            border-radius: 40px;
+            backdrop-filter: blur(4px);
+        }
+
+        .capa {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            border-bottom: none;
+            margin-bottom: 0;
+            padding: 2rem 0;
+        }
+
+        .capa-badge {
+            background: var(--grad-brand);
+            padding: 0.5rem 1.5rem;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            margin-bottom: 2rem;
+            display: inline-block;
+            backdrop-filter: blur(8px);
+        }
+
+        .capa h1 {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .capa-sub {
+            font-size: 1.3rem;
+            color: var(--text-dim);
+            max-width: 700px;
+            margin: 2rem auto 1.5rem;
+        }
+
+        .assinatura {
+            font-family: 'Syne';
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 4px;
+            color: var(--yellow-signal);
+            margin-top: 3rem;
+        }
+
+        .grid-2, .grid-3, .grid-diffs, .grid-cases {
+            display: grid;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .grid-2 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+        .grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+        .grid-diffs { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+        .grid-cases { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
+
+        .card-premium {
+            background: var(--glass-panel);
+            border: 1px solid var(--border-glow);
+            border-radius: var(--card-radius);
+            padding: 2rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(2px);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-premium:hover {
+            border-color: var(--purple-core);
+            transform: translateY(-6px);
+            background: rgba(110,47,181,0.05);
+        }
+
+        .logo-narrative {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            align-items: center;
+            background: radial-gradient(ellipse at 30% 40%, rgba(110,47,181,0.1), transparent);
+            border-radius: 48px;
+            padding: 2rem;
+        }
+
+        .logo-display {
+            flex: 1;
+            text-align: center;
+        }
+
+        .logo-display img {
+            max-width: 180px;
+            margin: 0 1rem;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+        }
+
+        .logo-narrative-text {
+            flex: 2;
+        }
+
+        .r3-steps {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+        .step {
+            flex: 1;
+            background: linear-gradient(145deg, rgba(255,255,255,0.02), rgba(0,0,0,0.3));
+            padding: 1.8rem;
+            border-radius: 28px;
+            border-left: 4px solid var(--orange-ignite);
+        }
+        .step-number {
+            font-family: 'Syne';
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--purple-core);
+            margin-bottom: 0.5rem;
+        }
+
+        .plano-card {
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(12px);
+            border-radius: 28px;
+            padding: 2rem;
+            border: 1px solid rgba(247,183,51,0.2);
+            transition: all 0.25s;
+        }
+        .plano-card.featured {
+            border: 1px solid var(--orange-ignite);
+            background: linear-gradient(135deg, rgba(110,47,181,0.2), rgba(255,107,53,0.05));
+            transform: scale(1.02);
+        }
+        .plano-preco {
+            font-size: 1.9rem;
+            font-weight: 800;
+            font-family: 'Syne';
+            color: var(--yellow-signal);
+            margin: 1rem 0;
+        }
+        .btn-outline-light {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 40px;
+            background: transparent;
+            border: 1px solid var(--purple-core);
+            color: white;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.3s;
+            margin-top: 1rem;
+        }
+        .btn-outline-light:hover {
+            background: var(--purple-core);
+            border-color: var(--purple-core);
+        }
+
+        .stat-bento {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 1.5rem;
+            text-align: center;
+        }
+        .stat-item {
+            flex: 1;
+            background: rgba(255,255,255,0.02);
+            padding: 1.8rem;
+            border-radius: 28px;
+        }
+        .stat-number {
+            font-family: 'Syne';
+            font-size: 2.8rem;
+            font-weight: 800;
+            background: var(--grad-brand);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .testimonial {
+            font-style: italic;
+            font-size: 1rem;
+            border-left: 3px solid var(--orange-ignite);
+            padding-left: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .cta-final {
+            text-align: center;
+            background: linear-gradient(145deg, #11001c, #030303);
+            padding: 4rem 2rem;
+            border-radius: 48px;
+            border: 1px solid rgba(247,183,51,0.3);
+            margin: 3rem 0;
+        }
+        .btn-grande {
+            background: var(--grad-brand);
+            padding: 1rem 2.5rem;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.3s;
+            border: none;
+        }
+        .btn-grande:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 30px rgba(110,47,181,0.4);
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.4);
+            padding: 2rem 0;
+        }
+
+        hr {
+            border-color: rgba(255,255,255,0.05);
+            margin: 1rem 0;
+        }
+
+        @media (max-width: 750px) {
+            .grid-2, .grid-3, .grid-cases, .r3-steps { grid-template-columns: 1fr; flex-direction: column; }
+            .logo-narrative { flex-direction: column; text-align: center; }
+            .capa h1 { font-size: 2.5rem; }
+        }
+
+        .badge-impact {
+            background: rgba(247,183,51,0.1);
+            color: var(--yellow-signal);
+            border-radius: 100px;
+            padding: 0.2rem 0.8rem;
+            font-size: 0.7rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+<div class="press-container">
+    <!-- CAPA -->
+    <div class="capa">
+        <div class="capa-badge">MEDIA PRESS KIT 2026 · EDIÇÃO ESTRATÉGICA</div>
+        <h1>Enquanto sua concorrência posta,<br> nós o posicionamos.</h1>
+        <div class="capa-sub">Estratégia digital que transforma visibilidade em receita — sem atalhos, sem templates, sem achismo.</div>
+        <div class="assinatura">Re Crie. Re Invente. Re Designer.</div>
+        <div style="margin-top: 4rem;">
+            <span style="background: rgba(255,255,255,0.05); padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 0.8rem;">redesigner.com.br  |  +55 11 99977-8996</span>
+        </div>
+    </div>
+
+    <!-- POSICIONAMENTO -->
+    <section>
+        <span class="overline">Posicionamento radical</span>
+        <h2>A agência que pensa antes de criar</h2>
+        <p style="font-size: 1.2rem; max-width: 850px; margin-bottom: 1.5rem;">A maioria das agências começa pelo design. A Redesigner começa pela pergunta certa: <strong>o que esse negócio precisa para crescer?</strong></p>
+        <div class="grid-2">
+            <div class="card-premium">
+                <i class="fas fa-brain" style="font-size: 2rem; color: var(--orange-ignite); margin-bottom: 1rem; display: block;"></i>
+                <h3>Clareza brutal</h3>
+                <p>Sem diagnóstico não existe estratégia. Cada ação carrega uma hipótese de negócio, validada por dados reais.</p>
+            </div>
+            <div class="card-premium">
+                <i class="fas fa-chart-line" style="font-size: 2rem; color: var(--yellow-signal); margin-bottom: 1rem;"></i>
+                <h3>Resultado como único KPI</h3>
+                <p>Posicionamento, visibilidade, autoridade — tudo mensurado no crescimento da sua receita. Não entregamos movimento, entregamos direção.</p>
+            </div>
+        </div>
+        <p style="margin-top: 2rem; border-left: 3px solid var(--purple-core); padding-left: 1.5rem; font-weight: 500;">"Redesigner: a agência que redesenha trajetórias — não apenas marcas."</p>
+    </section>
+
+    <!-- LOGO NARRATIVA -->
+    <section>
+        <span class="overline">Ativo de marca</span>
+        <h2>A logo como declaração de guerra</h2>
+        <div class="logo-narrative">
+            <div class="logo-display">
+                <img src="logo.png" alt="Redesigner logo principal" style="width: 140px;">
+                <img src="logo(1).png" alt="Redesigner variação amarela" style="width: 130px;">
+                <div style="margin-top: 1rem;"><span class="badge-impact">AMARELO · PROTAGONISMO</span> <span class="badge-impact">ROXO · AUTORIDADE</span></div>
+            </div>
+            <div class="logo-narrative-text">
+                <p style="font-weight: 600; margin-bottom: 1rem;">Não foi desenhada para ser bonita. Foi desenhada para comunicar tensão estratégica.</p>
+                <p>O símbolo fluido entrelaça duas formas: o estado atual da marca e seu potencial latente. O movimento aberto representa uma espiral ascendente — marcas fortes se reinventam continuamente, mas com consistência. O <strong style="color: var(--yellow-signal);">amarelo vibrante</strong> não é estética: é a cor da atenção involuntária, o primeiro estímulo que o olho capta. Sinaliza que aqui não se passa despercebido.</p>
+                <p style="margin-top: 1rem;">O <strong style="color: var(--purple-core);">roxo</strong> carrega a tensão entre criatividade e autoridade intelectual. Juntos, amarelo + roxo formam contraste intencional, hierarquia visual e a mensagem subliminar: <em>essa agência pensa diferente, entrega diferente e posiciona diferente.</em></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROPOSTA DE VALOR -->
+    <section>
+        <span class="overline">O problema que ninguém quer admitir</span>
+        <h2>O mercado está cheio de agências operacionais</h2>
+        <div class="grid-2">
+            <div class="card-premium">
+                <h3 style="color: #ff6b35;">Falha comum</h3>
+                <p>Produzem volume, entregam relatório e renovam contrato. O cliente paga, o feed é atualizado — mas o negócio continua estagnado. Postagens sem posicionamento são ruído; anúncios sem diagnóstico são desperdício.</p>
+            </div>
+            <div class="card-premium">
+                <h3 style="color: #f7b733;">Como a Redesigner resolve</h3>
+                <p>Começamos por onde ninguém começa: diagnóstico do negócio, mapeamento de mercado, construção da arquitetura de posicionamento — e só então executamos. Cada entrega tem um porquê comercial.</p>
+            </div>
+        </div>
+        <div class="stat-bento" style="margin-top: 2rem;">
+            <div class="stat-item"><span class="stat-number">+65%</span><br>engajamento médio em 90d</div>
+            <div class="stat-item"><span class="stat-number">-30%</span><br>CPL após 60 dias</div>
+            <div class="stat-item"><span class="stat-number">+110%</span><br>alcance orgânico (cases B2B)</div>
+        </div>
+    </section>
+
+    <!-- METODOLOGIA R3 -->
+    <section>
+        <span class="overline">MÉTODO PROPRIETÁRIO</span>
+        <h2>Método R3™ — Recriar · Reinventar · Redesenhar</h2>
+        <div class="r3-steps">
+            <div class="step"><div class="step-number">R1</div><h3>RECRIAR</h3><p>Diagnóstico profundo: análise competitiva, personas, auditoria digital e gaps de posicionamento. Entregamos um documento estratégico com tom de voz, canais prioritários e metas realistas.</p></div>
+            <div class="step"><div class="step-number">R2</div><h3>REINVENTAR</h3><p>Execução integrada: identidade visual, conteúdo, mídia paga, SEO e landing pages. Tudo guiado por objetivo de negócio — não por volume arbitrário.</p></div>
+            <div class="step"><div class="step-number">R3</div><h3>REDESENHAR</h3><p>Análise mensal com dados reais, interpretação estratégica e recomendações de ajuste. Não entregamos e sumimos: co-responsabilidade pelos resultados.</p></div>
+        </div>
+        <p style="margin-top: 2rem; font-style: italic;">O R3 garante que cada real investido tenha direção e métrica de acompanhamento.</p>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section>
+        <span class="overline">SOLUÇÕES INTEGRADAS</span>
+        <h2>O que fazemos (e por que funciona)</h2>
+        <div class="grid-3">
+            <div class="card-premium"><i class="fas fa-chart-simple"></i><h3>Gestão de Redes Sociais</h3><p><strong>Problema:</strong> presença digital sem resultado.<br> <strong>Entregamos:</strong> planejamento editorial orientado a posicionamento, copy estratégica.<br> <strong>Resultado:</strong> +65% engajamento em 90d, inbound consistente.</p></div>
+            <div class="card-premium"><i class="fas fa-ad"></i><h3>Tráfego Pago</h3><p><strong>Problema:</strong> CPL crescente e resultados opacos.<br> <strong>Solução:</strong> campanhas em Google Ads/Meta com funil, testes A/B, relatórios transparentes.<br> <strong>Meta:</strong> redução média de 30% no CPL após 60d.</p></div>
+            <div class="card-premium"><i class="fas fa-palette"></i><h3>Identidade Visual & Design</h3><p>Inconsistência visual comunica amadorismo. Criamos sistemas de marca escaláveis que transmitem profissionalismo imediato.</p></div>
+            <div class="card-premium"><i class="fas fa-code"></i><h3>Sites que Convertem</h3><p>Desenvolvimento focado em UX, SEO on-page e velocidade. Seu site se torna ativo de negócio, não apenas cartão de visitas.</p></div>
+            <div class="card-premium"><i class="fas fa-chart-line"></i><h3>Planejamento Estratégico</h3><p>Benchmarking, personas, linguagem e tom de voz. Clareza para alocar orçamento com inteligência.</p></div>
+            <div class="card-premium"><i class="fas fa-user-tie"></i><h3>Consultoria de Performance</h3><p>Para equipes internas: análise de indicadores, ajustes de rota e decisões orientadas a dados.</p></div>
+        </div>
+    </section>
+
+    <!-- CASES DE SUCESSO (8 CLIENTES, EXTRAÍDOS DO INDEX.HTML) -->
+    <section>
+        <span class="overline">RESULTADOS REAIS</span>
+        <h2>Cases que provam o método — 8 histórias de transformação</h2>
+        <div class="grid-cases">
+            <div class="card-premium">
+                <h3>🏨 Hotel Paradies Express</h3>
+                <p><strong>Segmento:</strong> Hotelaria / Turismo<br>
+                <strong>Problema:</strong> Baixa visibilidade orgânica, dependência de OTAs (Booking, Airbnb).<br>
+                <strong>Estratégia:</strong> Auditoria SEO completa, produção de conteúdo estratégico para palavras-chave de alta intenção, otimização do Google Business Profile.<br>
+                <strong>Resultados:</strong> +90% tráfego orgânico em 4 meses, redução da dependência de OTAs, primeiras posições no Google para buscas locais.</p>
+            </div>
+            <div class="card-premium">
+                <h3>🏭 RG Etiquetas (B2B)</h3>
+                <p><strong>Segmento:</strong> Indústria<br>
+                <strong>Problema:</strong> Inexistência digital, dependência total de indicações.<br>
+                <strong>Estratégia:</strong> Construção de presença digital do zero, gestão de redes sociais com linguagem técnica, campanhas segmentadas no Meta Ads para gestores industriais.<br>
+                <strong>Resultados:</strong> +110% alcance orgânico em 90 dias, +3 leads qualificados/mês via canal digital.</p>
+            </div>
+            <div class="card-premium">
+                <h3>🐶 Dorvet</h3>
+                <p><strong>Segmento:</strong> Veterinária / Petshop<br>
+                <strong>Problema:</strong> Site desatualizado e sem conversão, pouca presença digital.<br>
+                <strong>Estratégia:</strong> Criação de site institucional moderno, foco em UX e SEO local, integração com redes sociais.<br>
+                <strong>Resultados:</strong> Aumento de visibilidade na região, primeiros contatos comerciais via formulário do site.</p>
+            </div>
+            <div class="card-premium">
+                <h3>🚪 MIB Portões</h3>
+                <p><strong>Segmento:</strong> Metal mecânica / Comércio<br>
+                <strong>Problema:</strong> Anúncios geravam cliques, mas não orçamentos. Funil quebrado.<br>
+                <strong>Estratégia:</strong> Reestruturação de campanhas de tráfego pago, landing page otimizada, segmentação por intenção de compra.<br>
+                <strong>Resultados:</strong> -38% CPL em 60 dias, +85% volume de orçamentos solicitados.</p>
+            </div>
+            <div class="card-premium">
+                <h3>🐕 Tio Júnior Táxi Pet</h3>
+                <p><strong>Segmento:</strong> Serviços Pet<br>
+                <strong>Problema:</strong> Comunicação amadora, sem identidade visual, segmentação geográfica ineficiente.<br>
+                <strong>Estratégia:</strong> Padronização visual, tráfego pago geolocalizado, conteúdo emocional para tutores.<br>
+                <strong>Resultados:</strong> +120% engajamento nas redes, expansão da área de atendimento, referência em transporte pet.</p>
+            </div>
+            <div class="card-premium">
+                <h3>🌿 Jardin Paysan</h3>
+                <p><strong>Segmento:</strong> Jardinagem / Paisagismo<br>
+                <strong>Problema:</strong> Baixa presença digital, dificuldade em atrair clientes de alto ticket.<br>
+                <strong>Estratégia:</strong> Criação de site institucional com portfólio, gestão de conteúdo e tráfego orgânico.<br>
+                <strong>Resultados:</strong> Aumento de leads qualificados, posicionamento como marca premium no setor.</p>
+            </div>
+            <div class="card-premium">
+                <h3>🦷 Odontologia Ideale</h3>
+                <p><strong>Segmento:</strong> Saúde / Odontologia<br>
+                <strong>Problema:</strong> Site antigo, sem captação de pacientes via digital.<br>
+                <strong>Estratégia:</strong> Desenvolvimento de site moderno com foco em conversão, SEO local e integração com WhatsApp.<br>
+                <strong>Resultados:</strong> Primeira posição em buscas locais, aumento de agendamentos online.</p>
+            </div>
+            <div class="card-premium">
+                <h3>📊 M. Furtado Contabilidade</h3>
+                <p><strong>Segmento:</strong> Serviços Contábeis<br>
+                <strong>Problema:</strong> 10+ anos sem site, sem redes, perdendo oportunidades para concorrentes digitais.<br>
+                <strong>Estratégia:</strong> Site institucional focado em credibilidade, identidade visual profissional, estruturação digital completa.<br>
+                <strong>Resultados:</strong> Primeira presença digital profissional, tráfego orgânico crescente, percepção de autoridade elevada.</p>
+            </div>
+        </div>
+        <div style="margin-top: 2rem; text-align: center;">
+            <span class="badge-impact">+8 negócios transformados</span>
+            <span class="badge-impact">Resultados mensuráveis</span>
+            <span class="badge-impact">Metodologia R3™ aplicada</span>
+        </div>
+    </section>
+
+    <!-- PROVA SOCIAL -->
+    <section>
+        <span class="overline">VOZ DOS PARCEIROS</span>
+        <h2>Antes e depois do trabalho conjunto</h2>
+        <div class="grid-2">
+            <div class="testimonial">“Antes da Redesigner, tínhamos um perfil no Instagram que não dizia nada sobre quem somos. Depois de 3 meses, nossa presença digital virou ferramenta real de prospecção. A visibilidade superou qualquer expectativa.”<br> — <strong>Ricardo S.</strong> | Diretor Industrial, setor B2B</div>
+            <div class="testimonial">“Minha empresa estava há anos sem identidade visual que transmitisse confiança. A Redesigner entendeu o que precisávamos antes mesmo de apresentarmos — e entregou algo que finalmente representa o que somos. Feedbacks imediatos.”<br> — <strong>Ana Paula M.</strong> | Proprietária, serviços especializados</div>
+            <div class="testimonial">“O que me surpreendeu foi o processo: cada etapa explicada, cada decisão com motivo estratégico. Me senti parceiro da agência, não apenas cliente. Isso é raro.”<br> — <strong>Cliente Redesigner</strong> | Setor contábil</div>
+        </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section>
+        <span class="overline">O QUE NOS SEPARA</span>
+        <h2>Diferenciais que importam</h2>
+        <div class="grid-diffs">
+            <div class="card-premium"><i class="fas fa-search"></i> <strong>Diagnóstico antes da ação</strong><br>Nenhuma campanha sem entendimento do negócio e dos objetivos comerciais.</div>
+            <div class="card-premium"><i class="fas fa-chart-simple"></i> <strong>Transparência radical</strong><br>Relatórios com interpretação estratégica, não apenas números.</div>
+            <div class="card-premium"><i class="fas fa-users"></i> <strong>Equipe integrada</strong><br>Design, copy, mídia e estratégia na mesma mesa — sem terceirização invisível.</div>
+            <div class="card-premium"><i class="fas fa-chart-line"></i> <strong>Mentalidade de crescimento</strong><br>Ajustes ágeis baseados em dados de performance real.</div>
+            <div class="card-premium"><i class="fas fa-handshake"></i> <strong>Co-responsabilidade</strong><br>Não entregamos e sumimos: acompanhamos dados e decisões do próximo ciclo.</div>
+        </div>
+    </section>
+
+    <!-- PLANOS -->
+    <section>
+        <span class="overline">INVESTIMENTO INTELIGENTE</span>
+        <h2>Escolha o nível de crescimento da sua marca</h2>
+        <div class="grid-3">
+            <div class="plano-card">
+                <h3>ESSENCIAL</h3>
+                <div class="plano-preco">Setup + Presença</div>
+                <ul style="list-style: none; margin: 1rem 0;">
+                    <li>✓ Otimização de perfil (bio/foto)</li>
+                    <li>✓ Presença no Facebook</li>
+                    <li>✓ Curadoria de imagens profissionais</li>
+                </ul>
+                <p>Ideal para: presença digital inicial.</p>
+                <a href="#" class="btn-outline-light">Consultar</a>
+            </div>
+            <div class="plano-card featured">
+                <h3>ESTRATÉGICO <span style="background: var(--orange-ignite); font-size: 0.7rem; padding: 2px 8px; border-radius: 30px;">+ contratado</span></h3>
+                <div class="plano-preco">Crescimento consistente</div>
+                <ul style="list-style: none;">
+                    <li>✓ Tudo do Essencial +</li>
+                    <li>✓ Cronograma editorial estratégico</li>
+                    <li>✓ Copywriting orientado à conversão</li>
+                    <li>✓ Relatórios mensais de performance</li>
+                </ul>
+                <p>Ideal para consolidação de marca.</p>
+                <a href="#" class="btn-outline-light">Quero crescer</a>
+            </div>
+            <div class="plano-card">
+                <h3>PREMIUM</h3>
+                <div class="plano-preco">Escala com performance</div>
+                <ul style="list-style: none;">
+                    <li>✓ Tudo do Estratégico +</li>
+                    <li>✓ Gestão de tráfego pago (Ads)</li>
+                    <li>✓ Consultoria e suporte prioritário</li>
+                    <li>✓ Reuniões periódicas de alinhamento</li>
+                </ul>
+                <p>Para empresas que buscam dominância digital.</p>
+                <a href="#" class="btn-outline-light">Falar com consultor</a>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 2rem;">* Planos semestrais para garantir continuidade estratégica. Diagnóstico gratuito.</p>
+    </section>
+
+    <!-- AUTORIDADE -->
+    <section>
+        <span class="overline">INFRAESTRUTURA DE ALTA PERFORMANCE</span>
+        <h2>A inteligência por trás das entregas</h2>
+        <div class="grid-2">
+            <div class="card-premium">
+                <i class="fab fa-google"></i> <strong>Stack de plataformas:</strong> Google Ads, Meta Ads, Google Analytics 4, Google Business Profile, ferramentas de SEO e Meta Business Suite.
+            </div>
+            <div class="card-premium">
+                <i class="fas fa-microchip"></i> <strong>Mentalidade data-driven:</strong> Cada alteração de estratégia é baseada em pelo menos 30 dias de performance. Não mantemos o que não converte por inércia.
+            </div>
+        </div>
+        <hr>
+        <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between;">
+            <div><span class="badge-impact">Missão</span><br>Transformar presença digital de PMEs em vantagem competitiva real.</div>
+            <div><span class="badge-impact">Visão</span><br>Referência em marketing estratégico pelo impacto, não pelo tamanho.</div>
+            <div><span class="badge-impact">Valores</span><br>Clareza antes de criatividade · Dados como linguagem · Comprometimento real</div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <div class="cta-final">
+        <span class="overline" style="background: none;">Próximo passo</span>
+        <h2 style="color: white;">Sua marca merece mais do que o mercado está entregando</h2>
+        <p style="max-width: 600px; margin: 1rem auto;">Em uma conversa de 30 minutos, identificamos onde sua empresa está perdendo oportunidades digitais e apresentamos um plano de crescimento personalizado — <strong>sem custo, sem compromisso.</strong></p>
+        <a href="https://wa.me/5511999778996" class="btn-grande" target="_blank"><i class="fab fa-whatsapp"></i> Solicitar diagnóstico estratégico gratuito</a>
+        <div style="margin-top: 2rem; font-size: 0.85rem;">contato@redesigner.com.br  |  +55 11 99977-8996  |  @agenciaredesigner</div>
+    </div>
+
+    <footer>
+        <p>Re Crie. Re Invente. Re Designer. — Redesigner PPM Ltda · Media Press Kit 2026 · São Paulo, Brasil</p>
+        <p>Uso exclusivo para clientes, parceiros e veículos de imprensa. Estratégia, criatividade e resultado.</p>
+    </footer>
+</div>
+</body>
+</html>
