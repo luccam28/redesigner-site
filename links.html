@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -9,68 +10,451 @@
         gtag('js', new Date());
         gtag('config', 'G-XXXXXX');
     </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Links Oficiais | Redesigner</title>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Redesigner | Links Oficiais</title>
+    <meta name="description" content="Acesse todos os links oficiais da ReDesigner Agência Digital.">
+    <meta name="theme-color" content="#FFC700">
+    <link rel="canonical" href="https://redesigner.com.br/links">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Redesigner | Links Oficiais">
+    <meta property="og:description" content="Solicite um orçamento, veja nosso portfólio e siga nossas redes.">
+    <meta property="og:image" content="https://redesigner.com.br/logo-og.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --bg: #030303;
-            --purple: #6e2fb5;
-            --orange: #ff6b35;
-            --yellow: #f7b733;
-            --text-main: #ffffff;
-            --glass: rgba(255, 255, 255, 0.05);
-            --gradient-brand: linear-gradient(135deg, var(--purple), var(--orange));
-            --card-radius: 30px;
-            --transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --brand-yellow: #FFC700;
+            --brand-purple: #59178A;
+            --brand-dark: #363630;
+            --bg-darker: #20201d;
+            --text-main: #FFFFFF;
+            --text-dim: rgba(255, 255, 255, 0.75);
+            --glass: rgba(54, 54, 48, 0.5);
+            --transition: 0.4s cubic-bezier(0.22, 0.97, 0.36, 1);
+            --card-radius: 22px;
         }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            background-color: var(--bg); color: var(--text-main); font-family: 'Inter', sans-serif; 
-            display: flex; flex-direction: column; align-items: center; min-height: 100vh; padding: 40px 20px;
+
+        body {
+            background-color: var(--bg-darker);
+            color: var(--text-main);
+            font-family: 'Paralucent Text', 'Paralucent', 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 50px 20px;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
-        #particles-js { position: fixed; width: 100%; height: 100%; z-index: 1; top:0; left:0; pointer-events: none; }
-        .container { position: relative; z-index: 2; width: 100%; max-width: 400px; text-align: center; }
-        .logo-links { 
-            width: 100px; margin-bottom: 20px;
-            filter: brightness(0) saturate(100%) invert(85%) sepia(100%) saturate(1000%) hue-rotate(0deg); /* DOURADO */
+
+        /* Fundo de grade sutil (igual ao index) */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: radial-gradient(circle at 25% 40%, rgba(89, 23, 138, 0.15) 1.5px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none; z-index: 0;
         }
-        h1 { font-family: 'Syne', sans-serif; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
-        p { font-size: 0.9rem; color: rgba(255,255,255,0.6); margin-bottom: 40px; }
-        .links-wrapper { display: flex; flex-direction: column; gap: 16px; }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        /* Badge giratório decorativo */
+        .propulsao-badge {
+            position: fixed;
+            z-index: 1;
+            pointer-events: none;
+            animation: spinBadge 28s linear infinite;
+            opacity: 0.25;
+        }
+        .propulsao-badge.top-right {
+            top: -120px;
+            right: -120px;
+            width: 280px;
+            height: 280px;
+        }
+        .propulsao-badge.bottom-left {
+            bottom: -120px;
+            left: -120px;
+            width: 240px;
+            height: 240px;
+            animation-direction: reverse;
+        }
+        @keyframes spinBadge {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Container principal */
+        .container {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 420px;
+            text-align: center;
+        }
+
+        /* Logo com efeito */
+        .logo-wrapper {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        .logo-img {
+            width: 90px;
+            height: auto;
+            filter: brightness(0) invert(1);
+            transition: transform 0.5s ease;
+            position: relative;
+            z-index: 1;
+        }
+        .logo-wrapper:hover .logo-img {
+            transform: scale(1.08);
+        }
+        .logo-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(89, 23, 138, 0.35) 0%, transparent 70%);
+            z-index: 0;
+            animation: pulseGlow 3s ease-in-out infinite;
+        }
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.4; transform: translate(-50%, -50%) scale(1); }
+            50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.2); }
+        }
+
+        /* Título */
+        .brand-name {
+            font-weight: 900;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 5px;
+            background: linear-gradient(135deg, #fff, var(--brand-yellow));
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .tagline {
+            font-family: 'Gochi Hand', cursive;
+            font-size: 1.1rem;
+            color: var(--brand-yellow);
+            margin-bottom: 35px;
+            opacity: 0.9;
+        }
+
+        /* Links */
+        .links-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-bottom: 45px;
+        }
+
         .link-card {
-            background: var(--glass); border: 1px solid rgba(255,255,255,0.1); padding: 18px; border-radius: 15px;
-            text-decoration: none; color: white; font-weight: 600; transition: var(--transition);
-            display: flex; align-items: center; justify-content: center; backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 18px 24px;
+            border-radius: var(--card-radius);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: all 0.4s cubic-bezier(0.22, 0.97, 0.36, 1);
+            position: relative;
+            overflow: hidden;
+            background: rgba(54, 54, 48, 0.5);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(89, 23, 138, 0.3);
+            color: #fff;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
         }
-        .link-card:hover { transform: translateY(-3px); border-color: var(--purple); background: rgba(110, 47, 181, 0.1); }
-        .featured { background: var(--gradient-brand); border: none; box-shadow: 0 10px 20px rgba(110, 47, 181, 0.3); }
-        .featured:hover { background: var(--gradient-brand); opacity: 0.9; }
-        footer { margin-top: 50px; font-size: 0.7rem; opacity: 0.4; text-transform: uppercase; letter-spacing: 1px; }
+
+        .link-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,199,0,0.05), transparent);
+            transition: left 0.7s;
+        }
+
+        .link-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--brand-purple);
+            background: rgba(89, 23, 138, 0.25);
+            box-shadow: 0 15px 35px rgba(89, 23, 138, 0.35);
+            color: #fff;
+        }
+        .link-card:hover::before {
+            left: 100%;
+        }
+
+        /* Card principal (CTA) */
+        .link-card.featured {
+            background: var(--brand-yellow);
+            color: var(--brand-dark);
+            border: none;
+            font-size: 1rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            box-shadow: 0 10px 30px rgba(255, 199, 0, 0.35);
+            animation: subtlePulse 2.5s ease-in-out infinite;
+        }
+        @keyframes subtlePulse {
+            0%, 100% { box-shadow: 0 10px 30px rgba(255, 199, 0, 0.35); }
+            50% { box-shadow: 0 15px 45px rgba(255, 199, 0, 0.55); }
+        }
+        .link-card.featured:hover {
+            background: #ffffff;
+            color: var(--brand-dark);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(255, 199, 0, 0.5);
+            animation: none;
+        }
+
+        /* Ícones dentro dos cards */
+        .link-card i,
+        .link-card .emoji-icon {
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+        .link-card.featured i {
+            color: var(--brand-purple);
+        }
+
+        /* Social proof rápido */
+        .social-proof {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        .social-proof a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: var(--text-dim);
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .social-proof a:hover {
+            background: var(--brand-purple);
+            color: #fff;
+            border-color: var(--brand-purple);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(89,23,138,0.4);
+        }
+
+        /* Footer */
+        .footer-note {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-dim);
+            opacity: 0.5;
+            margin-top: 10px;
+        }
+
+        /* Responsivo */
         @media (max-width: 480px) {
-            .container { padding: 0 10px; }
-            .link-card { padding: 16px; font-size: 0.9rem; }
+            .container {
+                max-width: 100%;
+                padding: 0 5px;
+            }
+            .link-card {
+                padding: 16px 18px;
+                font-size: 0.8rem;
+                letter-spacing: 1px;
+            }
+            .link-card.featured {
+                font-size: 0.9rem;
+            }
+            .brand-name {
+                font-size: 1.2rem;
+            }
+            .logo-img {
+                width: 75px;
+            }
+            .propulsao-badge.top-right {
+                top: -150px;
+                right: -150px;
+                width: 220px;
+                height: 220px;
+                opacity: 0.15;
+            }
+            .propulsao-badge.bottom-left {
+                bottom: -150px;
+                left: -150px;
+                width: 180px;
+                height: 180px;
+                opacity: 0.15;
+            }
         }
     </style>
 </head>
 <body>
+
+    <!-- Partículas -->
     <div id="particles-js"></div>
-    <div class="container">
-        <img src="logo.png" alt="Redesigner" class="logo-links">
-        <h1>Redesigner</h1>
-        <p>Projetando o futuro da sua autoridade digital.</p>
-        <div class="links-wrapper">
-            <a href="https://wa.me/5511999778996" class="link-card featured">🚀 SOLICITAR ORÇAMENTO</a>
-            <a href="index.html" class="link-card">🌐 NOSSO SITE OFICIAL</a>
-            <a href="index.html#cases" class="link-card">🎨 PORTFÓLIO & CASES</a>
-            <a href="https://www.instagram.com/agenciaredesigner" class="link-card">📸 INSTAGRAM</a>
-            <a href="mailto:atendimento@redesigner.com.br" class="link-card">📩 CONTATO POR E-MAIL</a>
-        </div>
-        <footer>© REDESIGNER PPM <br> EST. 2019</footer>
+
+    <!-- Badges giratórios decorativos -->
+    <div class="propulsao-badge top-right">
+        <svg viewBox="0 0 200 200" width="280" height="280">
+            <path id="circle-path-tr" d="M 100, 20 a 80,80 0 1,1 -0.1,0" fill="none" />
+            <text fill="var(--brand-yellow)" font-size="13" font-weight="700" letter-spacing="4" font-family="'Paralucent Text', 'Montserrat', sans-serif">
+                <textPath href="#circle-path-tr" startOffset="0%">PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • </textPath>
+            </text>
+        </svg>
     </div>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <div class="propulsao-badge bottom-left">
+        <svg viewBox="0 0 200 200" width="240" height="240">
+            <path id="circle-path-bl" d="M 100, 20 a 80,80 0 1,1 -0.1,0" fill="none" />
+            <text fill="var(--brand-yellow)" font-size="12" font-weight="700" letter-spacing="4" font-family="'Paralucent Text', 'Montserrat', sans-serif">
+                <textPath href="#circle-path-bl" startOffset="0%">PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • </textPath>
+            </text>
+        </svg>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <main class="container">
+        <!-- Logo com glow -->
+        <div class="logo-wrapper">
+            <div class="logo-glow"></div>
+            <img src="logo.png" alt="Redesigner" class="logo-img">
+        </div>
+
+        <h1 class="brand-name">Redesigner</h1>
+        <p class="tagline">Projetando o futuro da sua autoridade digital.</p>
+
+        <!-- Ícones sociais rápidos -->
+        <div class="social-proof">
+            <a href="https://www.instagram.com/agenciaredesigner" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/agenciaredesigner" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/company/agenciaredesigner/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:atendimento@redesigner.com.br" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
+        </div>
+
+        <!-- Cards de links -->
+        <div class="links-wrapper">
+            <a href="https://wa.me/5511999778996" target="_blank" rel="noopener" class="link-card featured">
+                <i class="fas fa-rocket"></i> SOLICITAR ORÇAMENTO
+            </a>
+            <a href="index.html" class="link-card">
+                <i class="fas fa-globe-americas"></i> NOSSO SITE OFICIAL
+            </a>
+            <a href="index.html#cases" class="link-card">
+                <i class="fas fa-palette"></i> PORTFÓLIO & CASES
+            </a>
+            <a href="https://www.instagram.com/agenciaredesigner" target="_blank" rel="noopener" class="link-card">
+                <i class="fab fa-instagram"></i> INSTAGRAM
+            </a>
+            <a href="mailto:atendimento@redesigner.com.br" class="link-card">
+                <i class="fas fa-envelope-open-text"></i> CONTATO POR E-MAIL
+            </a>
+            <a href="lgpd.html" class="link-card">
+                <i class="fas fa-shield-alt"></i> LGPD & PRIVACIDADE
+            </a>
+        </div>
+
+        <p class="footer-note">© REDESIGNER PPM — EST. 2019</p>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
     <script>
-        particlesJS("particles-js", { particles: { number: { value: 50 }, color: { value: "#6e2fb5" }, opacity: { value: 0.3 }, size: { value: 2 }, line_linked: { enable: true, distance: 150, color: "#6e2fb5", opacity: 0.1, width: 1 }, move: { enable: true, speed: 1.5 } } });
+        (function() {
+            // Partículas
+            if(window.particlesJS) {
+                particlesJS("particles-js", {
+                    particles: {
+                        number: { value: 50 },
+                        color: { value: "#ffffff" },
+                        opacity: { value: 0.18 },
+                        size: { value: 2 },
+                        line_linked: { 
+                            enable: true, 
+                            distance: 150, 
+                            color: "#ffffff", 
+                            opacity: 0.06, 
+                            width: 1 
+                        },
+                        move: { 
+                            enable: true, 
+                            speed: 0.6 
+                        }
+                    }
+                });
+            }
+
+            // Efeito de entrada suave nos cards
+            const cards = document.querySelectorAll('.link-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = `opacity 0.6s ${index * 0.1}s, transform 0.6s ${index * 0.1}s`;
+                observer.observe(card);
+            });
+
+            // Forçar a animação inicial
+            setTimeout(() => {
+                cards.forEach(card => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                });
+            }, 200);
+        })();
     </script>
 </body>
 </html>
