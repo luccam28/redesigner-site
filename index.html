@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -9,15 +10,17 @@
         gtag('js', new Date());
         gtag('config', 'G-XXXXXX');
     </script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Agência de Marketing Digital em São Paulo | Redesigner</title>
-    <meta name="description" content="Mais clientes, mais vendas e presença digital real. Estratégias personalizadas, design e performance para alavancar sua marca.">
-    <meta name="keywords" content="marketing digital, gestão de redes sociais, agência de performance, branding, redesigner, tráfego pago, estratégias personalizadas">
+    <title>Redesigner | Consultoria de Marketing Digital & Performance em São Paulo</title>
+    <meta name="description" content="Aceleramos o crescimento de empresas através de estratégias de tráfego pago, branding e gestão de presença digital. Foco total em ROI e escala de faturamento.">
+    <meta name="keywords" content="marketing digital, agência de marketing digital são paulo, gestão de redes sociais, agência de performance, branding, redesigner, tráfego pago, criação de sites, B2B">
     <meta name="author" content="ReDesigner Agência Digital">
     <meta name="robots" content="index, follow, max-image-preview:large">
-    <meta name="theme-color" content="#6e2fb5">
+    <meta name="theme-color" content="#FFC700">
     <link rel="canonical" href="https://redesigner.com.br/">
 
+    <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -25,583 +28,785 @@
     <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
 
+    <!-- Open Graph / Twitter -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Redesigner | Agência de Marketing Digital e Performance">
-    <meta property="og:description" content="Mais clientes, mais vendas. Estratégias personalizadas para crescimento planejado.">
+    <meta property="og:title" content="Redesigner | Engenharia de Crescimento e Performance">
+    <meta property="og:description" content="Estratégias personalizadas e orientadas a dados para escalar o faturamento da sua empresa.">
     <meta property="og:url" content="https://redesigner.com.br/">
-    <meta property="og:image" content="logo(1).png">
-
+    <meta property="og:image" content="https://redesigner.com.br/logo-og.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Redesigner | Agência de Performance">
-    <meta name="twitter:description" content="Resultados reais com estratégia e criatividade.">
-    <meta name="twitter:image" content="logo(1).png">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+    <!-- Schema.org -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "ReDesigner Agência Digital",
-      "image": "https://redesigner.com.br/logo(1).png",
-      "@id": "https://redesigner.com.br",
-      "url": "https://redesigner.com.br",
-      "telephone": "+5511999778996",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "São Paulo",
-        "addressCountry": "BR"
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "09:00",
-        "closes": "18:00"
-      },
-      "sameAs": [
-        "https://www.instagram.com/agenciaredesigner/"
-      ]
-    }
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Redesigner Comunicação e Marketing",
+            "description": "Agência de marketing digital especializada em performance, tráfego pago e soluções digitais focadas em conversão.",
+            "url": "https://redesigner.com.br",
+            "telephone": "+55 11 99977-8996",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "São Paulo",
+                "addressRegion": "SP",
+                "addressCountry": "BR"
+            },
+            "sameAs": [
+                "https://www.instagram.com/agenciaredesigner",
+                "https://www.facebook.com/agenciaredesigner"
+            ],
+            "openingHours": "Mo-Fr 09:00-18:00",
+            "priceRange": "$$$"
+        }
     </script>
 
+    <!-- Fonts & Icons (Mantemos Gochi Hand e fallback de Montserrat via Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
     <style>
-        :root {
-            --bg: #030303;
-            --purple: #6e2fb5;
-            --orange: #ff6b35;
-            --yellow: #f7b733;
-            --text-main: #ffffff;
-            --text-dim: rgba(255, 255, 255, 0.8);
-            --sidebar-w: 130px;
-            --glass: rgba(255, 255, 255, 0.02);
-            --transition: 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-            --gradient-brand: linear-gradient(135deg, var(--purple), var(--orange));
-            --spacing-section: clamp(80px, 12vw, 140px);
-            --spacing-card: 30px;
-            --line-height-text: 1.8;
-            --card-radius: 30px;
-            --card-padding: clamp(30px, 4vw, 40px);
-        }
-
+        /* ---------- RESET & VARIÁVEIS (BRANDBOOK REDESIGNER) ---------- */
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-        html { scroll-padding-top: 80px; }
-        html, body { overflow-x: hidden; width: 100%; max-width: 100vw; }
+        :root {
+            /* Cores Oficiais */
+            --brand-yellow: #FFC700;       /* Pantone 7548C */
+            --brand-purple: #59178A;       /* Pantone 267C */
+            --brand-dark: #363630;         /* Pantone 447C (Chumbo Escuro) */
+            --brand-light: #DBD4D6;        /* Pantone 5315C (Cinza Claro) */
+            --text-main: #FFFFFF;          /* Pantone White */
+            
+            /* Derivados para UI/UX */
+            --bg-darker: #20201d;          /* Chumbo mais profundo para contraste */
+            --brand-purple-dark: #370e56;  /* Roxo escurecido para degradê */
+            --text-dim: rgba(255, 255, 255, 0.75);
+            
+            --transition: 0.5s cubic-bezier(0.22, 0.97, 0.36, 1);
+            --spacing-section: clamp(80px, 12vw, 140px);
+            --card-radius: 20px;
+            --card-padding: clamp(28px, 4vw, 40px);
+            --glow-yellow: 0 0 15px rgba(255, 199, 0, 0.3);
+        }
+        
+        html { scroll-padding-top: 80px; overflow-x: hidden; }
+        
         body {
-            background-color: var(--bg);
+            background-color: var(--bg-darker);
             color: var(--text-main);
-            font-family: 'Inter', sans-serif;
-            line-height: var(--line-height-text);
+            /* Tipografia Oficial: Paralucent Text */
+            font-family: 'Paralucent Text', 'Paralucent', 'Montserrat', sans-serif;
+            line-height: 1.7;
             -webkit-font-smoothing: antialiased;
-            overflow-wrap: break-word;
+            overflow-x: hidden;
         }
 
-        /* particles background - desativado em mobile para performance */
-        #particles-js {
+        /* Fundo com grade sutil geométrica baseada no roxo oficial */
+        body::before {
+            content: '';
             position: fixed;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            pointer-events: none;
-        }
-        @media (max-width: 768px) {
-            #particles-js { display: none; }
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: radial-gradient(circle at 25% 40%, rgba(89, 23, 138, 0.15) 1.5px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none; z-index: 0;
         }
 
-        /* SCROLLBAR PERSONALIZADA */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #111; }
-        ::-webkit-scrollbar-thumb { background: linear-gradient(#6e2fb5, #ff6b35); border-radius: 10px; }
-        ::selection { background: #ff6b35; color: #fff; }
+        #particles-js { position: fixed; width: 100%; height: 100%; z-index: 1; pointer-events: none; opacity: 0.6; }
+        @media (max-width: 768px) { #particles-js { display: none; } }
+        
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--bg-darker); }
+        ::-webkit-scrollbar-thumb { background: var(--brand-purple); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--brand-yellow); }
+        ::selection { background: var(--brand-yellow); color: var(--brand-dark); }
 
-        /* HEADER MOBILE */
-        .mobile-header {
-            display: none; position: fixed; top: 0; left: 0; width: 100%;
-            background: rgba(3,3,3,0.97); backdrop-filter: blur(15px);
-            padding: 15px 25px; z-index: 1000; justify-content: space-between; align-items: center;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+        /* ---------- NAVBAR (MENU TOP) ---------- */
+        .navbar {
+            position: fixed; top: 0; left: 0; width: 100%; padding: 25px 8%;
+            display: flex; justify-content: space-between; align-items: center; z-index: 1001;
+            transition: var(--transition);
         }
-        .mobile-header img { width: 90px; height: auto; object-fit: contain; filter: brightness(0) saturate(100%) invert(85%) sepia(100%) saturate(1000%) hue-rotate(0deg); }
-        .burger-btn { background: none; border: none; cursor: pointer; display: flex; flex-direction: column; gap: 6px; }
-        .burger-btn span { display: block; width: 25px; height: 2px; background: var(--text-main); transition: 0.3s; }
+        .navbar.scrolled {
+            padding: 10px 8%; background: rgba(54, 54, 48, 0.95);
+            backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(89, 23, 138, 0.4); box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .navbar .logo-img { height: 75px; filter: brightness(0) invert(1); transition: 0.3s; }
+        .navbar.scrolled .logo-img { height: 50px; }
 
-        /* SIDEBAR */
-        .sidebar {
-            position: fixed; left: 0; top: 0; width: var(--sidebar-w); height: 100vh;
-            background: rgba(255, 255, 255, 0.01); backdrop-filter: blur(25px);
-            border-right: 1px solid rgba(255, 255, 255, 0.05);
-            display: flex; flex-direction: column; justify-content: space-between; align-items: center;
-            padding: 50px 0; z-index: 1001; transition: var(--transition);
-        }
-        .logo-box { width: 90px; height: 90px; transition: 0.3s; display: block; margin-bottom: 20px; }
-        .logo-img { width: 100%; height: 100%; object-fit: contain; filter: brightness(0) saturate(100%) invert(85%) sepia(100%) saturate(1000%) hue-rotate(0deg); }
-        .nav-items { list-style: none; width: 100%; text-align: center; }
+        .nav-items { display: flex; gap: 35px; list-style: none; align-items: center; }
         .nav-items a {
-            color: rgba(255, 255, 255, 0.4); text-decoration: none; font-size: 0.65rem;
+            color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.75rem;
             font-weight: 700; text-transform: uppercase; letter-spacing: 2px;
-            transition: 0.4s; display: block; margin: 30px 0; line-height: 1.4;
+            transition: 0.3s; position: relative;
         }
-        .nav-items a:hover, .nav-items a.active { color: var(--orange); }
-        .sidebar-footer { text-align: center; width: 100%; }
-        .back-to-top {
-            width: 45px; height: 45px; border-radius: 50%; background: var(--glass);
-            border: 1px solid rgba(255,255,255,0.1); color: #fff;
-            display: flex; align-items: center; justify-content: center; text-decoration: none;
-            margin: 0 auto 25px; transition: 0.4s; cursor: pointer;
+        .nav-items a::after {
+            content: ''; position: absolute; bottom: -6px; left: 50%;
+            width: 0; height: 2px; background: var(--brand-yellow);
+            transition: 0.3s; transform: translateX(-50%);
         }
-        .back-to-top:hover { background: var(--purple); transform: translateY(-5px); }
-        .copyright { font-size: 9px; opacity: 0.5; text-transform: uppercase; line-height: 1.6; }
+        .nav-items a:hover::after, .nav-items a.active::after { width: 100%; }
+        .nav-items a:hover, .nav-items a.active { color: var(--brand-yellow); text-shadow: var(--glow-yellow); }
 
-        /* COOKIES */
+        .burger-btn { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 6px; z-index: 1002; }
+        .burger-btn span { display: block; width: 28px; height: 2px; background: #fff; transition: 0.3s; }
+
+        /* ---------- OVERLAY MENU MOBILE ---------- */
+        .mobile-nav-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+            background: rgba(54, 54, 48, 0.98); backdrop-filter: blur(10px);
+            z-index: 1000; display: flex; flex-direction: column; justify-content: center; align-items: center;
+            transform: translateY(-100%); transition: 0.5s ease-in-out; opacity: 0;
+        }
+        .mobile-nav-overlay.active { transform: translateY(0); opacity: 1; }
+        .mobile-nav-overlay .nav-items { flex-direction: column; gap: 30px; text-align: center; }
+        .mobile-nav-overlay .nav-items a { font-size: 1.2rem; }
+
+        /* ---------- MODAIS (COOKIE + WHATSAPP) ---------- */
+        .cookie-popup, .whatsapp-modal {
+            background: rgba(54, 54, 48, 0.95); backdrop-filter: blur(16px);
+            border: 1px solid rgba(89, 23, 138, 0.6); border-radius: 24px;
+            box-shadow: 0 25px 45px rgba(0,0,0,0.8), 0 0 0 1px rgba(255,199,0,0.05) inset;
+        }
         .cookie-popup {
             position: fixed; bottom: -100%; left: 50%; transform: translateX(-50%);
-            width: 90%; max-width: 650px; background: rgba(20, 20, 20, 0.98); backdrop-filter: blur(15px);
-            border: 1px solid var(--purple); padding: 30px; border-radius: 20px; z-index: 9999;
-            display: flex; flex-direction: column; gap: 20px; transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+            width: 90%; max-width: 650px; padding: 30px; z-index: 9999;
+            display: flex; flex-direction: column; gap: 20px; transition: 0.6s cubic-bezier(0.2, 0.9, 0.4, 1.1);
         }
         .cookie-popup.show { bottom: 30px; }
-        .btn-cookie { padding: 12px 25px; border-radius: 10px; border: none; cursor: pointer; font-weight: 700; font-size: 0.85rem; }
-        .btn-accept { background: var(--purple); color: white; }
-        .btn-decline { background: transparent; color: white; border: 1px solid rgba(255,255,255,0.2); }
-
-        /* MAIN CONTENT */
-        main { position: relative; z-index: 2; margin-left: var(--sidebar-w); padding: 0 10%; transition: 0.4s; }
-        .section-label {
-            font-size: 0.8rem; text-transform: uppercase; letter-spacing: 6px; color: var(--purple);
-            margin-bottom: 20px; display: block; font-weight: 800;
+        .btn-cookie {
+            padding: 12px 25px; border-radius: 40px; border: none; font-weight: 700;
+            cursor: pointer; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; transition: 0.2s;
+            font-family: 'Paralucent Text', sans-serif;
         }
-
-        /* HERO (com label extra) */
-        .hero { min-height: 100vh; height: auto; display: flex; flex-direction: column; justify-content: center; padding: 100px 0; }
-        .hero-label {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            color: var(--orange);
-            margin-bottom: 20px;
-            display: inline-block;
-            font-weight: 600;
-            background: rgba(255,107,53,0.1);
-            padding: 5px 12px;
-            border-radius: 40px;
-            backdrop-filter: blur(4px);
-        }
-        .typing-container { 
-            font-family: 'Syne', sans-serif; font-size: clamp(2.2rem, 9vw, 5.5rem); 
-            text-transform: uppercase; line-height: 1.2; letter-spacing: -2px; 
-        }
-        .dynamic-text { background: linear-gradient(90deg, var(--purple), var(--orange), var(--yellow)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .cursor { display: inline-block; width: 10px; height: 0.9em; background-color: var(--yellow); margin-left: 8px; vertical-align: middle; animation: blink 0.7s infinite; }
-        @keyframes blink { 50% { opacity: 0; } }
+        .btn-accept { background: var(--brand-yellow); color: var(--brand-dark); box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+        .btn-accept:hover { background: #fff; transform: scale(1.02); }
+        .btn-decline { background: transparent; color: white; border: 1px solid rgba(255,255,255,0.3); }
         
-        .hero p { 
-            max-width: 700px; font-size: clamp(1rem, 2vw, 1.2rem); color: var(--text-dim); 
-            margin-top: 40px; margin-bottom: 40px; border-left: 4px solid var(--purple); padding-left: 30px; 
+        .whatsapp-float {
+            position: fixed; bottom: 35px; right: 35px; width: 60px; height: 60px;
+            background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            z-index: 9998; cursor: pointer; transition: 0.3s; box-shadow: 0 5px 20px rgba(37,211,102,0.4);
         }
+        .whatsapp-float:hover { transform: scale(1.1) rotate(5deg); }
+        
+        .whatsapp-modal {
+            position: fixed; bottom: -100%; right: 35px; width: calc(100% - 70px); max-width: 380px;
+            padding: 32px; z-index: 9999; transition: 0.5s;
+        }
+        .whatsapp-modal.show { bottom: 110px; }
 
-        /* SEÇÕES GERAIS */
-        section { padding: var(--spacing-section) 0; border-bottom: 1px solid rgba(255,255,255,0.03); width: 100%; }
+        /* ---------- MAIN & SECTIONS ---------- */
+        main { position: relative; z-index: 2; padding: 0; }
+        section { padding: var(--spacing-section) 10%; position: relative; z-index: 2; }
+        
+        .section-label {
+            font-size: 0.7rem; text-transform: uppercase; letter-spacing: 5px; color: var(--brand-yellow);
+            margin-bottom: 20px; display: inline-block; font-weight: 800;
+            background: rgba(255,199,0,0.1); padding: 4px 12px; border-radius: 40px; backdrop-filter: blur(2px);
+        }
+        
+        /* Transições suaves entre seções utilizando o Chumbo (#363630) e Roxo (#59178A) */
+        #quem-somos { background: linear-gradient(135deg, var(--bg-darker) 0%, var(--brand-dark) 100%); }
+        #services { background: linear-gradient(135deg, var(--brand-dark) 0%, var(--brand-purple-dark) 100%); }
+        #diferenciais { background: linear-gradient(135deg, var(--brand-purple-dark) 0%, var(--brand-purple) 50%, var(--bg-darker) 100%); }
+        #depoimentos { background: linear-gradient(135deg, var(--bg-darker) 0%, var(--brand-dark) 100%); }
+        #cases { background: linear-gradient(135deg, var(--brand-dark) 0%, var(--bg-darker) 100%); }
+        
+        /* Regra Tipográfica Hierárquica */
         h2 {
-            font-family: 'Syne'; font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 50px;
-            text-transform: uppercase; line-height: 1.2; word-break: break-word;
+            font-weight: 700; /* Bold */
+            font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 45px;
+            text-transform: uppercase; letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #fff, #e0e0ff);
+            background-clip: text; -webkit-background-clip: text; color: transparent;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2); display: inline-block;
+        }
+        h2::after { content: '.'; color: var(--brand-yellow); background: none; -webkit-background-clip: unset; }
+
+        /* ---------- HERO ESTRUTURADO ---------- */
+        .hero {
+            min-height: 100vh; display: flex; align-items: center;
+            padding: 0; position: relative; z-index: 1; overflow: hidden;
+        }
+        .hero-background {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;
+        }
+        .hero-bg-img {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background-position: left center; background-size: cover; background-repeat: no-repeat;
+            opacity: 0; transition: opacity 1.5s ease-in-out;
+        }
+        .hero-bg-img.active { opacity: 1; }
+        
+        /* Overlay Amarelo Oficial na esquerda fluindo para Roxo Oficial na direita */
+        .hero::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(90deg, rgba(255, 199, 0, 0.1) 0%, rgba(89, 23, 138, 0.8) 55%, rgba(89, 23, 138, 0.95) 100%);
+            z-index: 1; pointer-events: none;
         }
 
-        .dna-grid, .services-grid, .investimento-grid, .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-            align-items: stretch;
+        .propulsao-badge {
+            position: absolute; right: -150px; top: 50%; transform: translateY(-50%);
+            animation: rotateBadge 22s linear infinite; pointer-events: none; z-index: 2; opacity: 0.7;
+        }
+        @keyframes rotateBadge { 0% { transform: translateY(-50%) rotate(0deg); } 100% { transform: translateY(-50%) rotate(360deg); } }
+
+        .hero-container {
+            position: relative; z-index: 3; width: 100%; max-width: 1400px; margin: 0 auto;
+            display: flex; justify-content: flex-end; padding: 0 5%;
         }
 
-        /* ESTILO CARDS PADRÃO */
-        .dna-card, .service-card, .inv-card, .testi-card, .stat-card {
-            background: var(--glass);
-            border: 1px solid rgba(255,255,255,0.05);
-            border-radius: var(--card-radius);
-            padding: var(--card-padding);
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            word-wrap: break-word;
+        .hero-content { width: 100%; max-width: 55%; }
+
+        .hero-title {
+            font-weight: 700; font-size: clamp(2.2rem, 4.5vw, 4rem);
+            color: #fff; line-height: 1.15; letter-spacing: -0.01em; margin: 0 0 30px;
+        }
+        .hero-subtitle-top {
+            color: var(--brand-yellow); display: block; font-size: clamp(1.2rem, 2.5vw, 2rem);
+            font-weight: 700; margin-bottom: 10px; text-shadow: 0 0 12px rgba(0,0,0,0.5);
+        }
+        .handwritten-highlight {
+            font-family: 'Gochi Hand', cursive; color: var(--brand-yellow); position: relative;
+            display: inline-block; font-weight: 400; padding-bottom: 5px;
+        }
+        .handwritten-highlight::after {
+            content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px;
+            background-color: var(--brand-yellow); border-radius: 4px; transform: rotate(-1deg);
+        }
+        .btn-prime {
+            font-family: 'Paralucent Text', sans-serif;
+            display: inline-flex; align-items: center; gap: 12px; padding: 16px 38px;
+            background: var(--brand-yellow); color: var(--brand-dark); text-decoration: none; font-weight: 700;
+            font-size: 0.85rem; border-radius: 50px; text-transform: uppercase; letter-spacing: 1.5px;
+            transition: 0.4s; border: none; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        .btn-prime:hover { background: #ffffff; color: var(--brand-dark); transform: translateY(-3px); box-shadow: 0 15px 30px rgba(255, 199, 0, 0.25); }
+        
+        /* ---------- GRIDS E CARDS ---------- */
+        .grid-3, .grid-4 { display: grid; gap: 35px; margin-top: 50px; }
+        .grid-3 { grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); }
+        .grid-4 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+        
+        .card {
+            background: rgba(54, 54, 48, 0.5); /* Chumbo translúcido */
+            backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+            border-radius: var(--card-radius); padding: var(--card-padding);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(89, 23, 138, 0.3);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+            display: flex; flex-direction: column;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: var(--brand-purple);
+            background: rgba(89, 23, 138, 0.2); /* Roxo no hover */
+            box-shadow: 0 20px 40px rgba(89, 23, 138, 0.3), inset 0 0 0 1px rgba(255,199,0,0.1);
+        }
+        .card h3 {
+            font-weight: 700; font-size: 1.3rem; margin-bottom: 15px; text-transform: uppercase;
+            background: linear-gradient(135deg, #fff, #ddd); background-clip: text; -webkit-background-clip: text; color: transparent;
+        }
+        .card p { font-size: 0.95rem; color: var(--text-dim); line-height: 1.6; flex: 1; }
+        .card p strong { color: var(--brand-yellow); font-weight: 700; }
+        
+        .service-card { position: relative; overflow: hidden; }
+        .service-card .card-number {
+            font-weight: 900; font-size: clamp(3rem, 8vw, 4.5rem); color: transparent;
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.12); position: absolute; top: 15px; right: 25px;
+            pointer-events: none; transition: 0.3s;
+        }
+        .service-card:hover .card-number { -webkit-text-stroke: 1px rgba(255, 199, 0, 0.4); transform: scale(1.05); }
+        
+        .dif-icon { font-size: 2.3rem; margin-bottom: 20px; color: var(--brand-yellow); display: inline-block; filter: drop-shadow(0 0 6px rgba(255,199,0,0.4)); }
+        
+        /* ---------- DEPOIMENTOS ---------- */
+        .testimonials-container { position: relative; width: 100%; overflow: hidden; margin-top: 50px; border-radius: 28px; }
+        .testimonials-track { display: flex; transition: transform 0.6s cubic-bezier(0.2, 0.9, 0.4, 1.1); }
+        .testi-card {
+            flex: 0 0 100%; background: rgba(54, 54, 48, 0.5); backdrop-filter: blur(12px);
+            border-left: 5px solid var(--brand-yellow); border-radius: 28px;
+            padding: clamp(30px, 4vw, 50px); margin: 0 15px; box-sizing: border-box; border-top: 1px solid rgba(89,23,138,0.3);
+        }
+        .testi-card .quote { font-size: 1.1rem; line-height: 1.7; color: #f0f0f0; font-style: italic; }
+        .testi-card .author { margin-top: 25px; color: var(--brand-yellow); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
+        .dots { text-align: center; margin-top: 30px; }
+        .dot { width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.25); display: inline-block; margin: 0 8px; cursor: pointer; transition: 0.3s; }
+        .dot.active { background: var(--brand-yellow); transform: scale(1.4); box-shadow: 0 0 8px var(--brand-yellow); }
+        
+        /* ---------- CASES ---------- */
+        .carousel-viewport {
+            width: 100%; overflow: hidden; padding: 50px 0;
+            mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+        }
+        .carousel-track { display: flex; width: max-content; }
+        .carousel-track.animate { animation: scroll 45s linear infinite; }
+        .carousel-track:hover { animation-play-state: paused; }
+        .case-item { width: 280px; margin: 0 20px; text-decoration: none; text-align: center; flex-shrink: 0; transition: 0.4s; }
+        .case-img-box {
+            width: 100%; height: 160px; border-radius: 24px; overflow: hidden; margin-bottom: 20px; filter: grayscale(0.8);
+            transition: 0.5s; background: var(--brand-dark); border: 1px solid rgba(89,23,138,0.3); display: flex; align-items: center; justify-content: center;
+        }
+        .case-item:hover .case-img-box { filter: grayscale(0); transform: translateY(-6px); border-color: var(--brand-yellow); box-shadow: 0 20px 30px rgba(89,23,138,0.4); }
+        .case-img-box img { max-width: 80%; max-height: 70%; object-fit: contain; }
+        .case-item h4 { font-weight: 700; color: #fff; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
+        .case-item span { color: var(--text-dim); font-size: 0.75rem; }
+        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+        /* ---------- BREAK CONVERSION CTA ---------- */
+        .break-conversion {
+            text-align: center; background: radial-gradient(ellipse at center, #ffe047 0%, var(--brand-yellow) 100%);
+            border-radius: 40px; padding: clamp(50px, 8vw, 80px) clamp(20px, 5vw, 40px);
+            margin: var(--spacing-section) 8%; border: none; box-shadow: 0 0 45px rgba(255, 199, 0, 0.2); transition: all 0.4s;
+        }
+        .break-conversion:hover { transform: scale(1.01); box-shadow: 0 0 70px rgba(255, 199, 0, 0.4); }
+        .break-conversion h2 { color: var(--brand-dark); margin-bottom: 15px; background: none; -webkit-background-clip: unset; }
+        .break-conversion h2::after { display: none; }
+        .break-conversion p { color: var(--brand-dark); opacity: 0.8; font-weight: 500; }
+        .break-conversion .btn-prime { background: var(--brand-purple); color: #fff; border-radius: 50px; }
+        .break-conversion .btn-prime:hover { background: var(--brand-purple-dark); box-shadow: 0 10px 25px rgba(0,0,0,0.4); }
+        
+        /* ---------- NOVO FOOTER (ALÍVIO VISUAL OFF-WHITE + AMARELO) ---------- */
+        .site-footer {
+            background-color: var(--brand-light); /* Cinza Claro: Pantone 5315C */
+            color: var(--brand-dark); /* Chumbo: Pantone 447C */
+            padding: 80px 0 0;
             position: relative;
+            z-index: 2;
             overflow: hidden;
         }
 
-        .dna-card:hover { background: var(--gradient-brand); transform: translateY(-10px); border-color: transparent; }
-        .dna-card h3 { font-family: 'Syne'; font-size: 1.1rem; margin-bottom: 15px; color: var(--orange); text-transform: uppercase; }
-        .dna-card p { line-height: var(--line-height-text); font-size: 0.95rem; color: var(--text-dim); flex-grow: 1; }
+        .footer-partners {
+            display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+            gap: clamp(30px, 5vw, 60px); padding: 0 10% 60px;
+            border-bottom: 1px solid rgba(54,54,48,0.1);
+        }
+        .partner-mock {
+            font-weight: 700; font-size: 1.2rem; color: var(--brand-dark); text-transform: uppercase;
+            letter-spacing: -0.5px; display: flex; align-items: center; gap: 10px;
+            opacity: 0.6; transition: 0.3s; cursor: default;
+        }
+        .partner-mock:hover { opacity: 1; color: var(--brand-purple); }
+        .partner-mock i { font-size: 1.8rem; }
 
-        .service-card:hover {
-            background: rgba(110, 47, 181, 0.08);
-            transform: translateY(-10px);
-            border-color: var(--orange);
-            box-shadow: 0 15px 40px rgba(110, 47, 181, 0.3);
-        }
-        .service-card .content-wrapper { position: relative; z-index: 2; display: flex; flex-direction: column; height: 100%; }
-        .service-card p { line-height: var(--line-height-text); font-size: 0.95rem; color: var(--text-dim); flex-grow: 1; }
-        .card-number {
-            font-family: 'Syne'; font-size: clamp(3.5rem, 10vw, 5rem); color: rgba(255, 255, 255, 0.03);
-            position: absolute; top: 15px; right: 25px; font-weight: 800; z-index: 0; pointer-events: none;
-        }
-        #services .service-card h3 {
-            background: linear-gradient(135deg, #6e2fb5, #ff6b35);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-family: 'Syne', sans-serif;
-            font-weight: 800;
-            font-size: 1.2rem;
-            letter-spacing: 1px;
-            margin-bottom: 20px;
-            display: inline-block;
+        .footer-main {
+            display: flex; justify-content: space-between; align-items: flex-end;
+            padding: 60px 10%; position: relative;
         }
 
-        /* INVESTIMENTO */
-        .inv-card.featured { border-color: rgba(255, 107, 53, 0.4); background: linear-gradient(135deg, rgba(110, 47, 181, 0.1), rgba(255, 107, 53, 0.1)); }
-        .inv-category { font-family: 'Syne'; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 3px; color: var(--orange); display: block; margin-bottom: 25px; }
-        .inv-card p { margin: 10px 0; line-height: var(--line-height-text); font-size: 0.95rem; color: var(--text-dim); }
-        .check { color: var(--yellow); font-weight: bold; margin-right: 12px; }
+        .footer-info { max-width: 500px; }
 
-        /* PROVA SOCIAL (STATS) */
-        .stat-card { text-align: center; justify-content: center; align-items: center; background: rgba(255,255,255,0.03); }
-        .stat-number { font-family: 'Syne'; font-size: 3rem; font-weight: 800; background: var(--gradient-brand); -webkit-background-clip: text; background-clip: text; color: transparent; line-height: 1.2; margin-bottom: 10px; }
-        .stat-label { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.8; }
-
-        /* TESTIMONIALS */
-        .testi-carousel-wrapper { width: 100%; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding-bottom: 30px; }
-        .testi-track { display: flex; gap: 30px; }
-        .testi-card { flex: 0 0 min(350px, 85vw); scroll-snap-align: center; }
-        .testi-card p.quote { font-style: italic; line-height: var(--line-height-text); font-size: 1rem; color: var(--text-dim); flex-grow: 1; }
-        .testi-card p.author { margin-top: 25px; color: var(--orange); font-weight: bold; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
-        .dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.2); display: inline-block; margin: 0 6px; cursor: pointer; transition: 0.3s; }
-        .dot.active { background: var(--orange); width: 30px; border-radius: 10px; }
-
-        /* CASES CARROSSEL */
-        .carousel-viewport { width: 100%; overflow: hidden; padding: 50px 0; mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent); }
-        .carousel-track { display: flex; width: max-content; animation: scroll 40s linear infinite; }
-        .carousel-track:hover { animation-play-state: paused; }
-        .case-item { width: 280px; margin: 0 25px; text-decoration: none; text-align: center; display: flex; flex-direction: column; align-items: center; flex-shrink: 0; transition: 0.3s; }
-        .case-img-box { width: 100%; height: 160px; border-radius: 20px; overflow: hidden; margin-bottom: 20px; filter: grayscale(1); transition: 0.5s; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); }
-        .case-item:hover .case-img-box { filter: grayscale(0); transform: translateY(-10px) scale(1.05); border-color: var(--purple); }
-        .case-img-box img { max-width: 80%; max-height: 70%; object-fit: contain; width: auto; height: auto; }
-        .case-item h4 { font-family: 'Syne'; color: #fff; text-transform: uppercase; font-size: 1rem; line-height: 1.4; margin-bottom: 5px; }
-        .case-item span { color: var(--purple); font-size: 0.85rem; font-weight: 700; display: block; }
-        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-330px * 7)); } }
-
-        /* SEÇÃO DE QUEBRA (CONVERSÃO) */
-        .break-conversion {
-            text-align: center;
-            background: linear-gradient(135deg, rgba(110,47,181,0.2), rgba(255,107,53,0.1));
-            border-radius: var(--card-radius);
-            padding: clamp(50px, 8vw, 80px) clamp(20px, 5vw, 40px);
-            margin: var(--spacing-section) 0;
-            border: 1px solid rgba(255,255,255,0.1);
+        .footer-social { display: flex; gap: 15px; margin-bottom: 30px; }
+        .footer-social a {
+            width: 45px; height: 45px; border-radius: 50%;
+            background-color: var(--brand-dark); color: var(--brand-light);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.2rem; transition: 0.3s; text-decoration: none;
         }
-        .break-conversion h2 {
-            margin-bottom: 20px;
-        }
-        .break-conversion p {
-            max-width: 700px;
-            margin: 0 auto 40px;
-            font-size: 1.2rem;
-            color: var(--text-dim);
+        .footer-social a:hover { background-color: var(--brand-purple); color: #fff; transform: translateY(-5px); }
+
+        .footer-details { font-size: 0.85rem; line-height: 1.6; color: var(--brand-dark); }
+        .footer-details strong { display: block; font-size: 1rem; font-weight: 700; margin-bottom: 8px; text-transform: uppercase;}
+
+        .footer-graphic { position: relative; display: flex; align-items: flex-end; }
+        .footer-graphic img { width: 180px; filter: brightness(0) opacity(0.85); z-index: 2; }
+
+        .pattern-pluses {
+            position: absolute; right: 120%; bottom: 20px;
+            width: 120px; height: 120px;
+            background-image: radial-gradient(var(--brand-purple) 1.5px, transparent 1.5px);
+            background-size: 25px 25px; opacity: 0.25; z-index: 1;
         }
 
-        /* CONTATO */
-        .contact-clean-box { max-width: 800px; width: 100%; padding: clamp(50px, 8vw, 100px) clamp(30px, 5vw, 50px); background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: var(--card-radius); backdrop-filter: blur(10px); margin: 0 auto; text-align: center; }
-        .contact-clean-box h2 { margin-bottom: 50px; }
-        .social-links-minimal { margin-top: 50px; display: flex; justify-content: center; gap: 30px; }
-        .social-links-minimal a { color: #fff; font-size: 1.5rem; transition: 0.3s; opacity: 0.7; }
-        .social-links-minimal a:hover { opacity: 1; color: var(--orange); transform: translateY(-3px); }
-
-        /* WHATSAPP */
-        .whatsapp-float { position: fixed; bottom: 35px; right: 35px; width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 9998; cursor: pointer; transition: 0.3s; box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3); }
-        .whatsapp-float:hover { transform: scale(1.1); }
-        .whatsapp-modal { position: fixed; bottom: -100%; right: 35px; width: calc(100% - 70px); max-width: 350px; background: rgba(20, 20, 20, 0.98); backdrop-filter: blur(15px); border: 1px solid #25D366; border-radius: 20px; padding: 30px; z-index: 9999; transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1); }
-        .whatsapp-modal.show { bottom: 110px; }
-        .whatsapp-modal h4 { font-family: 'Syne'; color: #25D366; margin-bottom: 15px; font-size: 1.1rem; }
-        .whatsapp-modal p { margin-bottom: 25px; font-size: 0.9rem; line-height: 1.6; }
-
-        .btn-prime {
-            display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-            padding: 18px 35px; background: var(--gradient-brand);
-            color: white; text-decoration: none; font-weight: 700; font-size: 0.9rem; border-radius: 60px;
-            text-transform: uppercase; letter-spacing: 1.5px; transition: 0.4s; border: none; cursor: pointer;
+        .footer-bottom {
+            background-color: var(--brand-yellow);
+            color: var(--brand-dark);
+            padding: 20px 10%; text-align: left; font-size: 0.85rem; font-weight: 600;
+            display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;
         }
-        .btn-prime:hover { transform: scale(1.05); box-shadow: 0 15px 30px rgba(110, 47, 181, 0.4); }
+        .footer-bottom a { color: var(--brand-dark); text-decoration: none; }
+        .footer-bottom a:hover { text-decoration: underline; color: var(--brand-purple); }
 
-        /* ANIMAÇÕES REVEAL */
-        .reveal { opacity: 0; transform: translateY(40px); transition: 0.8s ease; }
+        /* ---------- ANIMAÇÃO DE REVELAÇÃO ---------- */
+        .reveal { opacity: 0; transform: translateY(40px); transition: 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1); }
         .reveal-active { opacity: 1; transform: translateY(0); }
 
+        /* ---------- RESPONSIVO ---------- */
         @media (max-width: 900px) {
-            .mobile-header { display: flex; }
-            .sidebar { transform: translateX(-100%); width: 280px; background: #030303; }
-            .sidebar.active { transform: translateX(0); }
-            main { margin-left: 0; padding: 0 5%; }
-            .dna-grid, .services-grid, .investimento-grid, .stats-grid { grid-template-columns: 1fr; }
+            .navbar { padding: 15px 5%; }
+            .navbar .logo-img { height: 50px; }
+            .nav-items { display: none; }
+            .burger-btn { display: flex; }
+            
+            .hero::before {
+                /* No mobile, o gradiente sobe invertido para cobrir o texto na base */
+                background: linear-gradient(180deg, rgba(255, 199, 0, 0.15) 0%, rgba(89, 23, 138, 0.6) 40%, rgba(89, 23, 138, 0.95) 100%);
+            }
+            .hero-bg-img { background-position: center top; }
+            .hero-container { align-items: flex-end; padding-bottom: 15%; justify-content: center; }
+            .hero-content { max-width: 100%; text-align: center; }
+            
+            section { padding: var(--spacing-section) 5%; }
+            .propulsao-badge {
+                right: auto; left: 50%; top: 30%; transform: translate(-50%, -50%); opacity: 0.25; scale: 0.8; }
+            .grid-3, .grid-4 { grid-template-columns: 1fr; gap: 25px; }
+            .whatsapp-float { right: 20px; bottom: 20px; }
+            .whatsapp-modal { right: 20px; width: calc(100% - 40px); }
+            .card { padding: 28px; }
+            .break-conversion { margin: var(--spacing-section) 5%; }
+
+            /* Responsividade do Footer */
+            .footer-main { flex-direction: column; align-items: flex-start; gap: 50px; padding: 50px 5%; }
+            .footer-bottom { flex-direction: column; text-align: center; justify-content: center; padding: 20px 5%; }
+            .pattern-pluses { display: none; }
+            .footer-graphic img { width: 140px; }
+            .footer-partners { padding: 0 5% 40px; }
         }
-        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+        @media (max-width: 480px) {
+            .btn-prime { padding: 14px 28px; font-size: 0.75rem; }
+            .card { padding: 22px; }
+            .testi-card .quote { font-size: 0.95rem; }
+            .partner-mock { font-size: 0.9rem; }
+            .partner-mock i { font-size: 1.3rem; }
+        }
     </style>
 </head>
 <body>
-    <div id="particles-js"></div>
 
-    <div class="whatsapp-float" id="whatsappFloatBtn" role="button" aria-label="Abrir WhatsApp">
-        <i class="fab fa-whatsapp" style="font-size:32px; color:white;"></i>
-    </div>
-    <div class="whatsapp-modal" id="whatsappModal">
-        <button onclick="toggleWhatsAppModal()" style="position:absolute; top:15px; right:15px; background:none; border:none; color:#fff; font-size:1.8rem; cursor:pointer;">&times;</button>
-        <h4>Conversar no WhatsApp</h4>
-        <p>Sua presença digital merece estratégia. Vamos projetar o futuro da sua marca?</p>
-        <a href="https://wa.me/5511999778996" target="_blank" rel="noopener" class="btn-prime" style="width:100%;">Iniciar Conversa</a>
-    </div>
+<div id="particles-js"></div>
 
-    <div class="cookie-popup" id="cookiePopup">
-        <p style="font-size:0.9rem;">Utilizamos cookies para personalizar sua experiência. Ao continuar, você concorda com nossa Política de Privacidade.</p>
-        <div style="display:flex; gap:15px;">
-            <button class="btn-cookie btn-accept" onclick="acceptCookies()">Aceitar</button>
-            <button class="btn-cookie btn-decline" onclick="closeCookie()">Fechar</button>
+<!-- WhatsApp flutuante -->
+<div class="whatsapp-float" id="whatsappFloatBtn" aria-label="Fale pelo WhatsApp">
+    <i class="fab fa-whatsapp" style="font-size:32px; color:white;"></i>
+</div>
+
+<!-- Modal WhatsApp -->
+<div class="whatsapp-modal" id="whatsappModal">
+    <button onclick="toggleWhatsAppModal()" style="position:absolute; top:18px; right:18px; background:none; border:none; color:#aaa; font-size:1.8rem; cursor:pointer;">&times;</button>
+    <h4>Otimize seus resultados</h4>
+    <p style="color:var(--text-dim); font-size:0.9rem; margin-bottom: 20px;">Fale agora com nossos consultores e descubra como escalar suas vendas de forma previsível.</p>
+    <a href="https://wa.me/5511999778996" target="_blank" rel="noopener noreferrer" class="btn-prime" style="width:100%; background:#25D366; color:var(--brand-dark); justify-content:center;">Iniciar Diagnóstico →</a>
+</div>
+
+<!-- Cookie popup -->
+<div class="cookie-popup" id="cookiePopup">
+    <p style="font-size:0.9rem; color:var(--text-dim);">Utilizamos cookies para métricas e melhoria da experiência do usuário. Ao continuar, você concorda com nossa <strong style="color:#fff;">Política de Privacidade</strong>.</p>
+    <div style="display:flex; gap:15px;">
+        <button class="btn-cookie btn-accept" onclick="acceptCookies()">Concordar</button>
+        <button class="btn-cookie btn-decline" onclick="closeCookie()">Recusar</button>
+    </div>
+</div>
+
+<!-- Navbar Topo -->
+<nav class="navbar" id="navbar">
+    <a href="#home"><img src="logo.png" alt="Redesigner Home" class="logo-img"></a>
+    <ul class="nav-items">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#quem-somos">A Agência</a></li>
+        <li><a href="#services">Soluções</a></li>
+        <li><a href="#diferenciais">Expertise</a></li>
+        <li><a href="#cases">Cases</a></li>
+        <li><a href="#contato">Contato</a></li>
+    </ul>
+    <button class="burger-btn" onclick="toggleMobileMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+<!-- Menu Overlay para Mobile -->
+<div class="mobile-nav-overlay" id="mobileMenu">
+    <ul class="nav-items" style="display: flex;">
+        <li><a href="#home" onclick="toggleMobileMenu()">Home</a></li>
+        <li><a href="#quem-somos" onclick="toggleMobileMenu()">A Agência</a></li>
+        <li><a href="#services" onclick="toggleMobileMenu()">Soluções</a></li>
+        <li><a href="#diferenciais" onclick="toggleMobileMenu()">Expertise</a></li>
+        <li><a href="#cases" onclick="toggleMobileMenu()">Cases</a></li>
+        <li><a href="#contato" onclick="toggleMobileMenu()">Contato</a></li>
+    </ul>
+</div>
+
+<main>
+    <!-- ==================== HERO ==================== -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-bg-img active" style="background-image: url('img.png');"></div>
+            <div class="hero-bg-img" style="background-image: url('img1.png');"></div>
         </div>
-    </div>
 
-    <header class="mobile-header">
-        <img src="logo.png" alt="Logo ReDesigner" width="90" height="90">
-        <button class="burger-btn" onclick="toggleMenu()" aria-label="Menu">
-            <span></span><span></span><span></span>
-        </button>
-    </header>
-
-    <nav class="sidebar" id="sidebar">
-        <a href="#home" class="logo-box">
-            <img src="logo.png" alt="Redesigner PPM" class="logo-img" width="90" height="90" loading="eager">
-        </a>
-        <ul class="nav-items">
-            <li><a href="#home" onclick="closeMenu()">Home</a></li>
-            <li><a href="#quem-somos" onclick="closeMenu()">Quem Somos</a></li>
-            <li><a href="#services" onclick="closeMenu()">Serviços</a></li>
-            <li><a href="#investimento" onclick="closeMenu()">Investimento</a></li>
-            <li><a href="#resultados" onclick="closeMenu()">Resultados</a></li>
-            <li><a href="#depoimentos" onclick="closeMenu()">Depoimentos</a></li>
-            <li><a href="#cases" onclick="closeMenu()">Cases</a></li>
-            <li><a href="#contato" onclick="closeMenu()">Contato</a></li>
-        </ul>
-        <div class="sidebar-footer">
-            <a href="#home" class="back-to-top">↑</a>
-            <div class="copyright">© 2019 REDESIGNER PPM <br>AGÊNCIA DIGITAL</div>
+        <div class="propulsao-badge">
+            <svg viewBox="0 0 200 200" width="300" height="300">
+                <path id="circle-path" d="M 100, 20 a 80,80 0 1,1 -0.1,0" fill="none" />
+                <text fill="var(--brand-yellow)" font-size="14" font-weight="700" letter-spacing="4" font-family="'Paralucent Text', 'Montserrat', sans-serif">
+                    <textPath href="#circle-path" startOffset="0%">PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • </textPath>
+                </text>
+            </svg>
         </div>
-    </nav>
 
-    <main>
-        <section id="home" class="hero" style="border-bottom:none;">
-            <span class="hero-label">Agência de Marketing e Performance</span>
-            <div class="typing-container">
-                <span class="prefix">RE</span><span class="dynamic-text" id="text"></span><span class="cursor"></span>
-            </div>
-            <p>Criatividade com estratégia para transformar sua presença digital em crescimento real, autoridade e vendas consistentes.</p>
-            <div class="hero-cta">
-                <a href="#contato" class="btn-prime">Quero crescer minha empresa</a>
-            </div>
-        </section>
-
-        <section id="quem-somos">
-            <span class="section-label">DNA ReDesigner</span>
-            <h2>Impulsionando sua Presença Digital</h2>
-            <div style="max-width: 950px;">
-                <p style="margin-bottom: 35px; font-size: 1.1rem; color: var(--text-dim); line-height: 1.8;">
-                    Ajudamos empresas a sair do comum e construir uma presença digital estratégica, com posicionamento, autoridade e crescimento consistente.
-                </p>
-                <div class="dna-grid">
-                    <div class="dna-card">
-                        <h3>Estratégias Personalizadas</h3>
-                        <p>Cada negócio é único. Criamos estratégias sob medida para atrair, engajar e converter o público certo.</p>
-                    </div>
-                    <div class="dna-card">
-                        <h3>Criatividade e Posicionamento</h3>
-                        <p>Não criamos apenas conteúdo, criamos percepção de valor e diferenciação real no mercado.</p>
-                    </div>
-                    <div class="dna-card">
-                        <h3>Crescimento Contínuo</h3>
-                        <p>Acompanhamos, analisamos e evoluímos constantemente para garantir resultados reais e escaláveis.</p>
-                    </div>
+        <!-- Divisão estrutural garantindo que o texto fique 100% à direita -->
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="hero-subtitle-top">A sua Agência de Marketing.</span>
+                    Construímos o relacionamento<br>
+                    da <span class="handwritten-highlight">sua marca.</span>
+                </h1>
+                <div>
+                    <a href="#contato" class="btn-prime">Solicitar Consultoria</a>
                 </div>
             </div>
-        </section>
-
-        <section id="services">
-            <span class="section-label">O que fazemos</span>
-            <h2>Nossas Soluções</h2>
-            <div class="services-grid">
-                <div class="service-card"><div class="card-number">01</div><div class="content-wrapper"><h3>PESQUISA & CRIAÇÃO</h3><p>Descobrimos o que torna sua marca única e transformamos isso em comunicação estratégica que chama atenção e gera interesse.</p></div></div>
-                <div class="service-card"><div class="card-number">02</div><div class="content-wrapper"><h3>CONTEÚDO E GESTÃO</h3><p>Criamos conteúdo que posiciona sua marca, fortalece autoridade e mantém seu público engajado todos os dias.</p></div></div>
-                <div class="service-card"><div class="card-number">03</div><div class="content-wrapper"><h3>MONITORAMENTO E PERFORMANCE</h3><p>Analisamos dados e ajustamos estratégias continuamente para maximizar resultados e crescimento.</p></div></div>
-            </div>
-        </section>
-
-        <section id="investimento">
-            <span class="section-label">Investimento</span>
-            <h2>Estratégias sob medida</h2>
-            <p style="max-width: 800px; margin-bottom: 30px; color: var(--text-dim);">
-                Escolha o nível de crescimento que sua empresa precisa e comece a construir uma presença digital forte e estratégica.
-            </p>
-            <div class="investimento-grid">
-                <div class="inv-card"><span class="inv-category">Setup & Identidade</span><div><p><span class="check">✓</span> Otimização de Perfil (Bio/Foto)</p><p><span class="check">✓</span> Presença no Facebook</p><p><span class="check">✓</span> Curadoria de Imagens Profissionais</p></div></div>
-                <div class="inv-card featured"><span class="inv-category">Gestão & Escala</span><div><p><span class="check">✓</span> Copywriting Estratégico</p><p><span class="check">✓</span> Relatórios de Performance Mensais</p><p><span class="check">✓</span> Consultoria e Suporte Prioritário</p></div></div>
-            </div>
-        </section>
-
-        <section id="resultados">
-            <span class="section-label">Resultados Reais</span>
-            <h2>Resultados que impactam diretamente seu crescimento</h2>
-            <div class="stats-grid">
-                <div class="stat-card"><div class="stat-number">+120%</div><div class="stat-label">aumento em leads</div></div>
-                <div class="stat-card"><div class="stat-number">+80%</div><div class="stat-label">crescimento engajamento</div></div>
-                <div class="stat-card"><div class="stat-number">+50</div><div class="stat-label">empresas atendidas</div></div>
-                <div class="stat-card"><div class="stat-number">5+</div><div class="stat-label">anos no mercado</div></div>
-            </div>
-        </section>
-
-        <section id="depoimentos">
-            <span class="section-label">Feedbacks</span>
-            <h2>O que nossos parceiros dizem</h2>
-            <div class="testi-carousel-wrapper"><div class="testi-track"><div class="testi-card"><p class="quote">"A visibilidade que ganhamos com o trabalho estratégico da ReDesigner superou todas as expectativas."</p><p class="author">Ricardo S. – Diretor Industrial | +120% em leads</p></div><div class="testi-card"><p class="quote">"Pela primeira vez temos uma identidade visual que realmente passa confiança ao mercado."</p><p class="author">Ana Paula M. – Empresária | Marca reposicionada</p></div></div></div>
-            <div style="text-align:center; margin-top:20px;"><span class="dot active"></span><span class="dot"></span></div>
-        </section>
-
-        <section id="cases">
-            <span class="section-label">Portfólio Ativo</span>
-            <h2>Cases de Sucesso</h2>
-            <div class="carousel-viewport"><div class="carousel-track">
-                <a href="https://hotelparadiesexpress.com.br/" class="case-item" target="_blank" rel="noopener noreferrer"><div class="case-img-box"><img src="paradies.png" alt="Hotel Paradies" loading="lazy" width="200" height="100"></div><h4>Hotel Paradies</h4><span>Social Media + Site</span></a>
-                <a href="http://rgetiquetas.com.br/" class="case-item" target="_blank" rel="noopener noreferrer"><div class="case-img-box"><img src="rg-etiquetas.png" alt="RG Etiquetas" loading="lazy"></div><h4>RG Etiquetas</h4><span>Ads, Social + Site</span></a>
-                <a href="https://www.dorvet.com.br/" class="case-item" target="_blank" rel="noopener noreferrer"><div class="case-img-box"><img src="dorvet.png" alt="Dorvet" loading="lazy"></div><h4>Dorvet</h4><span>Criação de Site</span></a>
-                <a href="https://tiojuniortaxipet.com.br/" class="case-item" target="_blank" rel="noopener noreferrer"><div class="case-img-box"><img src="taxipet.png" alt="Taxi Pet" loading="lazy"></div><h4>Tio Júnior Taxi Pet</h4><span>Tráfego Pago + Site</span></a>
-                <a href="https://jardinpaysan.com.br/" class="case-item" target="_blank" rel="noopener noreferrer"><div class="case-img-box"><img src="jardin-paysan.png" alt="Jardin Paysan" loading="lazy"></div><h4>Jardin Paysan</h4><span>Conteúdo + Site</span></a>
-                <a href="https://mibportoes.com.br/" class="case-item" target="_blank" rel="noopener noreferrer"><div class="case-img-box"><img src="mib-portoes.png" alt="MIB Portões" loading="lazy"></div><h4>MIB Portões</h4><span>Criação de Site</span></a>
-                <a href="#/" class="case-item"><div class="case-img-box"><img src="logo-ideale.png" alt="Odontologia Ideale" loading="lazy"></div><h4>Odontologia Ideale</h4><span>Criação de Site</span></a>
-                <a href="#/" class="case-item"><div class="case-img-box"><img src="m-furtado.png" alt="Grupo M. Furtado" loading="lazy"></div><h4>Grupo M. Furtado</h4><span>Criação de Site</span></a>
-            </div></div>
-            <div style="text-align: center; margin-top: 60px;"><a href="https://wa.me/5511999778996?text=Olá! Vi os cases da ReDesigner e gostaria de um projeto similar para minha empresa." target="_blank" rel="noopener noreferrer" class="btn-prime">Quero resultados como esses</a></div>
-        </section>
-
-        <!-- SEÇÃO DE QUEBRA (CONVERSÃO) -->
-        <div class="break-conversion">
-            <h2>Sua empresa está pronta para o próximo nível?</h2>
-            <p>Se você quer mais visibilidade, mais autoridade e mais clientes, o próximo passo começa agora.</p>
-            <a href="#contato" class="btn-prime">Falar com especialista</a>
         </div>
+    </section>
 
-        <section id="contato">
-            <div class="contact-clean-box">
-                <span class="section-label">Contato Direto</span>
-                <h2>Pronto para crescer de verdade no digital?</h2>
-                <a href="https://wa.me/5511999778996" target="_blank" rel="noopener" class="btn-prime" style="margin-bottom:20px;"><i class="fab fa-whatsapp"></i> Quero mais clientes</a>
-                <div class="social-links-minimal">
-                    <a href="https://www.instagram.com/agenciaredesigner" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/agenciaredesigner" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="mailto:atendimento@redesigner.com.br" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
-                </div>
+    <!-- ==================== QUEM SOMOS ==================== -->
+    <section id="quem-somos">
+        <span class="section-label">DNA Redesigner</span>
+        <h2>Foco Absoluto em Resultados</h2>
+        <div style="max-width: 1000px; margin-bottom: 50px;">
+            <p style="margin-bottom: 25px; font-size: 1.05rem; color: var(--text-dim);">Desde 2019, a <strong>Redesigner</strong> atua como o braço estratégico de marketing para empresas que buscam ir além das métricas de vaidade. Somos especialistas na estruturação e gestão de canais digitais focados na atração, retenção e conversão de clientes qualificados (B2B e B2C).</p>
+            <p style="margin-bottom: 25px; font-size: 1.05rem; color: var(--text-dim);">Nossa metodologia integra análise de dados, criatividade orientada à performance e desenvolvimento de infraestrutura digital (Sites e Landing Pages de alta conversão). Trabalhamos com transparência e relatórios precisos para garantir o melhor ROI do seu investimento.</p>
+        </div>
+        <div class="grid-3">
+            <div class="card"><h3>Nossa Missão</h3><p>Desenvolver e executar estratégias de marketing digital de alta precisão, impulsionando a lucratividade e o valor de mercado dos nossos parceiros de negócios.</p></div>
+            <div class="card"><h3>Nossa Visão</h3><p>Consolidar-nos como a agência de performance referência em São Paulo, reconhecida pelo compromisso técnico e impacto real no faturamento dos clientes.</p></div>
+            <div class="card"><h3>Nossos Valores</h3><p><strong>Decisões por Dados:</strong> Achismos não escalam negócios.<br><strong>Parceria Estratégica:</strong> O seu sucesso viabiliza o nosso.<br><strong>Transparência:</strong> Clareza total nos investimentos.<br><strong>Inovação:</strong> Adaptação rápida ao mercado.</p></div>
+        </div>
+    </section>
+
+    <!-- ==================== SERVIÇOS ==================== -->
+    <section id="services">
+        <span class="section-label">Nossas Soluções</span>
+        <h2>Metodologia de Escala</h2>
+        <div class="grid-4">
+            <div class="card service-card"><div class="card-number">01</div><h3>Auditoria & Dados</h3><p>Mapeamento de mercado, análise de concorrência e identificação de gargalos comerciais no seu funil de vendas digital.</p></div>
+            <div class="card service-card"><div class="card-number">02</div><h3>Gestão de Tráfego</h3><p>Criação e otimização contínua de campanhas em Google Ads e Meta Ads com foco implacável em CPA (Custo por Aquisição).</p></div>
+            <div class="card service-card"><div class="card-number">03</div><h3>Posiciona-<br>mento</h3><p>Gestão de redes sociais e produção de conteúdo corporativo que transmite autoridade e eleva o ticket médio da sua marca.</p></div>
+            <div class="card service-card"><div class="card-number">04</div><h3>Infra-<br>estrutura Web</h3><p>Desenvolvimento de sites institucionais e Landing Pages com UX/UI voltados exclusivamente para captação de leads.</p></div>
+        </div>
+    </section>
+
+    <!-- ==================== DIFERENCIAIS ==================== -->
+    <section id="diferenciais">
+        <span class="section-label">Vantagem Competitiva</span>
+        <h2>Por que ser um parceiro?</h2>
+        <div class="grid-3">
+            <div class="card"><div class="dif-icon"><i class="fas fa-chart-line"></i></div><h3>Estratégia Custo-<br>mizada</h3><p>Sua operação é única. Desenvolvemos planejamentos sob medida com base nas especificidades do seu mercado de atuação.</p></div>
+            <div class="card"><div class="dif-icon"><i class="fas fa-bullseye"></i></div><h3>Foco em ROI</h3><p>Cada ação, post ou campanha publicitária é estruturada para retornar o investimento. Monitoramos o funil de ponta a ponta.</p></div>
+            <div class="card"><div class="dif-icon"><i class="fas fa-laptop-code"></i></div><h3>Multidisciplinar</h3><p>De programadores a especialistas em copy corporativo, uma equipe completa atuando como seu departamento de marketing.</p></div>
+        </div>
+    </section>
+
+    <!-- ==================== DEPOIMENTOS ==================== -->
+    <section id="depoimentos">
+        <span class="section-label">Nossa Reputação</span>
+        <h2>O impacto no mercado</h2>
+        <div class="testimonials-container">
+            <div class="testimonials-track" id="testimonialTrack">
+                <div class="testi-card"><p class="quote">"A reestruturação digital feita pela equipe transformou nosso comercial. Triplicamos o volume de leads qualificados no B2B em apenas 6 meses de operação conjunta."</p><p class="author">— Ricardo Silva / Setor Industrial</p></div>
+                <div class="testi-card"><p class="quote">"Profissionalismo desde o diagnóstico inicial até os relatórios de performance. Conseguimos baixar nosso CAC em 40% através da gestão de tráfego."</p><p class="author">— Ana Paula Melo / Varejo Premium</p></div>
+                <div class="testi-card"><p class="quote">"Uma agência que finalmente entende de negócios e não apenas de design. O site desenvolvido converte visitantes em clientes diariamente."</p><p class="author">— Carlos Dutra / Serviços Veterinários</p></div>
             </div>
-        </section>
-    </main>
+        </div>
+        <div class="dots" id="testimonialDots"></div>
+    </section>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
-    <script>
-        (function() {
-            // Typing effect (original)
-            const words = ["CRIE", "INVENTE", "DESIGNER"];
-            let wordIdx = 0, charIdx = 0, deleting = false;
-            function type() {
-                const target = document.getElementById("text");
-                if(!target) return;
-                const word = words[wordIdx];
-                target.textContent = word.substring(0, charIdx);
-                let speed = deleting ? 50 : 150;
-                if(!deleting && charIdx === word.length) { speed = 2000; deleting = true; }
-                else if(deleting && charIdx === 0) { deleting = false; wordIdx = (wordIdx+1)%words.length; speed = 500; }
-                charIdx = deleting ? charIdx - 1 : charIdx + 1;
-                setTimeout(type, speed);
-            }
+    <!-- ==================== CASES ==================== -->
+    <section id="cases">
+        <span class="section-label">Portfólio Ativo</span>
+        <h2>Empresas que escalam conosco</h2>
+        <div class="carousel-viewport">
+            <div class="carousel-track" id="casesTrack">
+                <a href="https://hotelparadiesexpress.com.br/" class="case-item" target="_blank" rel="noopener noreferrer"><div class="case-img-box"><img src="paradies.png" alt="Hotel Paradies" loading="lazy"></div><h4>Hotel Paradies</h4><span>Infraestrutura + Tráfego</span></a>
+                <a href="http://rgetiquetas.com.br/" class="case-item" target="_blank" rel="noopener noreferrer"><div class="case-img-box"><img src="rg-etiquetas.png" alt="RG Etiquetas" loading="lazy"></div><h4>RG Etiquetas</h4><span>Performance B2B</span></a>
+                <a href="https://www.dorvet.com.br/" class="case-item" target="_blank" rel="noopener noreferrer"><div class="case-img-box"><img src="dorvet.png" alt="Dorvet" loading="lazy"></div><h4>Dorvet</h4><span>Criação de Site Web</span></a>
+                <a href="https://tiojuniortaxipet.com.br/" class="case-item" target="_blank" rel="noopener noreferrer"><div class="case-img-box"><img src="taxipet.png" alt="Tio Júnior Taxi Pet" loading="lazy"></div><h4>Tio Júnior Taxi Pet</h4><span>Tráfego + Captação</span></a>
+                <a href="https://jardinpaysan.com.br/" class="case-item" target="_blank" rel="noopener noreferrer"><div class="case-img-box"><img src="jardin-paysan.png" alt="Jardin Paysan" loading="lazy"></div><h4>Jardin Paysan</h4><span>Posicionamento de Marca</span></a>
+                <a href="https://mibportoes.com.br/" class="case-item" target="_blank" rel="noopener noreferrer"><div class="case-img-box"><img src="mib-portoes.png" alt="MIB Portões" loading="lazy"></div><h4>MIB Portões</h4><span>Desenvolvimento Web</span></a>
+                <a href="#" class="case-item" target="_blank" rel="noopener noreferrer"><div class="case-img-box"><img src="logo-ideale.png" alt="Odontologia Ideale" loading="lazy"></div><h4>Odontologia Ideale</h4><span>Soluções Digitais</span></a>
+                <a href="https://mfurtadocontabil.com.br/" class="case-item" target="_blank" rel="noopener noreferrer"><div class="case-img-box"><img src="m-furtado.png" alt="M. Furtado Contabilidade" loading="lazy"></div><h4>M. Furtado Contabilidade</h4><span>Desenvolvimento Web</span></a>
+                <a href="#" class="case-item" target="_blank" rel="noopener noreferrer"><div class="case-img-box"><img src="nanda.png" alt="Nanda Turismo" loading="lazy"></div><h4>Nanda Turismo</h4><span>Soluções Digitais</span></a>
+                <a href="#" class="case-item" target="_blank" rel="noopener noreferrer"><div class="case-img-box"><img src="doghood.png" alt="Doghood" loading="lazy"></div><h4>Doghood</h4><span>Desenvolvimento Web</span></a>
+            </div>
+        </div>
+        <div style="text-align:center; margin-top:40px;"><a href="https://wa.me/5511999778996" target="_blank" rel="noopener noreferrer" class="btn-prime">Solicitar Portfólio Completo</a></div>
+    </section>
 
-            // Particles (desktop only)
-            if(window.particlesJS && window.innerWidth > 768) {
-                particlesJS("particles-js", { particles: { number: { value: 40 }, color: { value: "#6e2fb5" }, opacity: { value: 0.2 }, size: { value: 2 }, line_linked: { enable: true, distance: 150, color: "#6e2fb5", opacity: 0.1, width: 1 }, move: { enable: true, speed: 1 } } });
-            }
+    <!-- ==================== BREAK CONVERSION (CTA) ==================== -->
+    <div class="break-conversion">
+        <h2>Sua operação está pronta para o próximo nível?</h2>
+        <p>Agende uma reunião estratégica para entendermos seus desafios de crescimento.</p>
+        <a href="#contato" class="btn-prime" style="margin-top: 15px;">Falar com Especialista</a>
+    </div>
 
-            // SCROLL SUAVE
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    const hash = this.getAttribute('href');
-                    if(hash === "#" || hash === "") return;
-                    const target = document.querySelector(hash);
-                    if(target) {
-                        e.preventDefault();
-                        window.scrollTo({ top: target.offsetTop - 60, behavior: 'smooth' });
-                        if(window.innerWidth <= 900) document.getElementById('sidebar')?.classList.remove('active');
-                    }
-                });
-            });
+</main>
 
-            // SCROLL SPY
-            const sections = document.querySelectorAll("section");
-            const navLinks = document.querySelectorAll(".nav-items a");
-            window.addEventListener("scroll", () => {
-                let current = "";
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    if(scrollY >= sectionTop - 200) current = section.getAttribute("id");
-                });
-                navLinks.forEach(a => {
-                    a.classList.remove("active");
-                    if(a.getAttribute("href") === `#${current}`) a.classList.add("active");
-                });
-            });
+<!-- ==================== NOVO FOOTER (ESTILO AGÊNCIA TRIBO) ==================== -->
+<footer id="contato" class="site-footer">
+    
+    <!-- Logos de Parceiros/Certificações -->
+    <div class="footer-partners reveal">
+        <div class="partner-mock"><i class="fab fa-google"></i> Google Partner</div>
+        <div class="partner-mock"><i class="fab fa-meta"></i> Meta Partner</div>
+        <div class="partner-mock"><i class="fab fa-linkedin"></i> Marketing Partners</div>
+        <div class="partner-mock"><i class="fas fa-medal"></i> GPTW Certificada</div>
+    </div>
 
-            // REVEAL ANIMATION
-            const revealElements = document.querySelectorAll(".dna-card, .service-card, .inv-card, .testi-card, .case-item, .stat-card, .break-conversion");
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add("reveal-active"); });
-            }, { threshold: 0.15 });
-            revealElements.forEach(el => { el.classList.add("reveal"); observer.observe(el); });
-
-            // LAZY IMAGE FALLBACK
-            const imgObserver = new IntersectionObserver((entries, obs) => {
-                entries.forEach(entry => { if(entry.isIntersecting) { const img = entry.target; if(img.dataset.src) img.src = img.dataset.src; obs.unobserve(img); } });
-            });
-            document.querySelectorAll("img").forEach(img => imgObserver.observe(img));
-
-            // EXIT INTENT (modal whatsapp)
-            let exitShown = false;
-            document.addEventListener("mouseleave", (e) => {
-                if(e.clientY <= 0 && !exitShown) { exitShown = true; document.getElementById('whatsappModal')?.classList.add('show'); }
-            });
-
-            // TRACKING
-            function trackEvent(name, label) { if(typeof gtag !== "undefined") gtag("event", name, { event_category: "Engajamento", event_label: label }); }
-            let scrollTracked = false;
-            window.addEventListener("scroll", () => { if(!scrollTracked && window.scrollY > document.body.scrollHeight * 0.5) { scrollTracked = true; trackEvent("scroll_depth", "50%"); } });
+    <div class="footer-main">
+        <div class="footer-info reveal">
+            <div class="footer-social">
+                <a href="https://www.instagram.com/agenciaredesigner" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/agenciaredesigner" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/company/agenciaredesigner/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:atendimento@redesigner.com.br" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
+            </div>
             
-            const waFloat = document.getElementById("whatsappFloatBtn");
-            if(waFloat) waFloat.addEventListener("click", () => { trackEvent("click", "whatsapp_float"); window.open("https://wa.me/5511999778996?text=Olá! Vim pelo site e quero mais clientes 🚀", "_blank"); });
+            <div class="footer-details">
+                <strong>Redesigner - Planejamento, Publicidade e Marketing</strong>
+                <p>São Paulo - SP - Atendimento Nacional</p>
+                <p>CNPJ: 41.142.331/0001-43</p>
+            </div>
+        </div>
 
-            // Start typing
-            type();
-        })();
+        <div class="footer-graphic reveal">
+            <div class="pattern-pluses"></div>
+            <a href="#home"><img src="logo.png" alt="Redesigner Agência Digital"></a>
+        </div>
+    </div>
 
-        // FUNÇÕES GLOBAIS
-        function toggleWhatsAppModal() { document.getElementById('whatsappModal').classList.toggle('show'); }
-        function toggleMenu() { document.getElementById('sidebar').classList.toggle('active'); }
-        function closeMenu() { document.getElementById('sidebar').classList.remove('active'); }
-        function acceptCookies() { localStorage.setItem('redesigner_cookies', 'true'); document.getElementById('cookiePopup').classList.remove('show'); }
-        function closeCookie() { document.getElementById('cookiePopup').classList.remove('show'); }
+    <div class="footer-bottom">
+        <p>© 2019-2026 - Todos os direitos reservados. | Desenvolvido por Redesigner PPM | <a href="#">Nossas Políticas</a></p>
+    </div>
+</footer>
 
-        window.onload = function() {
-            if(!localStorage.getItem('redesigner_cookies')) setTimeout(() => document.getElementById('cookiePopup')?.classList.add('show'), 3000);
-        };
-    </script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+<script>
+    (function() {
+        // Inicialização das partículas
+        if(window.particlesJS && window.innerWidth > 768) {
+            particlesJS("particles-js", {
+                particles: {
+                    number: { value: 45 },
+                    color: { value: "#ffffff" },
+                    opacity: { value: 0.15 },
+                    size: { value: 2 },
+                    line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.05, width: 1 },
+                    move: { enable: true, speed: 0.8 }
+                }
+            });
+        }
+
+        // Navbar blur on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const hash = this.getAttribute('href');
+                if(hash === "#" || hash === "") return;
+                const target = document.querySelector(hash);
+                if(target) {
+                    e.preventDefault();
+                    window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Scroll spy link ativo
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".nav-items a");
+        window.addEventListener("scroll", () => {
+            let current = "";
+            sections.forEach(section => {
+                if(scrollY >= section.offsetTop - 250) current = section.getAttribute("id");
+            });
+            // Adicionando footer ao scroll spy
+            const footer = document.querySelector('.site-footer');
+            if(footer && scrollY >= footer.offsetTop - 250) current = "contato";
+
+            navLinks.forEach(a => {
+                a.classList.remove("active");
+                if(a.getAttribute("href") === `#${current}`) a.classList.add("active");
+            });
+        });
+
+        // Reveal no scroll
+        const reveals = document.querySelectorAll(".card, .testi-card, .case-item, .break-conversion, .reveal");
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if(e.isIntersecting) e.target.classList.add("reveal-active"); });
+        }, { threshold: 0.1 });
+        reveals.forEach(el => { el.classList.add("reveal"); obs.observe(el); });
+
+        // Crossfade do Hero Background (Tribo Effect)
+        const bgImgs = document.querySelectorAll('.hero-bg-img');
+        if(bgImgs.length > 1) {
+            let bgIndex = 0;
+            setInterval(() => {
+                bgImgs[bgIndex].classList.remove('active');
+                bgIndex = (bgIndex + 1) % bgImgs.length;
+                bgImgs[bgIndex].classList.add('active');
+            }, 5000); 
+        }
+
+        // Depoimentos Carrossel
+        const track = document.getElementById('testimonialTrack');
+        const dotsContainer = document.getElementById('testimonialDots');
+        let currentSlide = 0;
+        const cards = track ? Array.from(track.children) : [];
+        if(cards.length) {
+            cards.forEach((_, i) => {
+                const dot = document.createElement('span');
+                dot.classList.add('dot');
+                if(i === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => goToSlide(i));
+                dotsContainer.appendChild(dot);
+            });
+            function goToSlide(index) {
+                currentSlide = index;
+                track.style.transform = `translateX(-${currentSlide * 100}%)`;
+                document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === currentSlide));
+            }
+            setInterval(() => { let next = (currentSlide + 1) % cards.length; goToSlide(next); }, 6000);
+        }
+
+        // Cases carrossel loop infinito
+        const casesTrack = document.getElementById('casesTrack');
+        if(casesTrack) {
+            const items = Array.from(casesTrack.children);
+            items.forEach(item => casesTrack.appendChild(item.cloneNode(true)));
+            casesTrack.classList.add('animate');
+        }
+
+        // Exit intent Modal
+        let exitShown = false;
+        document.addEventListener("mouseleave", (e) => {
+            if(e.clientY <= 0 && !exitShown && !localStorage.getItem('exit_modal')) {
+                exitShown = true;
+                localStorage.setItem('exit_modal','true');
+                document.getElementById('whatsappModal')?.classList.add('show');
+                setTimeout(() => document.getElementById('whatsappModal')?.classList.remove('show'), 8000);
+            }
+        });
+
+        // Floating Zap
+        document.getElementById('whatsappFloatBtn')?.addEventListener('click', () => {
+            window.open("https://wa.me/5511999778996?text=Olá! Vim pelo site e gostaria de agendar uma consultoria estratégica para minha empresa.", "_blank", "noopener");
+        });
+    })();
+
+    function toggleWhatsAppModal() { document.getElementById('whatsappModal').classList.toggle('show'); }
+    function toggleMobileMenu() { 
+        const menu = document.getElementById('mobileMenu');
+        menu.classList.toggle('active');
+        document.querySelector('.burger-btn').classList.toggle('open');
+    }
+    function acceptCookies() { localStorage.setItem('redesigner_cookies', 'true'); document.getElementById('cookiePopup').classList.remove('show'); }
+    function closeCookie() { document.getElementById('cookiePopup').classList.remove('show'); }
+    window.onload = function() { if(!localStorage.getItem('redesigner_cookies')) setTimeout(() => document.getElementById('cookiePopup')?.classList.add('show'), 2500); };
+</script>
 </body>
 </html>
