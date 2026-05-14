@@ -84,6 +84,15 @@
             --card-padding: clamp(28px, 4vw, 40px);
             --glow-yellow: 0 0 15px rgba(255, 199, 0, 0.3);
         }
+
+        /* ---------- CARREGAMENTO DA FONTE MANUSCRITA KGDropsofJupiter ---------- */
+        @font-face {
+            font-family: 'KGDropsofJupiter';
+            src: url('KGDropsofJupiter.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
         
         html { scroll-padding-top: 80px; overflow-x: hidden; }
         
@@ -237,6 +246,15 @@
             z-index: 1; pointer-events: none;
         }
 
+        /* NOVO: faixa de transição suave entre hero e quem-somos */
+        .hero-transition {
+            position: relative;
+            z-index: 2;
+            height: 120px;
+            background: linear-gradient(to bottom, rgba(54,54,48,0.95) 0%, var(--bg-darker) 100%);
+            margin-top: -1px;
+        }
+
         /* Badges decorativos */
         .propulsao-badge {
             position: absolute;
@@ -248,23 +266,10 @@
         }
         .propulsao-badge.right { right: -80px; top: 50%; transform: translateY(-50%); }
         .propulsao-badge.left  { left: -80px; top: 50%; transform: translateY(-50%); }
-        /* Ajustes para tamanhos diferentes (opcional) */
         .propulsao-badge.small { width: 180px; height: 180px; }
         .propulsao-badge.medium { width: 240px; height: 240px; }
         .propulsao-badge.large { width: 300px; height: 300px; }
         
-        @keyframes rotateBadge {
-            0% { transform: translateY(-50%) rotate(0deg); }
-            100% { transform: translateY(-50%) rotate(360deg); }
-        }
-        /* Para os que estão na esquerda, também usamos translateY */
-        .propulsao-badge.left { transform: translateY(-50%) rotate(0deg); }
-        @keyframes rotateBadgeLeft {
-            0% { transform: translateY(-50%) rotate(0deg); }
-            100% { transform: translateY(-50%) rotate(360deg); }
-        }
-        /* Vamos usar a mesma animação, funciona igual. Só precisa da rotação, o translateY já está no seletor base? Não, está no seletor .right/.left separado, e a animação substitui o transform. Precisamos incluir translateY na animação. */
-        /* Reescrevendo para manter translateY */
         @keyframes spinRight {
             0% { transform: translateY(-50%) rotate(0deg); }
             100% { transform: translateY(-50%) rotate(360deg); }
@@ -275,15 +280,6 @@
         }
         .propulsao-badge.right { animation: spinRight 22s linear infinite; }
         .propulsao-badge.left { animation: spinLeft 22s linear infinite; }
-        /* Ajuste para mobile: reduzir opacidade e escala */
-        @media (max-width: 900px) {
-            .propulsao-badge { opacity: 0.15; }
-            .propulsao-badge.right { right: -120px; }
-            .propulsao-badge.left { left: -120px; }
-        }
-        @media (max-width: 480px) {
-            .propulsao-badge { opacity: 0.1; }
-        }
 
         .hero-container {
             position: relative; z-index: 3; width: 100%; max-width: 1400px; margin: 0 auto;
@@ -300,13 +296,25 @@
             color: var(--brand-yellow); display: block; font-size: clamp(1.2rem, 2.5vw, 2rem);
             font-weight: 700; margin-bottom: 10px; text-shadow: 0 0 12px rgba(0,0,0,0.5);
         }
+        /* Nova fonte aplicada apenas aqui */
         .handwritten-highlight {
-            font-family: 'Gochi Hand', cursive; color: var(--brand-yellow); position: relative;
-            display: inline-block; font-weight: 400; padding-bottom: 5px;
+            font-family: 'KGDropsofJupiter', cursive;
+            color: var(--brand-yellow);
+            position: relative;
+            display: inline-block;
+            font-weight: 400;
+            padding-bottom: 5px;
         }
         .handwritten-highlight::after {
-            content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px;
-            background-color: var(--brand-yellow); border-radius: 4px; transform: rotate(-1deg);
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--brand-yellow);
+            border-radius: 4px;
+            transform: rotate(-1deg);
         }
         .btn-prime {
             font-family: 'Paralucent Text', sans-serif;
@@ -494,6 +502,8 @@
             .handwritten-highlight { display: inline; }
             .hero-content .btn-prime { display: inline-flex; margin: 0 auto; }
             
+            .hero-transition { height: 80px; }
+
             .propulsao-badge { opacity: 0.15; }
             .propulsao-badge.right { right: -120px; }
             .propulsao-badge.left { left: -120px; }
@@ -566,6 +576,7 @@
                     rgba(54, 54, 48, 0.7) 100%);
             }
             .hero-bg-img { background-position: center 25%; }
+            .hero-transition { height: 60px; }
             
             p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
             .hero-title, .hero-subtitle-top, h2, h3, h4,
@@ -659,6 +670,9 @@
             </div>
         </div>
     </section>
+
+    <!-- FAIXA DE TRANSIÇÃO SUAVE -->
+    <div class="hero-transition" aria-hidden="true"></div>
 
     <!-- ==================== QUEM SOMOS ==================== -->
     <section id="quem-somos">
@@ -769,7 +783,7 @@
         <div style="text-align:center; margin-top:40px;"><a href="https://wa.me/5511999778996" target="_blank" rel="noopener noreferrer" class="btn-prime">Solicitar Portfólio Completo</a></div>
     </section>
 
-    <!-- ==================== BREAK CONVERSION (sem badge, para não poluir) ==================== -->
+    <!-- ==================== BREAK CONVERSION ==================== -->
     <div class="break-conversion">
         <h2>Sua operação está pronta para o próximo nível?</h2>
         <p>Agende uma reunião estratégica para entendermos seus desafios de crescimento.</p>
