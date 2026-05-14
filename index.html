@@ -60,7 +60,7 @@
         }
     </script>
 
-    <!-- Fonts & Icons (Mantemos Gochi Hand e fallback de Montserrat via Google Fonts) -->
+    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -70,18 +70,14 @@
         /* ---------- RESET & VARIÁVEIS (BRANDBOOK REDESIGNER) ---------- */
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
         :root {
-            /* Cores Oficiais */
-            --brand-yellow: #FFC700;       /* Pantone 7548C */
-            --brand-purple: #59178A;       /* Pantone 267C */
-            --brand-dark: #363630;         /* Pantone 447C (Chumbo Escuro) */
-            --brand-light: #DBD4D6;        /* Pantone 5315C (Cinza Claro) */
-            --text-main: #FFFFFF;          /* Pantone White */
-            
-            /* Derivados para UI/UX */
-            --bg-darker: #20201d;          /* Chumbo mais profundo para contraste */
-            --brand-purple-dark: #370e56;  /* Roxo escurecido para degradê */
+            --brand-yellow: #FFC700;
+            --brand-purple: #59178A;
+            --brand-dark: #363630;
+            --brand-light: #DBD4D6;
+            --text-main: #FFFFFF;
+            --bg-darker: #20201d;
+            --brand-purple-dark: #370e56;
             --text-dim: rgba(255, 255, 255, 0.75);
-            
             --transition: 0.5s cubic-bezier(0.22, 0.97, 0.36, 1);
             --spacing-section: clamp(80px, 12vw, 140px);
             --card-radius: 20px;
@@ -94,14 +90,12 @@
         body {
             background-color: var(--bg-darker);
             color: var(--text-main);
-            /* Tipografia Oficial: Paralucent Text */
             font-family: 'Paralucent Text', 'Paralucent', 'Montserrat', sans-serif;
             line-height: 1.7;
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
         }
 
-        /* Fundo com grade sutil geométrica baseada no roxo oficial */
         body::before {
             content: '';
             position: fixed;
@@ -120,7 +114,7 @@
         ::-webkit-scrollbar-thumb:hover { background: var(--brand-yellow); }
         ::selection { background: var(--brand-yellow); color: var(--brand-dark); }
 
-        /* ---------- NAVBAR (MENU TOP) ---------- */
+        /* ---------- NAVBAR ---------- */
         .navbar {
             position: fixed; top: 0; left: 0; width: 100%; padding: 25px 8%;
             display: flex; justify-content: space-between; align-items: center; z-index: 1001;
@@ -162,7 +156,7 @@
         .mobile-nav-overlay .nav-items { flex-direction: column; gap: 30px; text-align: center; }
         .mobile-nav-overlay .nav-items a { font-size: 1.2rem; }
 
-        /* ---------- MODAIS (COOKIE + WHATSAPP) ---------- */
+        /* ---------- MODAIS ---------- */
         .cookie-popup, .whatsapp-modal {
             background: rgba(54, 54, 48, 0.95); backdrop-filter: blur(16px);
             border: 1px solid rgba(89, 23, 138, 0.6); border-radius: 24px;
@@ -206,16 +200,14 @@
             background: rgba(255,199,0,0.1); padding: 4px 12px; border-radius: 40px; backdrop-filter: blur(2px);
         }
         
-        /* Transições suaves entre seções utilizando o Chumbo (#363630) e Roxo (#59178A) */
         #quem-somos { background: linear-gradient(135deg, var(--bg-darker) 0%, var(--brand-dark) 100%); }
         #services { background: linear-gradient(135deg, var(--brand-dark) 0%, var(--brand-purple-dark) 100%); }
         #diferenciais { background: linear-gradient(135deg, var(--brand-purple-dark) 0%, var(--brand-purple) 50%, var(--bg-darker) 100%); }
         #depoimentos { background: linear-gradient(135deg, var(--bg-darker) 0%, var(--brand-dark) 100%); }
         #cases { background: linear-gradient(135deg, var(--brand-dark) 0%, var(--bg-darker) 100%); }
         
-        /* Regra Tipográfica Hierárquica */
         h2 {
-            font-weight: 700; /* Bold */
+            font-weight: 700;
             font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 45px;
             text-transform: uppercase; letter-spacing: -0.02em;
             background: linear-gradient(135deg, #fff, #e0e0ff);
@@ -224,7 +216,7 @@
         }
         h2::after { content: '.'; color: var(--brand-yellow); background: none; -webkit-background-clip: unset; }
 
-        /* ---------- HERO ESTRUTURADO ---------- */
+        /* ---------- HERO ---------- */
         .hero {
             min-height: 100vh; display: flex; align-items: center;
             padding: 0; position: relative; z-index: 1; overflow: hidden;
@@ -239,18 +231,59 @@
         }
         .hero-bg-img.active { opacity: 1; }
         
-        /* Overlay Amarelo Oficial na esquerda fluindo para Roxo Oficial na direita */
         .hero::before {
             content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
             background: linear-gradient(90deg, rgba(255, 199, 0, 0.1) 0%, rgba(89, 23, 138, 0.8) 55%, rgba(89, 23, 138, 0.95) 100%);
             z-index: 1; pointer-events: none;
         }
 
+        /* Badges decorativos */
         .propulsao-badge {
-            position: absolute; right: -150px; top: 50%; transform: translateY(-50%);
-            animation: rotateBadge 22s linear infinite; pointer-events: none; z-index: 2; opacity: 0.7;
+            position: absolute;
+            z-index: 2;
+            pointer-events: none;
+            animation: rotateBadge 22s linear infinite;
+            opacity: 0.55;
+            transition: opacity 0.3s;
         }
-        @keyframes rotateBadge { 0% { transform: translateY(-50%) rotate(0deg); } 100% { transform: translateY(-50%) rotate(360deg); } }
+        .propulsao-badge.right { right: -80px; top: 50%; transform: translateY(-50%); }
+        .propulsao-badge.left  { left: -80px; top: 50%; transform: translateY(-50%); }
+        /* Ajustes para tamanhos diferentes (opcional) */
+        .propulsao-badge.small { width: 180px; height: 180px; }
+        .propulsao-badge.medium { width: 240px; height: 240px; }
+        .propulsao-badge.large { width: 300px; height: 300px; }
+        
+        @keyframes rotateBadge {
+            0% { transform: translateY(-50%) rotate(0deg); }
+            100% { transform: translateY(-50%) rotate(360deg); }
+        }
+        /* Para os que estão na esquerda, também usamos translateY */
+        .propulsao-badge.left { transform: translateY(-50%) rotate(0deg); }
+        @keyframes rotateBadgeLeft {
+            0% { transform: translateY(-50%) rotate(0deg); }
+            100% { transform: translateY(-50%) rotate(360deg); }
+        }
+        /* Vamos usar a mesma animação, funciona igual. Só precisa da rotação, o translateY já está no seletor base? Não, está no seletor .right/.left separado, e a animação substitui o transform. Precisamos incluir translateY na animação. */
+        /* Reescrevendo para manter translateY */
+        @keyframes spinRight {
+            0% { transform: translateY(-50%) rotate(0deg); }
+            100% { transform: translateY(-50%) rotate(360deg); }
+        }
+        @keyframes spinLeft {
+            0% { transform: translateY(-50%) rotate(0deg); }
+            100% { transform: translateY(-50%) rotate(360deg); }
+        }
+        .propulsao-badge.right { animation: spinRight 22s linear infinite; }
+        .propulsao-badge.left { animation: spinLeft 22s linear infinite; }
+        /* Ajuste para mobile: reduzir opacidade e escala */
+        @media (max-width: 900px) {
+            .propulsao-badge { opacity: 0.15; }
+            .propulsao-badge.right { right: -120px; }
+            .propulsao-badge.left { left: -120px; }
+        }
+        @media (max-width: 480px) {
+            .propulsao-badge { opacity: 0.1; }
+        }
 
         .hero-container {
             position: relative; z-index: 3; width: 100%; max-width: 1400px; margin: 0 auto;
@@ -290,7 +323,7 @@
         .grid-4 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
         
         .card {
-            background: rgba(54, 54, 48, 0.5); /* Chumbo translúcido */
+            background: rgba(54, 54, 48, 0.5);
             backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
             border-radius: var(--card-radius); padding: var(--card-padding);
             transition: all 0.4s ease;
@@ -301,7 +334,7 @@
         .card:hover {
             transform: translateY(-8px);
             border-color: var(--brand-purple);
-            background: rgba(89, 23, 138, 0.2); /* Roxo no hover */
+            background: rgba(89, 23, 138, 0.2);
             box-shadow: 0 20px 40px rgba(89, 23, 138, 0.3), inset 0 0 0 1px rgba(255,199,0,0.1);
         }
         .card h3 {
@@ -355,7 +388,7 @@
         .case-item span { color: var(--text-dim); font-size: 0.75rem; }
         @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-        /* ---------- BREAK CONVERSION CTA ---------- */
+        /* ---------- BREAK CONVERSION ---------- */
         .break-conversion {
             text-align: center; background: radial-gradient(ellipse at center, #ffe047 0%, var(--brand-yellow) 100%);
             border-radius: 40px; padding: clamp(50px, 8vw, 80px) clamp(20px, 5vw, 40px);
@@ -368,10 +401,10 @@
         .break-conversion .btn-prime { background: var(--brand-purple); color: #fff; border-radius: 50px; }
         .break-conversion .btn-prime:hover { background: var(--brand-purple-dark); box-shadow: 0 10px 25px rgba(0,0,0,0.4); }
         
-        /* ---------- NOVO FOOTER (ALÍVIO VISUAL OFF-WHITE + AMARELO) ---------- */
+        /* ---------- FOOTER ---------- */
         .site-footer {
-            background-color: var(--brand-light); /* Cinza Claro: Pantone 5315C */
-            color: var(--brand-dark); /* Chumbo: Pantone 447C */
+            background-color: var(--brand-light);
+            color: var(--brand-dark);
             padding: 80px 0 0;
             position: relative;
             z-index: 2;
@@ -433,7 +466,7 @@
         .reveal { opacity: 0; transform: translateY(40px); transition: 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1); }
         .reveal-active { opacity: 1; transform: translateY(0); }
 
-        /* ---------- RESPONSIVO ---------- */
+        /* ========== RESPONSIVO (APENAS MOBILE) ========== */
         @media (max-width: 900px) {
             .navbar { padding: 15px 5%; }
             .navbar .logo-img { height: 50px; }
@@ -441,34 +474,103 @@
             .burger-btn { display: flex; }
             
             .hero::before {
-                /* No mobile, o gradiente sobe invertido para cobrir o texto na base e amarelar o topo */
-                background: linear-gradient(180deg, rgba(255, 199, 0, 0.15) 0%, rgba(89, 23, 138, 0.6) 40%, rgba(89, 23, 138, 0.95) 100%);
+                background: linear-gradient(180deg, 
+                    rgba(255, 199, 0, 0.08) 0%, 
+                    rgba(89, 23, 138, 0.25) 35%, 
+                    rgba(89, 23, 138, 0.45) 65%, 
+                    rgba(54, 54, 48, 0.75) 100%);
             }
-            .hero-bg-img { background-position: center top; }
-            .hero-container { align-items: flex-end; padding-bottom: 15%; justify-content: center; }
-            .hero-content { max-width: 100%; text-align: center; }
+            .hero-bg-img { background-position: center 28%; background-size: cover; }
+            .hero-container { 
+                align-items: center; justify-content: center; 
+                padding-bottom: 8%; min-height: 100vh; text-align: center;
+            }
+            .hero-content { max-width: 90%; text-align: center; margin: 0 auto; }
+            .hero-title {
+                font-size: clamp(1.8rem, 6vw, 2.6rem);
+                text-align: center; line-height: 1.25; margin-bottom: 25px;
+            }
+            .hero-subtitle-top { text-align: center; font-size: clamp(1rem, 3.5vw, 1.4rem); }
+            .handwritten-highlight { display: inline; }
+            .hero-content .btn-prime { display: inline-flex; margin: 0 auto; }
             
-            section { padding: var(--spacing-section) 5%; }
-            .propulsao-badge { right: auto; left: 50%; top: 30%; transform: translate(-50%, -50%); opacity: 0.25; scale: 0.8; }
-            .grid-3, .grid-4 { grid-template-columns: 1fr; gap: 25px; }
+            .propulsao-badge { opacity: 0.15; }
+            .propulsao-badge.right { right: -120px; }
+            .propulsao-badge.left { left: -120px; }
+            
+            section { padding: var(--spacing-section) 6%; }
+            
+            #quem-somos p,
+            #services .card p,
+            #diferenciais .card p,
+            #depoimentos .testi-card .quote,
+            #cases .case-item span,
+            .break-conversion p,
+            .footer-details p {
+                text-align: justify;
+                hyphens: auto;
+                -webkit-hyphens: auto;
+                text-justify: inter-word;
+            }
+            
+            section h2 { text-align: center; display: block; }
+            section .section-label { display: block; text-align: center; margin-left: auto; margin-right: auto; }
+            .card { text-align: center; }
+            .card p { text-align: justify; }
+            .card h3 { text-align: center; }
+            .dif-icon { display: block; text-align: center; }
+            
+            .grid-3, .grid-4 { 
+                grid-template-columns: 1fr; gap: 25px; 
+                max-width: 500px; margin-left: auto; margin-right: auto;
+            }
+            
             .whatsapp-float { right: 20px; bottom: 20px; }
             .whatsapp-modal { right: 20px; width: calc(100% - 40px); }
             .card { padding: 28px; }
-            .break-conversion { margin: var(--spacing-section) 5%; }
-
-            /* Responsividade do Footer */
-            .footer-main { flex-direction: column; align-items: flex-start; gap: 50px; padding: 50px 5%; }
+            .break-conversion { margin: var(--spacing-section) 5%; text-align: center; }
+            
+            .footer-main { 
+                flex-direction: column; align-items: center; text-align: center;
+                gap: 50px; padding: 50px 5%; 
+            }
+            .footer-info { text-align: center; }
+            .footer-social { justify-content: center; }
+            .footer-details { text-align: justify; }
+            .footer-details strong { text-align: center; display: block; }
             .footer-bottom { flex-direction: column; text-align: center; justify-content: center; padding: 20px 5%; }
             .pattern-pluses { display: none; }
             .footer-graphic img { width: 140px; }
-            .footer-partners { padding: 0 5% 40px; }
+            .footer-partners { padding: 0 5% 40px; justify-content: center; }
+            
+            .testi-card .quote { text-align: justify; }
+            .testi-card .author { text-align: left; }
+            .service-card .card-number { right: 15px; top: 10px; }
         }
+
         @media (max-width: 480px) {
-            .btn-prime { padding: 14px 28px; font-size: 0.75rem; }
+            .btn-prime { padding: 14px 28px; font-size: 0.75rem; display: inline-flex; margin: 0 auto; }
             .card { padding: 22px; }
-            .testi-card .quote { font-size: 0.95rem; }
+            .testi-card .quote { font-size: 0.95rem; text-align: justify; }
             .partner-mock { font-size: 0.9rem; }
             .partner-mock i { font-size: 1.3rem; }
+            
+            .hero-title { font-size: clamp(1.5rem, 7vw, 2rem); }
+            .hero-content { max-width: 95%; }
+            
+            .hero::before {
+                background: linear-gradient(180deg, 
+                    rgba(255, 199, 0, 0.06) 0%, 
+                    rgba(89, 23, 138, 0.2) 30%, 
+                    rgba(89, 23, 138, 0.4) 60%, 
+                    rgba(54, 54, 48, 0.7) 100%);
+            }
+            .hero-bg-img { background-position: center 25%; }
+            
+            p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+            .hero-title, .hero-subtitle-top, h2, h3, h4,
+            .section-label, .btn-prime, .nav-items a,
+            .author, .footer-bottom p, .cookie-popup p { text-align: center; }
         }
     </style>
 </head>
@@ -534,16 +636,16 @@
             <div class="hero-bg-img" style="background-image: url('img1.png');"></div>
         </div>
 
-        <div class="propulsao-badge">
+        <!-- Badge decorativo na Hero (direita) -->
+        <div class="propulsao-badge right large">
             <svg viewBox="0 0 200 200" width="300" height="300">
-                <path id="circle-path" d="M 100, 20 a 80,80 0 1,1 -0.1,0" fill="none" />
+                <path id="circle-path-hero" d="M 100, 20 a 80,80 0 1,1 -0.1,0" fill="none" />
                 <text fill="var(--brand-yellow)" font-size="14" font-weight="700" letter-spacing="4" font-family="'Paralucent Text', 'Montserrat', sans-serif">
-                    <textPath href="#circle-path" startOffset="0%">PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • </textPath>
+                    <textPath href="#circle-path-hero" startOffset="0%">PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • </textPath>
                 </text>
             </svg>
         </div>
 
-        <!-- Divisão estrutural garantindo que o texto fique 100% à direita -->
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">
@@ -560,6 +662,15 @@
 
     <!-- ==================== QUEM SOMOS ==================== -->
     <section id="quem-somos">
+        <!-- Badge à esquerda -->
+        <div class="propulsao-badge left medium">
+            <svg viewBox="0 0 200 200" width="240" height="240">
+                <path id="circle-path-q1" d="M 100, 20 a 80,80 0 1,1 -0.1,0" fill="none" />
+                <text fill="var(--brand-yellow)" font-size="14" font-weight="700" letter-spacing="4" font-family="'Paralucent Text', 'Montserrat', sans-serif">
+                    <textPath href="#circle-path-q1" startOffset="0%">PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • </textPath>
+                </text>
+            </svg>
+        </div>
         <span class="section-label">DNA Redesigner</span>
         <h2>Foco Absoluto em Resultados</h2>
         <div style="max-width: 1000px; margin-bottom: 50px;">
@@ -575,6 +686,15 @@
 
     <!-- ==================== SERVIÇOS ==================== -->
     <section id="services">
+        <!-- Badge à direita -->
+        <div class="propulsao-badge right small">
+            <svg viewBox="0 0 200 200" width="180" height="180">
+                <path id="circle-path-s1" d="M 100, 20 a 80,80 0 1,1 -0.1,0" fill="none" />
+                <text fill="var(--brand-yellow)" font-size="13" font-weight="700" letter-spacing="4" font-family="'Paralucent Text', 'Montserrat', sans-serif">
+                    <textPath href="#circle-path-s1" startOffset="0%">PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • </textPath>
+                </text>
+            </svg>
+        </div>
         <span class="section-label">Nossas Soluções</span>
         <h2>Metodologia de Escala</h2>
         <div class="grid-4">
@@ -587,6 +707,15 @@
 
     <!-- ==================== DIFERENCIAIS ==================== -->
     <section id="diferenciais">
+        <!-- Badge à esquerda -->
+        <div class="propulsao-badge left medium">
+            <svg viewBox="0 0 200 200" width="240" height="240">
+                <path id="circle-path-d1" d="M 100, 20 a 80,80 0 1,1 -0.1,0" fill="none" />
+                <text fill="var(--brand-yellow)" font-size="14" font-weight="700" letter-spacing="4" font-family="'Paralucent Text', 'Montserrat', sans-serif">
+                    <textPath href="#circle-path-d1" startOffset="0%">PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • </textPath>
+                </text>
+            </svg>
+        </div>
         <span class="section-label">Vantagem Competitiva</span>
         <h2>Por que ser um parceiro?</h2>
         <div class="grid-3">
@@ -598,6 +727,15 @@
 
     <!-- ==================== DEPOIMENTOS ==================== -->
     <section id="depoimentos">
+        <!-- Badge à direita -->
+        <div class="propulsao-badge right small">
+            <svg viewBox="0 0 200 200" width="180" height="180">
+                <path id="circle-path-t1" d="M 100, 20 a 80,80 0 1,1 -0.1,0" fill="none" />
+                <text fill="var(--brand-yellow)" font-size="13" font-weight="700" letter-spacing="4" font-family="'Paralucent Text', 'Montserrat', sans-serif">
+                    <textPath href="#circle-path-t1" startOffset="0%">PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • </textPath>
+                </text>
+            </svg>
+        </div>
         <span class="section-label">Nossa Reputação</span>
         <h2>O impacto no mercado</h2>
         <div class="testimonials-container">
@@ -631,18 +769,16 @@
         <div style="text-align:center; margin-top:40px;"><a href="https://wa.me/5511999778996" target="_blank" rel="noopener noreferrer" class="btn-prime">Solicitar Portfólio Completo</a></div>
     </section>
 
-    <!-- ==================== BREAK CONVERSION (CTA) ==================== -->
+    <!-- ==================== BREAK CONVERSION (sem badge, para não poluir) ==================== -->
     <div class="break-conversion">
         <h2>Sua operação está pronta para o próximo nível?</h2>
         <p>Agende uma reunião estratégica para entendermos seus desafios de crescimento.</p>
         <a href="#contato" class="btn-prime" style="margin-top: 15px;">Falar com Especialista</a>
     </div>
-
 </main>
 
-<!-- ==================== NOVO FOOTER (ESTILO AGÊNCIA TRIBO) ==================== -->
+<!-- FOOTER -->
 <footer id="contato" class="site-footer">
-
     <div class="footer-main">
         <div class="footer-info reveal">
             <div class="footer-social">
@@ -651,20 +787,17 @@
                 <a href="https://www.linkedin.com/company/agenciaredesigner/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 <a href="mailto:atendimento@redesigner.com.br" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
             </div>
-            
             <div class="footer-details">
                 <strong>Redesigner - Planejamento, Publicidade e Marketing</strong>
                 <p>São Paulo - SP - Atendimento Nacional</p>
                 <p>CNPJ: 41.142.331/0001-43</p>
             </div>
         </div>
-
         <div class="footer-graphic reveal">
             <div class="pattern-pluses"></div>
             <a href="#home"><img src="logo.png" alt="Redesigner Agência Digital"></a>
         </div>
     </div>
-
     <div class="footer-bottom">
         <p>© 2019-2026 - Todos os direitos reservados. | Desenvolvido por Redesigner PPM | <a href="#">Nossas Políticas</a></p>
     </div>
@@ -673,7 +806,6 @@
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
 <script>
     (function() {
-        // Inicialização das partículas
         if(window.particlesJS && window.innerWidth > 768) {
             particlesJS("particles-js", {
                 particles: {
@@ -687,14 +819,12 @@
             });
         }
 
-        // Navbar blur on scroll
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) navbar.classList.add('scrolled');
             else navbar.classList.remove('scrolled');
         });
 
-        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 const hash = this.getAttribute('href');
@@ -707,7 +837,6 @@
             });
         });
 
-        // Scroll spy link ativo
         const sections = document.querySelectorAll("section");
         const navLinks = document.querySelectorAll(".nav-items a");
         window.addEventListener("scroll", () => {
@@ -715,24 +844,20 @@
             sections.forEach(section => {
                 if(scrollY >= section.offsetTop - 250) current = section.getAttribute("id");
             });
-            // Adicionando footer ao scroll spy
             const footer = document.querySelector('.site-footer');
             if(footer && scrollY >= footer.offsetTop - 250) current = "contato";
-
             navLinks.forEach(a => {
                 a.classList.remove("active");
                 if(a.getAttribute("href") === `#${current}`) a.classList.add("active");
             });
         });
 
-        // Reveal no scroll
         const reveals = document.querySelectorAll(".card, .testi-card, .case-item, .break-conversion, .reveal");
         const obs = new IntersectionObserver((entries) => {
             entries.forEach(e => { if(e.isIntersecting) e.target.classList.add("reveal-active"); });
         }, { threshold: 0.1 });
         reveals.forEach(el => { el.classList.add("reveal"); obs.observe(el); });
 
-        // Crossfade do Hero Background (Dinâmico para N imagens)
         const bgImgs = document.querySelectorAll('.hero-bg-img');
         if(bgImgs.length > 1) {
             let bgIndex = 0;
@@ -743,7 +868,6 @@
             }, 5000); 
         }
 
-        // Depoimentos Carrossel
         const track = document.getElementById('testimonialTrack');
         const dotsContainer = document.getElementById('testimonialDots');
         let currentSlide = 0;
@@ -764,7 +888,6 @@
             setInterval(() => { let next = (currentSlide + 1) % cards.length; goToSlide(next); }, 6000);
         }
 
-        // Cases carrossel loop infinito
         const casesTrack = document.getElementById('casesTrack');
         if(casesTrack) {
             const items = Array.from(casesTrack.children);
@@ -772,7 +895,6 @@
             casesTrack.classList.add('animate');
         }
 
-        // Exit intent Modal
         let exitShown = false;
         document.addEventListener("mouseleave", (e) => {
             if(e.clientY <= 0 && !exitShown && !localStorage.getItem('exit_modal')) {
@@ -783,7 +905,6 @@
             }
         });
 
-        // Floating Zap
         document.getElementById('whatsappFloatBtn')?.addEventListener('click', () => {
             window.open("https://wa.me/5511999778996?text=Olá! Vim pelo site e gostaria de agendar uma consultoria estratégica para minha empresa.", "_blank", "noopener");
         });
