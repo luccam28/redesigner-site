@@ -441,7 +441,7 @@
             .burger-btn { display: flex; }
             
             .hero::before {
-                /* No mobile, o gradiente sobe invertido para cobrir o texto na base */
+                /* No mobile, o gradiente sobe invertido para cobrir o texto na base e amarelar o topo */
                 background: linear-gradient(180deg, rgba(255, 199, 0, 0.15) 0%, rgba(89, 23, 138, 0.6) 40%, rgba(89, 23, 138, 0.95) 100%);
             }
             .hero-bg-img { background-position: center top; }
@@ -449,8 +449,7 @@
             .hero-content { max-width: 100%; text-align: center; }
             
             section { padding: var(--spacing-section) 5%; }
-            .propulsao-badge {
-                right: auto; left: 50%; top: 30%; transform: translate(-50%, -50%); opacity: 0.25; scale: 0.8; }
+            .propulsao-badge { right: auto; left: 50%; top: 30%; transform: translate(-50%, -50%); opacity: 0.25; scale: 0.8; }
             .grid-3, .grid-4 { grid-template-columns: 1fr; gap: 25px; }
             .whatsapp-float { right: 20px; bottom: 20px; }
             .whatsapp-modal { right: 20px; width: calc(100% - 40px); }
@@ -643,14 +642,6 @@
 
 <!-- ==================== NOVO FOOTER (ESTILO AGÊNCIA TRIBO) ==================== -->
 <footer id="contato" class="site-footer">
-    
-    <!-- Logos de Parceiros/Certificações -->
-    <div class="footer-partners reveal">
-        <div class="partner-mock"><i class="fab fa-google"></i> Google Partner</div>
-        <div class="partner-mock"><i class="fab fa-meta"></i> Meta Partner</div>
-        <div class="partner-mock"><i class="fab fa-linkedin"></i> Marketing Partners</div>
-        <div class="partner-mock"><i class="fas fa-medal"></i> GPTW Certificada</div>
-    </div>
 
     <div class="footer-main">
         <div class="footer-info reveal">
@@ -741,7 +732,7 @@
         }, { threshold: 0.1 });
         reveals.forEach(el => { el.classList.add("reveal"); obs.observe(el); });
 
-        // Crossfade do Hero Background (Tribo Effect)
+        // Crossfade do Hero Background (Dinâmico para N imagens)
         const bgImgs = document.querySelectorAll('.hero-bg-img');
         if(bgImgs.length > 1) {
             let bgIndex = 0;
