@@ -2,7 +2,6 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -20,7 +19,6 @@
     <meta name="theme-color" content="#FFC700">
     <link rel="canonical" href="https://redesigner.com.br/">
 
-    <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -28,7 +26,6 @@
     <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
 
-    <!-- Open Graph / Twitter -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Redesigner | Engenharia de Crescimento e Performance">
     <meta property="og:description" content="Estratégias personalizadas e orientadas a dados para escalar o faturamento da sua empresa.">
@@ -36,7 +33,6 @@
     <meta property="og:image" content="https://redesigner.com.br/logo-og.png">
     <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Schema.org -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -60,7 +56,6 @@
         }
     </script>
 
-    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -93,13 +88,33 @@
             font-style: normal;
             font-display: swap;
         }
+
+        /* ---------- CARREGAMENTO DA FONTE PARALUCENT ---------- */
+        @font-face {
+            font-family: 'Paralucent';
+            /* ATENÇÃO: Substitua "Paralucent-Regular.ttf" pelo nome exato do arquivo que está na sua pasta */
+            src: url('paralucent/Paralucent-Regular.ttf') format('truetype');
+            font-weight: 400; /* Peso normal */
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Paralucent';
+            /* ATENÇÃO: Substitua "Paralucent-Bold.ttf" pelo nome exato do arquivo que está na sua pasta */
+            src: url('paralucent/Paralucent-Bold.ttf') format('truetype');
+            font-weight: 700; /* Peso Negrito */
+            font-style: normal;
+            font-display: swap;
+        }
         
         html { scroll-padding-top: 80px; overflow-x: hidden; }
         
         body {
             background-color: var(--bg-darker);
             color: var(--text-main);
-            font-family: 'Paralucent Text', 'Paralucent', 'Montserrat', sans-serif;
+            /* Aqui eu garanti que o site inteiro puxe a Paralucent que acabamos de declarar */
+            font-family: 'Paralucent', 'Montserrat', sans-serif;
             line-height: 1.7;
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
@@ -180,7 +195,7 @@
         .btn-cookie {
             padding: 12px 25px; border-radius: 40px; border: none; font-weight: 700;
             cursor: pointer; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; transition: 0.2s;
-            font-family: 'Paralucent Text', sans-serif;
+            font-family: 'Paralucent', sans-serif;
         }
         .btn-accept { background: var(--brand-yellow); color: var(--brand-dark); box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
         .btn-accept:hover { background: #fff; transform: scale(1.02); }
@@ -317,7 +332,7 @@
             transform: rotate(-1deg);
         }
         .btn-prime {
-            font-family: 'Paralucent Text', sans-serif;
+            font-family: 'Paralucent', sans-serif;
             display: inline-flex; align-items: center; gap: 12px; padding: 16px 38px;
             background: var(--brand-yellow); color: var(--brand-dark); text-decoration: none; font-weight: 700;
             font-size: 0.85rem; border-radius: 50px; text-transform: uppercase; letter-spacing: 1.5px;
@@ -589,12 +604,10 @@
 
 <div id="particles-js"></div>
 
-<!-- WhatsApp flutuante -->
 <div class="whatsapp-float" id="whatsappFloatBtn" aria-label="Fale pelo WhatsApp">
     <i class="fab fa-whatsapp" style="font-size:32px; color:white;"></i>
 </div>
 
-<!-- Modal WhatsApp -->
 <div class="whatsapp-modal" id="whatsappModal">
     <button onclick="toggleWhatsAppModal()" style="position:absolute; top:18px; right:18px; background:none; border:none; color:#aaa; font-size:1.8rem; cursor:pointer;">&times;</button>
     <h4>Otimize seus resultados</h4>
@@ -602,7 +615,6 @@
     <a href="https://wa.me/5511999778996" target="_blank" rel="noopener noreferrer" class="btn-prime" style="width:100%; background:#25D366; color:var(--brand-dark); justify-content:center;">Iniciar Diagnóstico →</a>
 </div>
 
-<!-- Cookie popup -->
 <div class="cookie-popup" id="cookiePopup">
     <p style="font-size:0.9rem; color:var(--text-dim);">Utilizamos cookies para métricas e melhoria da experiência do usuário. Ao continuar, você concorda com nossa <strong style="color:#fff;">Política de Privacidade</strong>.</p>
     <div style="display:flex; gap:15px;">
@@ -611,7 +623,6 @@
     </div>
 </div>
 
-<!-- Navbar Topo -->
 <nav class="navbar" id="navbar">
     <a href="#home"><img src="logo.png" alt="Redesigner Home" class="logo-img"></a>
     <ul class="nav-items">
@@ -627,7 +638,6 @@
     </button>
 </nav>
 
-<!-- Menu Overlay para Mobile -->
 <div class="mobile-nav-overlay" id="mobileMenu">
     <ul class="nav-items" style="display: flex;">
         <li><a href="#home" onclick="toggleMobileMenu()">Home</a></li>
@@ -640,18 +650,18 @@
 </div>
 
 <main>
-    <!-- ==================== HERO ==================== -->
     <section id="home" class="hero">
         <div class="hero-background">
-            <div class="hero-bg-img active" style="background-image: url('img.png');"></div>
-            <div class="hero-bg-img" style="background-image: url('img1.png');"></div>
+            <div class="hero-bg-img active" style="background-image: url('img2.png');"></div>
+            <div class="hero-bg-img" style="background-image: url('img3.png');"></div>
+            <div class="hero-bg-img" style="background-image: url('img4.png');"></div>
+            <div class="hero-bg-img" style="background-image: url('img5.png');"></div>
         </div>
 
-        <!-- Badge decorativo na Hero (direita) -->
         <div class="propulsao-badge right large">
             <svg viewBox="0 0 200 200" width="300" height="300">
                 <path id="circle-path-hero" d="M 100, 20 a 80,80 0 1,1 -0.1,0" fill="none" />
-                <text fill="var(--brand-yellow)" font-size="14" font-weight="700" letter-spacing="4" font-family="'Paralucent Text', 'Montserrat', sans-serif">
+                <text fill="var(--brand-yellow)" font-size="14" font-weight="700" letter-spacing="4" font-family="'Paralucent', 'Montserrat', sans-serif">
                     <textPath href="#circle-path-hero" startOffset="0%">PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • </textPath>
                 </text>
             </svg>
@@ -671,16 +681,13 @@
         </div>
     </section>
 
-    <!-- FAIXA DE TRANSIÇÃO SUAVE -->
     <div class="hero-transition" aria-hidden="true"></div>
 
-    <!-- ==================== QUEM SOMOS ==================== -->
     <section id="quem-somos">
-        <!-- Badge à esquerda -->
         <div class="propulsao-badge left medium">
             <svg viewBox="0 0 200 200" width="240" height="240">
                 <path id="circle-path-q1" d="M 100, 20 a 80,80 0 1,1 -0.1,0" fill="none" />
-                <text fill="var(--brand-yellow)" font-size="14" font-weight="700" letter-spacing="4" font-family="'Paralucent Text', 'Montserrat', sans-serif">
+                <text fill="var(--brand-yellow)" font-size="14" font-weight="700" letter-spacing="4" font-family="'Paralucent', 'Montserrat', sans-serif">
                     <textPath href="#circle-path-q1" startOffset="0%">PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • </textPath>
                 </text>
             </svg>
@@ -698,13 +705,11 @@
         </div>
     </section>
 
-    <!-- ==================== SERVIÇOS ==================== -->
     <section id="services">
-        <!-- Badge à direita -->
         <div class="propulsao-badge right small">
             <svg viewBox="0 0 200 200" width="180" height="180">
                 <path id="circle-path-s1" d="M 100, 20 a 80,80 0 1,1 -0.1,0" fill="none" />
-                <text fill="var(--brand-yellow)" font-size="13" font-weight="700" letter-spacing="4" font-family="'Paralucent Text', 'Montserrat', sans-serif">
+                <text fill="var(--brand-yellow)" font-size="13" font-weight="700" letter-spacing="4" font-family="'Paralucent', 'Montserrat', sans-serif">
                     <textPath href="#circle-path-s1" startOffset="0%">PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • </textPath>
                 </text>
             </svg>
@@ -719,13 +724,11 @@
         </div>
     </section>
 
-    <!-- ==================== DIFERENCIAIS ==================== -->
     <section id="diferenciais">
-        <!-- Badge à esquerda -->
         <div class="propulsao-badge left medium">
             <svg viewBox="0 0 200 200" width="240" height="240">
                 <path id="circle-path-d1" d="M 100, 20 a 80,80 0 1,1 -0.1,0" fill="none" />
-                <text fill="var(--brand-yellow)" font-size="14" font-weight="700" letter-spacing="4" font-family="'Paralucent Text', 'Montserrat', sans-serif">
+                <text fill="var(--brand-yellow)" font-size="14" font-weight="700" letter-spacing="4" font-family="'Paralucent', 'Montserrat', sans-serif">
                     <textPath href="#circle-path-d1" startOffset="0%">PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • </textPath>
                 </text>
             </svg>
@@ -739,13 +742,11 @@
         </div>
     </section>
 
-    <!-- ==================== DEPOIMENTOS ==================== -->
     <section id="depoimentos">
-        <!-- Badge à direita -->
         <div class="propulsao-badge right small">
             <svg viewBox="0 0 200 200" width="180" height="180">
                 <path id="circle-path-t1" d="M 100, 20 a 80,80 0 1,1 -0.1,0" fill="none" />
-                <text fill="var(--brand-yellow)" font-size="13" font-weight="700" letter-spacing="4" font-family="'Paralucent Text', 'Montserrat', sans-serif">
+                <text fill="var(--brand-yellow)" font-size="13" font-weight="700" letter-spacing="4" font-family="'Paralucent', 'Montserrat', sans-serif">
                     <textPath href="#circle-path-t1" startOffset="0%">PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • </textPath>
                 </text>
             </svg>
@@ -762,7 +763,6 @@
         <div class="dots" id="testimonialDots"></div>
     </section>
 
-    <!-- ==================== CASES ==================== -->
     <section id="cases">
         <span class="section-label">Portfólio Ativo</span>
         <h2>Empresas que escalam conosco</h2>
@@ -783,7 +783,6 @@
         <div style="text-align:center; margin-top:40px;"><a href="https://wa.me/5511999778996" target="_blank" rel="noopener noreferrer" class="btn-prime">Solicitar Portfólio Completo</a></div>
     </section>
 
-    <!-- ==================== BREAK CONVERSION ==================== -->
     <div class="break-conversion">
         <h2>Sua operação está pronta para o próximo nível?</h2>
         <p>Agende uma reunião estratégica para entendermos seus desafios de crescimento.</p>
@@ -791,7 +790,6 @@
     </div>
 </main>
 
-<!-- FOOTER -->
 <footer id="contato" class="site-footer">
     <div class="footer-main">
         <div class="footer-info reveal">
