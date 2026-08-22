@@ -4,4 +4,4 @@ Disallow: /admin/
 Disallow: /login/
 Disallow: /wp-admin/
 
-Sitemap: https://redesigner.com.br/sitemap.xml
+Sitemap: http://redesigner.com.br/sitemap.xml

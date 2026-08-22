@@ -2,23 +2,16 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXX');
-    </script>
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Redesigner | Consultoria de Marketing Digital & Performance em São Paulo</title>
-    <meta name="description" content="Aceleramos o crescimento de empresas através de estratégias de tráfego pago, branding e gestão de presença digital. Foco total em ROI e escala de faturamento.">
-    <meta name="keywords" content="marketing digital, agência de marketing digital são paulo, gestão de redes sociais, agência de performance, branding, redesigner, tráfego pago, criação de sites, B2B">
+    <title>Redesigner | Agência de Marketing Digital & Performance em São Paulo</title>
+    <meta name="description" content="Aceleramos o crescimento de PMEs com estratégias de tráfego pago, branding e infraestrutura digital. Foco em ROI e escala de faturamento.">
+    <meta name="keywords" content="marketing digital, agência de marketing digital são paulo, gestão de redes sociais, tráfego pago, criação de sites, B2B, performance">
     <meta name="author" content="ReDesigner Agência Digital">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="theme-color" content="#FFC700">
     <link rel="canonical" href="https://redesigner.com.br/">
 
+    <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -26,6 +19,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
 
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Redesigner | Engenharia de Crescimento e Performance">
     <meta property="og:description" content="Estratégias personalizadas e orientadas a dados para escalar o faturamento da sua empresa.">
@@ -33,6 +27,7 @@
     <meta property="og:image" content="https://redesigner.com.br/logo-og.png">
     <meta name="twitter:card" content="summary_large_image">
 
+    <!-- Schema.org -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -56,882 +51,492 @@
         }
     </script>
 
+    <!-- Pré-conexão para fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
-    <style>
-        /* ---------- RESET & VARIÁVEIS (BRANDBOOK REDESIGNER) ---------- */
-        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-        :root {
-            --brand-yellow: #FFC700;
-            --brand-purple: #59178A;
-            --brand-dark: #363630;
-            --brand-light: #DBD4D6;
-            --text-main: #FFFFFF;
-            --bg-darker: #20201d;
-            --brand-purple-dark: #370e56;
-            --text-dim: rgba(255, 255, 255, 0.75);
-            --transition: 0.5s cubic-bezier(0.22, 0.97, 0.36, 1);
-            --spacing-section: clamp(80px, 12vw, 140px);
-            --card-radius: 20px;
-            --card-padding: clamp(28px, 4vw, 40px);
-            --glow-yellow: 0 0 15px rgba(255, 199, 0, 0.3);
-        }
-
-        /* ---------- CARREGAMENTO DA FONTE MANUSCRITA KGDropsofJupiter ---------- */
-        @font-face {
-            font-family: 'KGDropsofJupiter';
-            src: url('KGDropsofJupiter.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-            font-display: swap;
-        }
-
-        /* ---------- CARREGAMENTO DA FONTE PARALUCENT ---------- */
-        @font-face {
-            font-family: 'Paralucent';
-            /* ATENÇÃO: Substitua "Paralucent-Regular.ttf" pelo nome exato do arquivo que está na sua pasta */
-            src: url('paralucent/Paralucent-Regular.ttf') format('truetype');
-            font-weight: 400; /* Peso normal */
-            font-style: normal;
-            font-display: swap;
-        }
-
-        @font-face {
-            font-family: 'Paralucent';
-            /* ATENÇÃO: Substitua "Paralucent-Bold.ttf" pelo nome exato do arquivo que está na sua pasta */
-            src: url('paralucent/Paralucent-Bold.ttf') format('truetype');
-            font-weight: 700; /* Peso Negrito */
-            font-style: normal;
-            font-display: swap;
-        }
-        
-        html { scroll-padding-top: 80px; overflow-x: hidden; }
-        
-        body {
-            background-color: var(--bg-darker);
-            color: var(--text-main);
-            /* Aqui eu garanti que o site inteiro puxe a Paralucent que acabamos de declarar */
-            font-family: 'Paralucent', 'Montserrat', sans-serif;
-            line-height: 1.7;
-            -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
-        }
-
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-image: radial-gradient(circle at 25% 40%, rgba(89, 23, 138, 0.15) 1.5px, transparent 1px);
-            background-size: 40px 40px;
-            pointer-events: none; z-index: 0;
-        }
-
-        #particles-js { position: fixed; width: 100%; height: 100%; z-index: 1; pointer-events: none; opacity: 0.6; }
-        @media (max-width: 768px) { #particles-js { display: none; } }
-        
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: var(--bg-darker); }
-        ::-webkit-scrollbar-thumb { background: var(--brand-purple); border-radius: 10px; }
-        ::-webkit-scrollbar-thumb:hover { background: var(--brand-yellow); }
-        ::selection { background: var(--brand-yellow); color: var(--brand-dark); }
-
-        /* ---------- NAVBAR ---------- */
-        .navbar {
-            position: fixed; top: 0; left: 0; width: 100%; padding: 25px 8%;
-            display: flex; justify-content: space-between; align-items: center; z-index: 1001;
-            transition: var(--transition);
-        }
-        .navbar.scrolled {
-            padding: 10px 8%; background: rgba(54, 54, 48, 0.95);
-            backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(89, 23, 138, 0.4); box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-        .navbar .logo-img { height: 75px; filter: brightness(0) invert(1); transition: 0.3s; }
-        .navbar.scrolled .logo-img { height: 90px; }
-
-        .nav-items { display: flex; gap: 35px; list-style: none; align-items: center; }
-        .nav-items a {
-            color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.75rem;
-            font-weight: 700; text-transform: uppercase; letter-spacing: 2px;
-            transition: 0.3s; position: relative;
-        }
-        .nav-items a::after {
-            content: ''; position: absolute; bottom: -6px; left: 50%;
-            width: 0; height: 2px; background: var(--brand-yellow);
-            transition: 0.3s; transform: translateX(-50%);
-        }
-        .nav-items a:hover::after, .nav-items a.active::after { width: 100%; }
-        .nav-items a:hover, .nav-items a.active { color: var(--brand-yellow); text-shadow: var(--glow-yellow); }
-
-        .burger-btn { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 6px; z-index: 1002; }
-        .burger-btn span { display: block; width: 28px; height: 2px; background: #fff; transition: 0.3s; }
-
-        /* ---------- OVERLAY MENU MOBILE ---------- */
-        .mobile-nav-overlay {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
-            background: rgba(54, 54, 48, 0.98); backdrop-filter: blur(10px);
-            z-index: 1000; display: flex; flex-direction: column; justify-content: center; align-items: center;
-            transform: translateY(-100%); transition: 0.5s ease-in-out; opacity: 0;
-        }
-        .mobile-nav-overlay.active { transform: translateY(0); opacity: 1; }
-        .mobile-nav-overlay .nav-items { flex-direction: column; gap: 30px; text-align: center; }
-        .mobile-nav-overlay .nav-items a { font-size: 1.2rem; }
-
-        /* ---------- MODAIS ---------- */
-        .cookie-popup, .whatsapp-modal {
-            background: rgba(54, 54, 48, 0.95); backdrop-filter: blur(16px);
-            border: 1px solid rgba(89, 23, 138, 0.6); border-radius: 24px;
-            box-shadow: 0 25px 45px rgba(0,0,0,0.8), 0 0 0 1px rgba(255,199,0,0.05) inset;
-        }
-        .cookie-popup {
-            position: fixed; bottom: -100%; left: 50%; transform: translateX(-50%);
-            width: 90%; max-width: 650px; padding: 30px; z-index: 9999;
-            display: flex; flex-direction: column; gap: 20px; transition: 0.6s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-        }
-        .cookie-popup.show { bottom: 30px; }
-        .btn-cookie {
-            padding: 12px 25px; border-radius: 40px; border: none; font-weight: 700;
-            cursor: pointer; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; transition: 0.2s;
-            font-family: 'Paralucent', sans-serif;
-        }
-        .btn-accept { background: var(--brand-yellow); color: var(--brand-dark); box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
-        .btn-accept:hover { background: #fff; transform: scale(1.02); }
-        .btn-decline { background: transparent; color: white; border: 1px solid rgba(255,255,255,0.3); }
-        
-        .whatsapp-float {
-            position: fixed; bottom: 35px; right: 35px; width: 60px; height: 60px;
-            background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            z-index: 9998; cursor: pointer; transition: 0.3s; box-shadow: 0 5px 20px rgba(37,211,102,0.4);
-        }
-        .whatsapp-float:hover { transform: scale(1.1) rotate(5deg); }
-        
-        .whatsapp-modal {
-            position: fixed; bottom: -100%; right: 35px; width: calc(100% - 70px); max-width: 380px;
-            padding: 32px; z-index: 9999; transition: 0.5s;
-        }
-        .whatsapp-modal.show { bottom: 110px; }
-
-        /* ---------- MAIN & SECTIONS ---------- */
-        main { position: relative; z-index: 2; padding: 0; }
-        section { padding: var(--spacing-section) 10%; position: relative; z-index: 2; }
-        
-        .section-label {
-            font-size: 0.7rem; text-transform: uppercase; letter-spacing: 5px; color: var(--brand-yellow);
-            margin-bottom: 20px; display: inline-block; font-weight: 800;
-            background: rgba(255,199,0,0.1); padding: 4px 12px; border-radius: 40px; backdrop-filter: blur(2px);
-        }
-        
-        #quem-somos { background: linear-gradient(135deg, var(--bg-darker) 0%, var(--brand-dark) 100%); }
-        #services { background: linear-gradient(135deg, var(--brand-dark) 0%, var(--brand-purple-dark) 100%); }
-        #diferenciais { background: linear-gradient(135deg, var(--brand-purple-dark) 0%, var(--brand-purple) 50%, var(--bg-darker) 100%); }
-        #depoimentos { background: linear-gradient(135deg, var(--bg-darker) 0%, var(--brand-dark) 100%); }
-        #cases { background: linear-gradient(135deg, var(--brand-dark) 0%, var(--bg-darker) 100%); }
-        
-        h2 {
-            font-weight: 700;
-            font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 45px;
-            text-transform: uppercase; letter-spacing: -0.02em;
-            background: linear-gradient(135deg, #fff, #e0e0ff);
-            background-clip: text; -webkit-background-clip: text; color: transparent;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.2); display: inline-block;
-        }
-        h2::after { content: '.'; color: var(--brand-yellow); background: none; -webkit-background-clip: unset; }
-
-        /* ---------- HERO ---------- */
-        .hero {
-            min-height: 100vh; display: flex; align-items: center;
-            padding: 0; position: relative; z-index: 1; overflow: hidden;
-        }
-        .hero-background {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;
-        }
-        .hero-bg-img {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background-position: left center; background-size: cover; background-repeat: no-repeat;
-            opacity: 0; transition: opacity 1.5s ease-in-out;
-        }
-        .hero-bg-img.active { opacity: 1; }
-        
-        .hero::before {
-            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(90deg, rgba(255, 199, 0, 0.1) 0%, rgba(89, 23, 138, 0.8) 55%, rgba(89, 23, 138, 0.95) 100%);
-            z-index: 1; pointer-events: none;
-        }
-
-        /* NOVO: faixa de transição suave entre hero e quem-somos */
-        .hero-transition {
-            position: relative;
-            z-index: 2;
-            height: 120px;
-            background: linear-gradient(to bottom, rgba(54,54,48,0.95) 0%, var(--bg-darker) 100%);
-            margin-top: -1px;
-        }
-
-        /* Badges decorativos */
-        .propulsao-badge {
-            position: absolute;
-            z-index: 2;
-            pointer-events: none;
-            animation: rotateBadge 22s linear infinite;
-            opacity: 0.55;
-            transition: opacity 0.3s;
-        }
-        .propulsao-badge.right { right: -80px; top: 50%; transform: translateY(-50%); }
-        .propulsao-badge.left  { left: -80px; top: 50%; transform: translateY(-50%); }
-        .propulsao-badge.small { width: 180px; height: 180px; }
-        .propulsao-badge.medium { width: 240px; height: 240px; }
-        .propulsao-badge.large { width: 300px; height: 300px; }
-        
-        @keyframes spinRight {
-            0% { transform: translateY(-50%) rotate(0deg); }
-            100% { transform: translateY(-50%) rotate(360deg); }
-        }
-        @keyframes spinLeft {
-            0% { transform: translateY(-50%) rotate(0deg); }
-            100% { transform: translateY(-50%) rotate(360deg); }
-        }
-        .propulsao-badge.right { animation: spinRight 22s linear infinite; }
-        .propulsao-badge.left { animation: spinLeft 22s linear infinite; }
-
-        .hero-container {
-            position: relative; z-index: 3; width: 100%; max-width: 1400px; margin: 0 auto;
-            display: flex; justify-content: flex-end; padding: 0 5%;
-        }
-
-        .hero-content { width: 100%; max-width: 55%; }
-
-        .hero-title {
-            font-weight: 700; font-size: clamp(2.2rem, 4.5vw, 4rem);
-            color: #fff; line-height: 1.15; letter-spacing: -0.01em; margin: 0 0 30px;
-        }
-        .hero-subtitle-top {
-            color: var(--brand-yellow); display: block; font-size: clamp(1.2rem, 2.5vw, 2rem);
-            font-weight: 700; margin-bottom: 10px; text-shadow: 0 0 12px rgba(0,0,0,0.5);
-        }
-        /* Nova fonte aplicada apenas aqui */
-        .handwritten-highlight {
-            font-family: 'KGDropsofJupiter', cursive;
-            color: var(--brand-yellow);
-            position: relative;
-            display: inline-block;
-            font-weight: 400;
-            padding-bottom: 5px;
-        }
-        .handwritten-highlight::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background-color: var(--brand-yellow);
-            border-radius: 4px;
-            transform: rotate(-1deg);
-        }
-        .btn-prime {
-            font-family: 'Paralucent', sans-serif;
-            display: inline-flex; align-items: center; gap: 12px; padding: 16px 38px;
-            background: var(--brand-yellow); color: var(--brand-dark); text-decoration: none; font-weight: 700;
-            font-size: 0.85rem; border-radius: 50px; text-transform: uppercase; letter-spacing: 1.5px;
-            transition: 0.4s; border: none; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-        }
-        .btn-prime:hover { background: #ffffff; color: var(--brand-dark); transform: translateY(-3px); box-shadow: 0 15px 30px rgba(255, 199, 0, 0.25); }
-        
-        /* ---------- GRIDS E CARDS ---------- */
-        .grid-3, .grid-4 { display: grid; gap: 35px; margin-top: 50px; }
-        .grid-3 { grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); }
-        .grid-4 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
-        
-        .card {
-            background: rgba(54, 54, 48, 0.5);
-            backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-            border-radius: var(--card-radius); padding: var(--card-padding);
-            transition: all 0.4s ease;
-            border: 1px solid rgba(89, 23, 138, 0.3);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-            display: flex; flex-direction: column;
-        }
-        .card:hover {
-            transform: translateY(-8px);
-            border-color: var(--brand-purple);
-            background: rgba(89, 23, 138, 0.2);
-            box-shadow: 0 20px 40px rgba(89, 23, 138, 0.3), inset 0 0 0 1px rgba(255,199,0,0.1);
-        }
-        .card h3 {
-            font-weight: 700; font-size: 1.3rem; margin-bottom: 15px; text-transform: uppercase;
-            background: linear-gradient(135deg, #fff, #ddd); background-clip: text; -webkit-background-clip: text; color: transparent;
-        }
-        .card p { font-size: 0.95rem; color: var(--text-dim); line-height: 1.6; flex: 1; }
-        .card p strong { color: var(--brand-yellow); font-weight: 700; }
-        
-        .service-card { position: relative; overflow: hidden; }
-        .service-card .card-number {
-            font-weight: 900; font-size: clamp(3rem, 8vw, 4.5rem); color: transparent;
-            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.12); position: absolute; top: 15px; right: 25px;
-            pointer-events: none; transition: 0.3s;
-        }
-        .service-card:hover .card-number { -webkit-text-stroke: 1px rgba(255, 199, 0, 0.4); transform: scale(1.05); }
-        
-        .dif-icon { font-size: 2.3rem; margin-bottom: 20px; color: var(--brand-yellow); display: inline-block; filter: drop-shadow(0 0 6px rgba(255,199,0,0.4)); }
-        
-        /* ---------- DEPOIMENTOS ---------- */
-        .testimonials-container { position: relative; width: 100%; overflow: hidden; margin-top: 50px; border-radius: 28px; }
-        .testimonials-track { display: flex; transition: transform 0.6s cubic-bezier(0.2, 0.9, 0.4, 1.1); }
-        .testi-card {
-            flex: 0 0 100%; background: rgba(54, 54, 48, 0.5); backdrop-filter: blur(12px);
-            border-left: 5px solid var(--brand-yellow); border-radius: 28px;
-            padding: clamp(30px, 4vw, 50px); margin: 0 15px; box-sizing: border-box; border-top: 1px solid rgba(89,23,138,0.3);
-        }
-        .testi-card .quote { font-size: 1.1rem; line-height: 1.7; color: #f0f0f0; font-style: italic; }
-        .testi-card .author { margin-top: 25px; color: var(--brand-yellow); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
-        .dots { text-align: center; margin-top: 30px; }
-        .dot { width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.25); display: inline-block; margin: 0 8px; cursor: pointer; transition: 0.3s; }
-        .dot.active { background: var(--brand-yellow); transform: scale(1.4); box-shadow: 0 0 8px var(--brand-yellow); }
-        
-        /* ---------- CASES ---------- */
-        .carousel-viewport {
-            width: 100%; overflow: hidden; padding: 50px 0;
-            mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
-            -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
-        }
-        .carousel-track { display: flex; width: max-content; }
-        .carousel-track.animate { animation: scroll 45s linear infinite; }
-        .carousel-track:hover { animation-play-state: paused; }
-        .case-item { width: 280px; margin: 0 20px; text-decoration: none; text-align: center; flex-shrink: 0; transition: 0.4s; }
-        .case-img-box {
-            width: 100%; height: 160px; border-radius: 24px; overflow: hidden; margin-bottom: 20px; filter: grayscale(0.8);
-            transition: 0.5s; background: var(--brand-dark); border: 1px solid rgba(89,23,138,0.3); display: flex; align-items: center; justify-content: center;
-        }
-        .case-item:hover .case-img-box { filter: grayscale(0); transform: translateY(-6px); border-color: var(--brand-yellow); box-shadow: 0 20px 30px rgba(89,23,138,0.4); }
-        .case-img-box img { max-width: 80%; max-height: 70%; object-fit: contain; }
-        .case-item h4 { font-weight: 700; color: #fff; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
-        .case-item span { color: var(--text-dim); font-size: 0.75rem; }
-        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-
-        /* ---------- BREAK CONVERSION ---------- */
-        .break-conversion {
-            text-align: center; background: radial-gradient(ellipse at center, #ffe047 0%, var(--brand-yellow) 100%);
-            border-radius: 40px; padding: clamp(50px, 8vw, 80px) clamp(20px, 5vw, 40px);
-            margin: var(--spacing-section) 8%; border: none; box-shadow: 0 0 45px rgba(255, 199, 0, 0.2); transition: all 0.4s;
-        }
-        .break-conversion:hover { transform: scale(1.01); box-shadow: 0 0 70px rgba(255, 199, 0, 0.4); }
-        .break-conversion h2 { color: var(--brand-dark); margin-bottom: 15px; background: none; -webkit-background-clip: unset; }
-        .break-conversion h2::after { display: none; }
-        .break-conversion p { color: var(--brand-dark); opacity: 0.8; font-weight: 500; }
-        .break-conversion .btn-prime { background: var(--brand-purple); color: #fff; border-radius: 50px; }
-        .break-conversion .btn-prime:hover { background: var(--brand-purple-dark); box-shadow: 0 10px 25px rgba(0,0,0,0.4); }
-        
-        /* ---------- FOOTER ---------- */
-        .site-footer {
-            background-color: var(--brand-light);
-            color: var(--brand-dark);
-            padding: 80px 0 0;
-            position: relative;
-            z-index: 2;
-            overflow: hidden;
-        }
-
-        .footer-partners {
-            display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
-            gap: clamp(30px, 5vw, 60px); padding: 0 10% 60px;
-            border-bottom: 1px solid rgba(54,54,48,0.1);
-        }
-        .partner-mock {
-            font-weight: 700; font-size: 1.2rem; color: var(--brand-dark); text-transform: uppercase;
-            letter-spacing: -0.5px; display: flex; align-items: center; gap: 10px;
-            opacity: 0.6; transition: 0.3s; cursor: default;
-        }
-        .partner-mock:hover { opacity: 1; color: var(--brand-purple); }
-        .partner-mock i { font-size: 1.8rem; }
-
-        .footer-main {
-            display: flex; justify-content: space-between; align-items: flex-end;
-            padding: 60px 10%; position: relative;
-        }
-
-        .footer-info { max-width: 500px; }
-
-        .footer-social { display: flex; gap: 15px; margin-bottom: 30px; }
-        .footer-social a {
-            width: 45px; height: 45px; border-radius: 50%;
-            background-color: var(--brand-dark); color: var(--brand-light);
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.2rem; transition: 0.3s; text-decoration: none;
-        }
-        .footer-social a:hover { background-color: var(--brand-purple); color: #fff; transform: translateY(-5px); }
-
-        .footer-details { font-size: 0.85rem; line-height: 1.6; color: var(--brand-dark); }
-        .footer-details strong { display: block; font-size: 1rem; font-weight: 700; margin-bottom: 8px; text-transform: uppercase;}
-
-        .footer-graphic { position: relative; display: flex; align-items: flex-end; }
-        .footer-graphic img { width: 180px; filter: brightness(0) opacity(0.85); z-index: 2; }
-
-        .pattern-pluses {
-            position: absolute; right: 120%; bottom: 20px;
-            width: 120px; height: 120px;
-            background-image: radial-gradient(var(--brand-purple) 1.5px, transparent 1.5px);
-            background-size: 25px 25px; opacity: 0.25; z-index: 1;
-        }
-
-        .footer-bottom {
-            background-color: var(--brand-yellow);
-            color: var(--brand-dark);
-            padding: 20px 10%; text-align: left; font-size: 0.85rem; font-weight: 600;
-            display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;
-        }
-        .footer-bottom a { color: var(--brand-dark); text-decoration: none; }
-        .footer-bottom a:hover { text-decoration: underline; color: var(--brand-purple); }
-
-        /* ---------- ANIMAÇÃO DE REVELAÇÃO ---------- */
-        .reveal { opacity: 0; transform: translateY(40px); transition: 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1); }
-        .reveal-active { opacity: 1; transform: translateY(0); }
-
-        /* ========== RESPONSIVO (APENAS MOBILE) ========== */
-        @media (max-width: 900px) {
-            .navbar { padding: 15px 5%; }
-            .navbar .logo-img { height: 70px; }
-            .nav-items { display: none; }
-            .burger-btn { display: flex; }
-            
-            .hero::before {
-                background: linear-gradient(180deg, 
-                    rgba(255, 199, 0, 0.08) 0%, 
-                    rgba(89, 23, 138, 0.25) 35%, 
-                    rgba(89, 23, 138, 0.45) 65%, 
-                    rgba(54, 54, 48, 0.75) 100%);
-            }
-            .hero-bg-img { background-position: center 28%; background-size: cover; }
-            .hero-container { 
-                align-items: center; justify-content: center; 
-                padding-bottom: 8%; min-height: 100vh; text-align: center;
-            }
-            .hero-content { max-width: 90%; text-align: center; margin: 0 auto; }
-            .hero-title {
-                font-size: clamp(1.8rem, 6vw, 2.6rem);
-                text-align: center; line-height: 1.25; margin-bottom: 25px;
-            }
-            .hero-subtitle-top { text-align: center; font-size: clamp(1rem, 3.5vw, 1.4rem); }
-            .handwritten-highlight { display: inline; }
-            .hero-content .btn-prime { display: inline-flex; margin: 0 auto; }
-            
-            .hero-transition { height: 80px; }
-
-            .propulsao-badge { opacity: 0.15; }
-            .propulsao-badge.right { right: -120px; }
-            .propulsao-badge.left { left: -120px; }
-            
-            section { padding: var(--spacing-section) 6%; }
-            
-            #quem-somos p,
-            #services .card p,
-            #diferenciais .card p,
-            #depoimentos .testi-card .quote,
-            #cases .case-item span,
-            .break-conversion p,
-            .footer-details p {
-                text-align: justify;
-                hyphens: auto;
-                -webkit-hyphens: auto;
-                text-justify: inter-word;
-            }
-            
-            section h2 { text-align: center; display: block; }
-            section .section-label { display: block; text-align: center; margin-left: auto; margin-right: auto; }
-            .card { text-align: center; }
-            .card p { text-align: justify; }
-            .card h3 { text-align: center; }
-            .dif-icon { display: block; text-align: center; }
-            
-            .grid-3, .grid-4 { 
-                grid-template-columns: 1fr; gap: 25px; 
-                max-width: 500px; margin-left: auto; margin-right: auto;
-            }
-            
-            .whatsapp-float { right: 20px; bottom: 20px; }
-            .whatsapp-modal { right: 20px; width: calc(100% - 40px); }
-            .card { padding: 28px; }
-            .break-conversion { margin: var(--spacing-section) 5%; text-align: center; }
-            
-            .footer-main { 
-                flex-direction: column; align-items: center; text-align: center;
-                gap: 50px; padding: 50px 5%; 
-            }
-            .footer-info { text-align: center; }
-            .footer-social { justify-content: center; }
-            .footer-details { text-align: justify; }
-            .footer-details strong { text-align: center; display: block; }
-            .footer-bottom { flex-direction: column; text-align: center; justify-content: center; padding: 20px 5%; }
-            .pattern-pluses { display: none; }
-            .footer-graphic img { width: 140px; }
-            .footer-partners { padding: 0 5% 40px; justify-content: center; }
-            
-            .testi-card .quote { text-align: justify; }
-            .testi-card .author { text-align: left; }
-            .service-card .card-number { right: 15px; top: 10px; }
-        }
-
-        @media (max-width: 480px) {
-            .btn-prime { padding: 14px 28px; font-size: 0.75rem; display: inline-flex; margin: 0 auto; }
-            .card { padding: 22px; }
-            .testi-card .quote { font-size: 0.95rem; text-align: justify; }
-            .partner-mock { font-size: 0.9rem; }
-            .partner-mock i { font-size: 1.3rem; }
-            
-            .hero-title { font-size: clamp(1.5rem, 7vw, 2rem); }
-            .hero-content { max-width: 95%; }
-            
-            .hero::before {
-                background: linear-gradient(180deg, 
-                    rgba(255, 199, 0, 0.06) 0%, 
-                    rgba(89, 23, 138, 0.2) 30%, 
-                    rgba(89, 23, 138, 0.4) 60%, 
-                    rgba(54, 54, 48, 0.7) 100%);
-            }
-            .hero-bg-img { background-position: center 25%; }
-            .hero-transition { height: 60px; }
-            
-            p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
-            .hero-title, .hero-subtitle-top, h2, h3, h4,
-            .section-label, .btn-prime, .nav-items a,
-            .author, .footer-bottom p, .cookie-popup p { text-align: center; }
-        }
-    </style>
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div id="particles-js"></div>
+    <!-- Elemento para partículas (somente desktop) -->
+    <div id="particles-js" aria-hidden="true"></div>
 
-<div class="whatsapp-float" id="whatsappFloatBtn" aria-label="Fale pelo WhatsApp">
-    <i class="fab fa-whatsapp" style="font-size:32px; color:white;"></i>
-</div>
-
-<div class="whatsapp-modal" id="whatsappModal">
-    <button onclick="toggleWhatsAppModal()" style="position:absolute; top:18px; right:18px; background:none; border:none; color:#aaa; font-size:1.8rem; cursor:pointer;">&times;</button>
-    <h4>Otimize seus resultados</h4>
-    <p style="color:var(--text-dim); font-size:0.9rem; margin-bottom: 20px;">Fale agora com nossos consultores e descubra como escalar suas vendas de forma previsível.</p>
-    <a href="https://wa.me/5511999778996" target="_blank" rel="noopener noreferrer" class="btn-prime" style="width:100%; background:#25D366; color:var(--brand-dark); justify-content:center;">Iniciar Diagnóstico →</a>
-</div>
-
-<div class="cookie-popup" id="cookiePopup">
-    <p style="font-size:0.9rem; color:var(--text-dim);">Utilizamos cookies para métricas e melhoria da experiência do usuário. Ao continuar, você concorda com nossa <strong style="color:#fff;">Política de Privacidade</strong>.</p>
-    <div style="display:flex; gap:15px;">
-        <button class="btn-cookie btn-accept" onclick="acceptCookies()">Concordar</button>
-        <button class="btn-cookie btn-decline" onclick="closeCookie()">Recusar</button>
+    <!-- ========== WHATSAPP FLUTUANTE ========== -->
+    <div class="whatsapp-float" id="whatsappFloatBtn" role="button" aria-label="Fale pelo WhatsApp" tabindex="0">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
     </div>
-</div>
+    <div class="whatsapp-modal" id="whatsappModal" role="dialog" aria-label="Modal WhatsApp">
+        <button class="whatsapp-modal-close" id="whatsappModalClose" aria-label="Fechar modal">×</button>
+        <h4>Otimize seus resultados</h4>
+        <p>Fale agora com nossos consultores e descubra como escalar suas vendas de forma previsível.</p>
+        <a href="https://wa.me/5511999778996" target="_blank" rel="noopener noreferrer" class="btn-prime btn-whatsapp">Iniciar Diagnóstico →</a>
+    </div>
 
-<nav class="navbar" id="navbar">
-    <a href="index.html"><img src="logo.png" alt="Redesigner Home" class="logo-img"></a>
-    <ul class="nav-items">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#quem-somos">A Agência</a></li>
-        <li><a href="#services">Soluções</a></li>
-        <li><a href="#diferenciais">Expertise</a></li>
-        <li><a href="#cases">Cases</a></li>
-        <li><a href="#contato">Contato</a></li>
-    </ul>
-    <button class="burger-btn" onclick="toggleMobileMenu()" aria-label="Menu">
-        <span></span><span></span><span></span>
-    </button>
-</nav>
-
-<div class="mobile-nav-overlay" id="mobileMenu">
-    <ul class="nav-items" style="display: flex;">
-        <li><a href="#home" onclick="toggleMobileMenu()">Home</a></li>
-        <li><a href="#quem-somos" onclick="toggleMobileMenu()">A Agência</a></li>
-        <li><a href="#services" onclick="toggleMobileMenu()">Soluções</a></li>
-        <li><a href="#diferenciais" onclick="toggleMobileMenu()">Expertise</a></li>
-        <li><a href="#cases" onclick="toggleMobileMenu()">Cases</a></li>
-        <li><a href="#contato" onclick="toggleMobileMenu()">Contato</a></li>
-    </ul>
-</div>
-
-<main>
-    <section id="home" class="hero">
-        <div class="hero-background">
-            <div class="hero-bg-img active" style="background-image: url('img2.png');"></div>
-            <div class="hero-bg-img" style="background-image: url('img3.png');"></div>
-            <div class="hero-bg-img" style="background-image: url('img4.png');"></div>
-            <div class="hero-bg-img" style="background-image: url('img5.png');"></div>
+    <!-- ========== COOKIE POPUP ========== -->
+    <div class="cookie-popup" id="cookiePopup" role="alert" aria-label="Aviso de cookies">
+        <p>Utilizamos cookies para métricas e melhoria da experiência. Ao continuar, você concorda com nossa <a href="privacidade.html" class="cookie-link">Política de Privacidade</a>.</p>
+        <div class="cookie-actions">
+            <button class="btn-cookie btn-accept" id="cookieAccept">Concordar</button>
+            <button class="btn-cookie btn-decline" id="cookieDecline">Recusar</button>
         </div>
+    </div>
 
-        <div class="propulsao-badge right large">
-            <svg viewBox="0 0 200 200" width="300" height="300">
-                <path id="circle-path-hero" d="M 100, 20 a 80,80 0 1,1 -0.1,0" fill="none" />
-                <text fill="var(--brand-yellow)" font-size="14" font-weight="700" letter-spacing="4" font-family="'Paralucent', 'Montserrat', sans-serif">
-                    <textPath href="#circle-path-hero" startOffset="0%">PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • </textPath>
-                </text>
-            </svg>
-        </div>
+    <!-- ========== HEADER / NAVBAR ========== -->
+    <header class="navbar" id="navbar" role="banner">
+        <a href="index.html" class="logo-link" aria-label="Redesigner - Página inicial">
+            <img src="logo.png" alt="Logo Redesigner" class="logo-img" width="150" height="75">
+        </a>
+        <nav aria-label="Navegação principal">
+            <ul class="nav-items" id="navMenu">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#proposta">A Agência</a></li>
+                <li><a href="#solucoes">Soluções</a></li>
+                <li><a href="#diferenciais">Expertise</a></li>
+                <li><a href="#cases">Cases</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <button class="burger-btn" id="burgerBtn" aria-label="Abrir menu mobile" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
 
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    <span class="hero-subtitle-top">A sua Agência de Marketing.</span>
-                    Construímos o relacionamento<br>
-                    da <span class="handwritten-highlight">sua marca.</span>
-                </h1>
-                <div>
+    <!-- Menu mobile (overlay) -->
+    <div class="mobile-nav-overlay" id="mobileMenu" role="navigation" aria-label="Menu mobile">
+        <ul class="nav-items">
+            <li><a href="#home" class="mobile-link">Home</a></li>
+            <li><a href="#proposta" class="mobile-link">A Agência</a></li>
+            <li><a href="#solucoes" class="mobile-link">Soluções</a></li>
+            <li><a href="#diferenciais" class="mobile-link">Expertise</a></li>
+            <li><a href="#cases" class="mobile-link">Cases</a></li>
+            <li><a href="#contato" class="mobile-link">Contato</a></li>
+        </ul>
+    </div>
+
+    <!-- ========== CONTEÚDO PRINCIPAL ========== -->
+    <main>
+        <!-- ===== HERO ===== -->
+        <section id="home" class="hero" aria-label="Apresentação">
+            <div class="hero-background">
+                <div class="hero-bg-img active" style="background-image: url('img2.png');" role="img" aria-label="Equipe Redesigner em reunião criativa"></div>
+                <div class="hero-bg-img" style="background-image: url('img3.png');" role="img" aria-label="Ambiente de trabalho moderno"></div>
+                <div class="hero-bg-img" style="background-image: url('img4.png');" role="img" aria-label="Profissionais de marketing digital"></div>
+                <div class="hero-bg-img" style="background-image: url('img5.png');" role="img" aria-label="Resultados em gráficos"></div>
+            </div>
+
+            <!-- Badge decorativo giratório -->
+            <div class="propulsao-badge right large" aria-hidden="true">
+                <svg viewBox="0 0 200 200" width="300" height="300">
+                    <path id="circle-hero" d="M 100, 20 a 80,80 0 1,1 -0.1,0" fill="none" />
+                    <text fill="#FFC700" font-size="14" font-weight="700" letter-spacing="4" font-family="'Paralucent', 'Montserrat', sans-serif">
+                        <textPath href="#circle-hero" startOffset="0%">PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • </textPath>
+                    </text>
+                </svg>
+            </div>
+
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="hero-subtitle-top">A sua Agência de Marketing.</span>
+                        Construímos o relacionamento<br>
+                        da <span class="handwritten-highlight">sua marca.</span>
+                    </h1>
                     <a href="#contato" class="btn-prime">Solicitar Consultoria</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <div class="hero-transition" aria-hidden="true"></div>
+        <!-- Transição suave -->
+        <div class="hero-transition" aria-hidden="true"></div>
 
-    <section id="quem-somos">
-        <div class="propulsao-badge left medium">
-            <svg viewBox="0 0 200 200" width="240" height="240">
-                <path id="circle-path-q1" d="M 100, 20 a 80,80 0 1,1 -0.1,0" fill="none" />
-                <text fill="var(--brand-yellow)" font-size="14" font-weight="700" letter-spacing="4" font-family="'Paralucent', 'Montserrat', sans-serif">
-                    <textPath href="#circle-path-q1" startOffset="0%">PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • </textPath>
-                </text>
-            </svg>
-        </div>
-        <span class="section-label">DNA Redesigner</span>
-        <h2>Foco Absoluto em Resultados</h2>
-        <div style="max-width: 1000px; margin-bottom: 50px;">
-            <p style="margin-bottom: 25px; font-size: 1.05rem; color: var(--text-dim);">Desde 2019, a <strong>Redesigner</strong> atua como o braço estratégico de marketing para empresas que buscam ir além das métricas de vaidade. Somos especialistas na estruturação e gestão de canais digitais focados na atração, retenção e conversão de clientes qualificados (B2B e B2C).</p>
-            <p style="margin-bottom: 25px; font-size: 1.05rem; color: var(--text-dim);">Nossa metodologia integra análise de dados, criatividade orientada à performance e desenvolvimento de infraestrutura digital (Sites e Landing Pages de alta conversão). Trabalhamos com transparência e relatórios precisos para garantir o melhor ROI do seu investimento.</p>
-        </div>
-        <div class="grid-3">
-            <div class="card"><h3>Nossa Missão</h3><p>Desenvolver e executar estratégias de marketing digital de alta precisão, impulsionando a lucratividade e o valor de mercado dos nossos parceiros de negócios.</p></div>
-            <div class="card"><h3>Nossa Visão</h3><p>Consolidar-nos como a agência de performance referência em São Paulo, reconhecida pelo compromisso técnico e impacto real no faturamento dos clientes.</p></div>
-            <div class="card"><h3>Nossos Valores</h3><p><strong>Decisões por Dados:</strong> Achismos não escalam negócios.<br><strong>Parceria Estratégica:</strong> O seu sucesso viabiliza o nosso.<br><strong>Transparência:</strong> Clareza total nos investimentos.<br><strong>Inovação:</strong> Adaptação rápida ao mercado.</p></div>
-        </div>
-    </section>
+        <!-- ===== PROPOSTA DE VALOR ===== -->
+        <section id="proposta" aria-labelledby="proposta-title">
+            <div class="propulsao-badge left medium" aria-hidden="true">
+                <svg viewBox="0 0 200 200" width="240" height="240">
+                    <path id="circle-proposta" d="M 100, 20 a 80,80 0 1,1 -0.1,0" fill="none" />
+                    <text fill="#FFC700" font-size="14" font-weight="700" letter-spacing="4" font-family="'Paralucent', 'Montserrat', sans-serif">
+                        <textPath href="#circle-proposta" startOffset="0%">PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • </textPath>
+                    </text>
+                </svg>
+            </div>
+            <span class="section-label">DNA Redesigner</span>
+            <h2 id="proposta-title">Foco Absoluto em Resultados</h2>
+            <div class="proposta-texto">
+                <p>Desde 2019, a <strong>Redesigner</strong> atua como o braço estratégico de marketing para empresas que buscam ir além das métricas de vaidade. Somos especialistas na estruturação e gestão de canais digitais focados na atração, retenção e conversão de clientes qualificados (B2B e B2C).</p>
+                <p>Nossa metodologia integra análise de dados, criatividade orientada à performance e desenvolvimento de infraestrutura digital (sites e landing pages de alta conversão). Trabalhamos com transparência e relatórios precisos para garantir o melhor ROI do seu investimento.</p>
+            </div>
+            <div class="grid-3">
+                <article class="card">
+                    <h3>Nossa Missão</h3>
+                    <p>Desenvolver e executar estratégias de marketing digital de alta precisão, impulsionando a lucratividade e o valor de mercado dos nossos parceiros.</p>
+                </article>
+                <article class="card">
+                    <h3>Nossa Visão</h3>
+                    <p>Consolidar-nos como a agência de performance referência em São Paulo, reconhecida pelo compromisso técnico e impacto real no faturamento dos clientes.</p>
+                </article>
+                <article class="card">
+                    <h3>Nossos Valores</h3>
+                    <p><strong>Decisões por Dados:</strong> Achismos não escalam negócios.<br><strong>Parceria Estratégica:</strong> O seu sucesso viabiliza o nosso.<br><strong>Transparência:</strong> Clareza total nos investimentos.<br><strong>Inovação:</strong> Adaptação rápida ao mercado.</p>
+                </article>
+            </div>
+        </section>
 
-    <section id="services">
-        <div class="propulsao-badge right small">
-            <svg viewBox="0 0 200 200" width="180" height="180">
-                <path id="circle-path-s1" d="M 100, 20 a 80,80 0 1,1 -0.1,0" fill="none" />
-                <text fill="var(--brand-yellow)" font-size="13" font-weight="700" letter-spacing="4" font-family="'Paralucent', 'Montserrat', sans-serif">
-                    <textPath href="#circle-path-s1" startOffset="0%">PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • </textPath>
-                </text>
-            </svg>
-        </div>
-        <span class="section-label">Nossas Soluções</span>
-        <h2>Metodologia de Escala</h2>
-        <div class="grid-4">
-            <div class="card service-card"><div class="card-number">01</div><h3>Auditoria & Dados</h3><p>Mapeamento de mercado, análise de concorrência e identificação de gargalos comerciais no seu funil de vendas digital.</p></div>
-            <div class="card service-card"><div class="card-number">02</div><h3>Gestão de Tráfego</h3><p>Criação e otimização contínua de campanhas em Google Ads e Meta Ads com foco implacável em CPA (Custo por Aquisição).</p></div>
-            <div class="card service-card"><div class="card-number">03</div><h3>Posiciona-<br>mento</h3><p>Gestão de redes sociais e produção de conteúdo corporativo que transmite autoridade e eleva o ticket médio da sua marca.</p></div>
-            <div class="card service-card"><div class="card-number">04</div><h3>Infra-<br>estrutura Web</h3><p>Desenvolvimento de sites institucionais e Landing Pages com UX/UI voltados exclusivamente para captação de leads.</p></div>
-        </div>
-    </section>
+        <!-- ===== CONTEXTUALIZAÇÃO DO PROBLEMA ===== -->
+        <section id="problema" aria-labelledby="problema-title" class="problema-section">
+            <span class="section-label">Diagnóstico</span>
+            <h2 id="problema-title">O que trava o seu crescimento?</h2>
+            <div class="problema-grid">
+                <div class="problema-item">
+                    <i class="fas fa-times-circle" aria-hidden="true"></i>
+                    <p><strong>Falta de leads qualificados</strong> – seu funil não atrai o cliente certo.</p>
+                </div>
+                <div class="problema-item">
+                    <i class="fas fa-times-circle" aria-hidden="true"></i>
+                    <p><strong>Investimento sem retorno claro</strong> – você gasta em anúncios, mas não vê resultado.</p>
+                </div>
+                <div class="problema-item">
+                    <i class="fas fa-times-circle" aria-hidden="true"></i>
+                    <p><strong>Marca invisível</strong> – sua empresa não é lembrada quando o cliente precisa.</p>
+                </div>
+                <div class="problema-item">
+                    <i class="fas fa-times-circle" aria-hidden="true"></i>
+                    <p><strong>Infraestrutura digital frágil</strong> – site lento ou que não converte.</p>
+                </div>
+            </div>
+            <p class="problema-conclusao">A Redesigner transforma esses gargalos em alavancas de crescimento.</p>
+        </section>
 
-    <section id="diferenciais">
-        <div class="propulsao-badge left medium">
-            <svg viewBox="0 0 200 200" width="240" height="240">
-                <path id="circle-path-d1" d="M 100, 20 a 80,80 0 1,1 -0.1,0" fill="none" />
-                <text fill="var(--brand-yellow)" font-size="14" font-weight="700" letter-spacing="4" font-family="'Paralucent', 'Montserrat', sans-serif">
-                    <textPath href="#circle-path-d1" startOffset="0%">PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • </textPath>
-                </text>
-            </svg>
-        </div>
-        <span class="section-label">Vantagem Competitiva</span>
-        <h2>Por que ser um parceiro?</h2>
-        <div class="grid-3">
-            <div class="card"><div class="dif-icon"><i class="fas fa-chart-line"></i></div><h3>Estratégia Custo-<br>mizada</h3><p>Sua operação é única. Desenvolvemos planejamentos sob medida com base nas especificidades do seu mercado de atuação.</p></div>
-            <div class="card"><div class="dif-icon"><i class="fas fa-bullseye"></i></div><h3>Foco em ROI</h3><p>Cada ação, post ou campanha publicitária é estruturada para retornar o investimento. Monitoramos o funil de ponta a ponta.</p></div>
-            <div class="card"><div class="dif-icon"><i class="fas fa-laptop-code"></i></div><h3>Multidisciplinar</h3><p>De programadores a especialistas em copy corporativo, uma equipe completa atuando como seu departamento de marketing.</p></div>
-        </div>
-    </section>
+        <!-- ===== SOLUÇÃO (SERVIÇOS) ===== -->
+        <section id="solucoes" aria-labelledby="solucoes-title">
+            <div class="propulsao-badge right small" aria-hidden="true">
+                <svg viewBox="0 0 200 200" width="180" height="180">
+                    <path id="circle-solucoes" d="M 100, 20 a 80,80 0 1,1 -0.1,0" fill="none" />
+                    <text fill="#FFC700" font-size="13" font-weight="700" letter-spacing="4" font-family="'Paralucent', 'Montserrat', sans-serif">
+                        <textPath href="#circle-solucoes" startOffset="0%">PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • </textPath>
+                    </text>
+                </svg>
+            </div>
+            <span class="section-label">Nossas Soluções</span>
+            <h2 id="solucoes-title">Metodologia de Escala</h2>
+            <div class="grid-4">
+                <article class="card service-card">
+                    <span class="card-number" aria-hidden="true">01</span>
+                    <h3>Auditoria &amp; Dados</h3>
+                    <p>Mapeamento de mercado, análise de concorrência e identificação de gargalos comerciais no seu funil de vendas digital.</p>
+                </article>
+                <article class="card service-card">
+                    <span class="card-number" aria-hidden="true">02</span>
+                    <h3>Gestão de Tráfego</h3>
+                    <p>Criação e otimização contínua de campanhas em Google Ads e Meta Ads com foco implacável em CPA (Custo por Aquisição).</p>
+                </article>
+                <article class="card service-card">
+                    <span class="card-number" aria-hidden="true">03</span>
+                    <h3>Posicionamento</h3>
+                    <p>Gestão de redes sociais e produção de conteúdo corporativo que transmite autoridade e eleva o ticket médio da sua marca.</p>
+                </article>
+                <article class="card service-card">
+                    <span class="card-number" aria-hidden="true">04</span>
+                    <h3>Infraestrutura Web</h3>
+                    <p>Desenvolvimento de sites institucionais e landing pages com UX/UI voltados exclusivamente para captação de leads.</p>
+                </article>
+            </div>
+        </section>
 
-    <section id="depoimentos">
-        <div class="propulsao-badge right small">
-            <svg viewBox="0 0 200 200" width="180" height="180">
-                <path id="circle-path-t1" d="M 100, 20 a 80,80 0 1,1 -0.1,0" fill="none" />
-                <text fill="var(--brand-yellow)" font-size="13" font-weight="700" letter-spacing="4" font-family="'Paralucent', 'Montserrat', sans-serif">
-                    <textPath href="#circle-path-t1" startOffset="0%">PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • </textPath>
-                </text>
-            </svg>
+        <!-- ===== BENEFÍCIOS / DIFERENCIAIS ===== -->
+        <section id="diferenciais" aria-labelledby="diferenciais-title">
+            <div class="propulsao-badge left medium" aria-hidden="true">
+                <svg viewBox="0 0 200 200" width="240" height="240">
+                    <path id="circle-diferenciais" d="M 100, 20 a 80,80 0 1,1 -0.1,0" fill="none" />
+                    <text fill="#FFC700" font-size="14" font-weight="700" letter-spacing="4" font-family="'Paralucent', 'Montserrat', sans-serif">
+                        <textPath href="#circle-diferenciais" startOffset="0%">PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • </textPath>
+                    </text>
+                </svg>
+            </div>
+            <span class="section-label">Vantagem Competitiva</span>
+            <h2 id="diferenciais-title">Por que ser um parceiro?</h2>
+            <div class="grid-3">
+                <article class="card">
+                    <div class="dif-icon"><i class="fas fa-chart-line" aria-hidden="true"></i></div>
+                    <h3>Estratégia Customizada</h3>
+                    <p>Sua operação é única. Desenvolvemos planejamentos sob medida com base nas especificidades do seu mercado de atuação.</p>
+                </article>
+                <article class="card">
+                    <div class="dif-icon"><i class="fas fa-bullseye" aria-hidden="true"></i></div>
+                    <h3>Foco em ROI</h3>
+                    <p>Cada ação, post ou campanha publicitária é estruturada para retornar o investimento. Monitoramos o funil de ponta a ponta.</p>
+                </article>
+                <article class="card">
+                    <div class="dif-icon"><i class="fas fa-laptop-code" aria-hidden="true"></i></div>
+                    <h3>Equipe Multidisciplinar</h3>
+                    <p>De programadores a especialistas em copy corporativo, uma equipe completa atuando como seu departamento de marketing.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===== PROCESSO (COMO FUNCIONA) ===== -->
+        <section id="processo" aria-labelledby="processo-title">
+            <span class="section-label">Metodologia</span>
+            <h2 id="processo-title">Como transformamos seu marketing</h2>
+            <div class="processo-timeline">
+                <div class="processo-step">
+                    <span class="step-number">1</span>
+                    <div class="step-content">
+                        <h3>Imersão</h3>
+                        <p>Conhecemos seu negócio, público e objetivos em detalhes.</p>
+                    </div>
+                </div>
+                <div class="processo-step">
+                    <span class="step-number">2</span>
+                    <div class="step-content">
+                        <h3>Diagnóstico</h3>
+                        <p>Analisamos dados, concorrência e oportunidades de melhoria.</p>
+                    </div>
+                </div>
+                <div class="processo-step">
+                    <span class="step-number">3</span>
+                    <div class="step-content">
+                        <h3>Estratégia</h3>
+                        <p>Criamos um plano de ação com metas, canais e orçamento.</p>
+                    </div>
+                </div>
+                <div class="processo-step">
+                    <span class="step-number">4</span>
+                    <div class="step-content">
+                        <h3>Execução</h3>
+                        <p>Colocamos a mão na massa com monitoramento diário.</p>
+                    </div>
+                </div>
+                <div class="processo-step">
+                    <span class="step-number">5</span>
+                    <div class="step-content">
+                        <h3>Otimização</h3>
+                        <p>Ajustes contínuos baseados em dados para maximizar resultados.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== DEMONSTRAÇÃO / CASES (ATUALIZADO) ===== -->
+        <section id="cases" aria-labelledby="cases-title">
+            <span class="section-label">Portfólio Ativo</span>
+            <h2 id="cases-title">Empresas que escalam conosco</h2>
+            <div class="carousel-viewport">
+                <div class="carousel-track" id="casesTrack">
+                    <!-- Cases existentes -->
+                    <a href="https://hotelparadiesexpress.com.br/" class="case-item" target="_blank" rel="noopener noreferrer">
+                        <div class="case-img-box"><img src="paradies.png" alt="Hotel Paradies - site institucional" loading="lazy"></div>
+                        <h4>Hotel Paradies</h4>
+                        <span>Infraestrutura + Tráfego</span>
+                    </a>
+                    <a href="http://rgetiquetas.com.br/" class="case-item" target="_blank" rel="noopener noreferrer">
+                        <div class="case-img-box"><img src="rg-etiquetas.png" alt="RG Etiquetas - campanha B2B" loading="lazy"></div>
+                        <h4>RG Etiquetas</h4>
+                        <span>Performance B2B</span>
+                    </a>
+                    <a href="https://www.dorvet.com.br/" class="case-item" target="_blank" rel="noopener noreferrer">
+                        <div class="case-img-box"><img src="dorvet.png" alt="Dorvet - site veterinário" loading="lazy"></div>
+                        <h4>Dorvet</h4>
+                        <span>Criação de Site Web</span>
+                    </a>
+                    <a href="https://tiojuniortaxipet.com.br/" class="case-item" target="_blank" rel="noopener noreferrer">
+                        <div class="case-img-box"><img src="taxipet.png" alt="Tio Júnior Taxi Pet - tráfego" loading="lazy"></div>
+                        <h4>Tio Júnior Taxi Pet</h4>
+                        <span>Tráfego + Captação</span>
+                    </a>
+                    <a href="https://jardinpaysan.com.br/" class="case-item" target="_blank" rel="noopener noreferrer">
+                        <div class="case-img-box"><img src="jardin-paysan.png" alt="Jardin Paysan - branding" loading="lazy"></div>
+                        <h4>Jardin Paysan</h4>
+                        <span>Posicionamento de Marca</span>
+                    </a>
+                    <a href="https://mibportoes.com.br/" class="case-item" target="_blank" rel="noopener noreferrer">
+                        <div class="case-img-box"><img src="mib-portoes.png" alt="MIB Portões - desenvolvimento web" loading="lazy"></div>
+                        <h4>MIB Portões</h4>
+                        <span>Desenvolvimento Web</span>
+                    </a>
+                    <a href="#" class="case-item" target="_blank" rel="noopener noreferrer">
+                        <div class="case-img-box"><img src="logo-ideale.png" alt="Odontologia Ideale - soluções digitais" loading="lazy"></div>
+                        <h4>Odontologia Ideale</h4>
+                        <span>Soluções Digitais</span>
+                    </a>
+                    <a href="https://mfurtadocontabil.com.br/" class="case-item" target="_blank" rel="noopener noreferrer">
+                        <div class="case-img-box"><img src="m-furtado.png" alt="M. Furtado Contabilidade - site" loading="lazy"></div>
+                        <h4>M. Furtado Contabilidade</h4>
+                        <span>Desenvolvimento Web</span>
+                    </a>
+                    <a href="https://www.nandaturismo.com.br/" class="case-item" target="_blank" rel="noopener noreferrer">
+                        <div class="case-img-box"><img src="nanda.png" alt="Nanda Turismo - soluções digitais" loading="lazy"></div>
+                        <h4>Nanda Turismo</h4>
+                        <span>Soluções Digitais</span>
+                    </a>
+                    <a href="#" class="case-item" target="_blank" rel="noopener noreferrer">
+                        <div class="case-img-box"><img src="doghood.png" alt="Doghood - site" loading="lazy"></div>
+                        <h4>Doghood</h4>
+                        <span>Desenvolvimento Web</span>
+                    </a>
+                    <a href="#" class="case-item" target="_blank" rel="noopener noreferrer">
+                        <div class="case-img-box"><img src="petblend.png" alt="PetBlend - site" loading="lazy"></div>
+                        <h4>PetBlend</h4>
+                        <span>Desenvolvimento Web</span>
+                    </a>
+
+                    <!-- NOVOS CASES ADICIONADOS -->
+                    <a href="#" class="case-item" target="_blank" rel="noopener noreferrer">
+                        <div class="case-img-box"><img src="dog-center.png" alt="Dog Center Ipiranga - pet shop" loading="lazy"></div>
+                        <h4>Dog Center Ipiranga</h4>
+                        <span>Infraestrutura + Tráfego</span>
+                    </a>
+                    <a href="#" class="case-item" target="_blank" rel="noopener noreferrer">
+                        <div class="case-img-box"><img src="morada.png" alt="Pet Shop Morada dos Pássaros" loading="lazy"></div>
+                        <h4>Morada dos Pássaros</h4>
+                        <span>Soluções Digitais</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cases-cta">
+                <a href="https://wa.me/5511999778996" target="_blank" rel="noopener noreferrer" class="btn-prime">Solicitar Portfólio Completo</a>
+            </div>
+        </section>
+
+        <!-- ===== AUTORIDADE ===== -->
+        <section id="autoridade" aria-labelledby="autoridade-title" class="autoridade-section">
+            <span class="section-label">Credenciais</span>
+            <h2 id="autoridade-title">Números que falam por si</h2>
+            <div class="autoridade-grid">
+                <div class="autoridade-item">
+                    <span class="numero">+5</span>
+                    <p>anos de mercado</p>
+                </div>
+                <div class="autoridade-item">
+                    <span class="numero">+50</span>
+                    <p>projetos entregues</p>
+                </div>
+                <div class="autoridade-item">
+                    <span class="numero">+200%</span>
+                    <p>crescimento médio em leads</p>
+                </div>
+                <div class="autoridade-item">
+                    <span class="numero">98%</span>
+                    <p>satisfação dos clientes</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== DEPOIMENTOS (Prova Social) ===== -->
+        <section id="depoimentos" aria-labelledby="depoimentos-title">
+            <div class="propulsao-badge right small" aria-hidden="true">
+                <svg viewBox="0 0 200 200" width="180" height="180">
+                    <path id="circle-depoimentos" d="M 100, 20 a 80,80 0 1,1 -0.1,0" fill="none" />
+                    <text fill="#FFC700" font-size="13" font-weight="700" letter-spacing="4" font-family="'Paralucent', 'Montserrat', sans-serif">
+                        <textPath href="#circle-depoimentos" startOffset="0%">PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • PROPULSÃO CRIATIVA • </textPath>
+                    </text>
+                </svg>
+            </div>
+            <span class="section-label">Nossa Reputação</span>
+            <h2 id="depoimentos-title">O impacto no mercado</h2>
+            <div class="testimonials-container">
+                <div class="testimonials-track" id="testimonialTrack">
+                    <article class="testi-card">
+                        <blockquote class="quote">"A reestruturação digital feita pela equipe transformou nosso comercial. Triplicamos o volume de leads qualificados no B2B em apenas 6 meses de operação conjunta."</blockquote>
+                        <cite class="author">— Ricardo Silva / Setor Industrial</cite>
+                    </article>
+                    <article class="testi-card">
+                        <blockquote class="quote">"Profissionalismo desde o diagnóstico inicial até os relatórios de performance. Conseguimos baixar nosso CAC em 40% através da gestão de tráfego."</blockquote>
+                        <cite class="author">— Ana Paula Melo / Varejo Premium</cite>
+                    </article>
+                    <article class="testi-card">
+                        <blockquote class="quote">"Uma agência que finalmente entende de negócios e não apenas de design. O site desenvolvido converte visitantes em clientes diariamente."</blockquote>
+                        <cite class="author">— Carlos Dutra / Serviços Veterinários</cite>
+                    </article>
+                </div>
+            </div>
+            <div class="dots" id="testimonialDots" role="tablist" aria-label="Navegação de depoimentos"></div>
+        </section>
+
+        <!-- ===== OBJEÇÕES / FAQ ===== -->
+        <section id="faq" aria-labelledby="faq-title">
+            <span class="section-label">Dúvidas Frequentes</span>
+            <h2 id="faq-title">Respondemos suas principais objeções</h2>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>Quanto custa?</summary>
+                    <p>Nossos serviços são personalizados. Oferecemos planos mensais e projetos específicos. Entre em contato para um diagnóstico gratuito e orçamento sob medida.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Como funciona o processo?</summary>
+                    <p>Começamos com uma imersão no seu negócio, seguida de diagnóstico, planejamento estratégico, execução e otimização contínua. Você tem total visibilidade de cada etapa.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>É para qualquer tipo de empresa?</summary>
+                    <p>Atendemos principalmente PMEs de diversos setores (indústria, varejo, serviços, saúde, etc.). Se sua empresa busca crescimento digital, podemos ajudar.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Quanto tempo leva para ver resultados?</summary>
+                    <p>Depende do objetivo, mas geralmente vemos melhorias significativas em 60 a 90 dias. Campanhas de tráfego podem gerar leads já na primeira semana.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Vocês oferecem garantia?</summary>
+                    <p>Garantimos transparência e profissionalismo. Não há fidelidade obrigatória – nosso trabalho é baseado em resultados, e você pode avaliar mensalmente.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Onde vocês estão localizados?</summary>
+                    <p>Atendemos todo o Brasil de forma remota e presencial em São Paulo (SP). Nossa estrutura permite atender clientes de qualquer região.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- ===== CTA FINAL ===== -->
+        <div class="break-conversion" id="contato">
+            <h2>Sua operação está pronta para o próximo nível?</h2>
+            <p>Agende uma reunião estratégica para entendermos seus desafios de crescimento.</p>
+            <a href="https://wa.me/5511999778996" target="_blank" rel="noopener noreferrer" class="btn-prime btn-conversion">Falar com Especialista</a>
         </div>
-        <span class="section-label">Nossa Reputação</span>
-        <h2>O impacto no mercado</h2>
-        <div class="testimonials-container">
-            <div class="testimonials-track" id="testimonialTrack">
-                <div class="testi-card"><p class="quote">"A reestruturação digital feita pela equipe transformou nosso comercial. Triplicamos o volume de leads qualificados no B2B em apenas 6 meses de operação conjunta."</p><p class="author">— Ricardo Silva / Setor Industrial</p></div>
-                <div class="testi-card"><p class="quote">"Profissionalismo desde o diagnóstico inicial até os relatórios de performance. Conseguimos baixar nosso CAC em 40% através da gestão de tráfego."</p><p class="author">— Ana Paula Melo / Varejo Premium</p></div>
-                <div class="testi-card"><p class="quote">"Uma agência que finalmente entende de negócios e não apenas de design. O site desenvolvido converte visitantes em clientes diariamente."</p><p class="author">— Carlos Dutra / Serviços Veterinários</p></div>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer" id="footer" role="contentinfo">
+        <div class="footer-main">
+            <div class="footer-info">
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/agenciaredesigner" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.facebook.com/agenciaredesigner" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/agenciaredesigner/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                    </a>
+                    <a href="mailto:atendimento@redesigner.com.br" aria-label="E-mail">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="footer-details">
+                    <strong>Redesigner - Planejamento, Publicidade e Marketing</strong>
+                    <p>São Paulo - SP - Atendimento Nacional</p>
+                    <p>CNPJ: 41.142.331/0001-43</p>
+                </div>
+            </div>
+            <div class="footer-graphic">
+                <a href="index.html"><img src="logo.png" alt="Redesigner Agência Digital" width="180" height="auto"></a>
             </div>
         </div>
-        <div class="dots" id="testimonialDots"></div>
-    </section>
-
-    <section id="cases">
-        <span class="section-label">Portfólio Ativo</span>
-        <h2>Empresas que escalam conosco</h2>
-        <div class="carousel-viewport">
-            <div class="carousel-track" id="casesTrack">
-                <a href="https://hotelparadiesexpress.com.br/" class="case-item" target="_blank" rel="noopener noreferrer"><div class="case-img-box"><img src="paradies.png" alt="Hotel Paradies" loading="lazy"></div><h4>Hotel Paradies</h4><span>Infraestrutura + Tráfego</span></a>
-                <a href="http://rgetiquetas.com.br/" class="case-item" target="_blank" rel="noopener noreferrer"><div class="case-img-box"><img src="rg-etiquetas.png" alt="RG Etiquetas" loading="lazy"></div><h4>RG Etiquetas</h4><span>Performance B2B</span></a>
-                <a href="https://www.dorvet.com.br/" class="case-item" target="_blank" rel="noopener noreferrer"><div class="case-img-box"><img src="dorvet.png" alt="Dorvet" loading="lazy"></div><h4>Dorvet</h4><span>Criação de Site Web</span></a>
-                <a href="https://tiojuniortaxipet.com.br/" class="case-item" target="_blank" rel="noopener noreferrer"><div class="case-img-box"><img src="taxipet.png" alt="Tio Júnior Taxi Pet" loading="lazy"></div><h4>Tio Júnior Taxi Pet</h4><span>Tráfego + Captação</span></a>
-                <a href="https://jardinpaysan.com.br/" class="case-item" target="_blank" rel="noopener noreferrer"><div class="case-img-box"><img src="jardin-paysan.png" alt="Jardin Paysan" loading="lazy"></div><h4>Jardin Paysan</h4><span>Posicionamento de Marca</span></a>
-                <a href="https://mibportoes.com.br/" class="case-item" target="_blank" rel="noopener noreferrer"><div class="case-img-box"><img src="mib-portoes.png" alt="MIB Portões" loading="lazy"></div><h4>MIB Portões</h4><span>Desenvolvimento Web</span></a>
-                <a href="#" class="case-item" target="_blank" rel="noopener noreferrer"><div class="case-img-box"><img src="logo-ideale.png" alt="Odontologia Ideale" loading="lazy"></div><h4>Odontologia Ideale</h4><span>Soluções Digitais</span></a>
-                <a href="https://mfurtadocontabil.com.br/" class="case-item" target="_blank" rel="noopener noreferrer"><div class="case-img-box"><img src="m-furtado.png" alt="M. Furtado Contabilidade" loading="lazy"></div><h4>M. Furtado Contabilidade</h4><span>Desenvolvimento Web</span></a>
-                <a href="https://www.nandaturismo.com.br/" class="case-item" target="_blank" rel="noopener noreferrer"><div class="case-img-box"><img src="nanda.png" alt="Nanda Turismo" loading="lazy"></div><h4>Nanda Turismo</h4><span>Soluções Digitais e Desenvolvimento Web</span></a>
-                <a href="#" class="case-item" target="_blank" rel="noopener noreferrer"><div class="case-img-box"><img src="doghood.png" alt="Doghood" loading="lazy"></div><h4>Doghood</h4><span>Desenvolvimento Web</span></a>
-                <a href="#" class="case-item" target="_blank" rel="noopener noreferrer"><div class="case-img-box"><img src="petblend.png" alt="Café com Leite" loading="lazy"></div><h4>PetBlend</h4><span>Desenvolvimento Web</span></a>
-            </div>
+        <div class="footer-bottom">
+            <p>&copy; 2019-2026 - Todos os direitos reservados. | Desenvolvido por Redesigner PPM</p>
+            <nav aria-label="Políticas">
+                <a href="privacidade.html">Privacidade</a>
+                <a href="termos.html">Termos de Uso</a>
+                <a href="cookies.html">Cookies</a>
+                <a href="lgpd.html">LGPD</a>
+            </nav>
         </div>
-        <div style="text-align:center; margin-top:40px;"><a href="https://wa.me/5511999778996" target="_blank" rel="noopener noreferrer" class="btn-prime">Solicitar Portfólio Completo</a></div>
-    </section>
+    </footer>
 
-    <div class="break-conversion">
-        <h2>Sua operação está pronta para o próximo nível?</h2>
-        <p>Agende uma reunião estratégica para entendermos seus desafios de crescimento.</p>
-        <a href="#contato" class="btn-prime" style="margin-top: 15px;">Falar com Especialista</a>
-    </div>
-</main>
-
-<footer id="contato" class="site-footer">
-    <div class="footer-main">
-        <div class="footer-info reveal">
-            <div class="footer-social">
-                <a href="https://www.instagram.com/agenciaredesigner" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/agenciaredesigner" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.linkedin.com/company/agenciaredesigner/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="mailto:atendimento@redesigner.com.br" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
-            </div>
-            <div class="footer-details">
-                <strong>Redesigner - Planejamento, Publicidade e Marketing</strong>
-                <p>São Paulo - SP - Atendimento Nacional</p>
-                <p>CNPJ: 41.142.331/0001-43</p>
-            </div>
-        </div>
-        <div class="footer-graphic reveal">
-            <div class="pattern-pluses"></div>
-            <a href="index.html"><img src="logo.png" alt="Redesigner Agência Digital"></a>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>© 2019-2026 - Todos os direitos reservados. | Desenvolvido por Redesigner PPM | <a href="privacidade.html">Nossas Políticas</a></p>
-    </div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
-<script>
-    (function() {
-        if(window.particlesJS && window.innerWidth > 768) {
-            particlesJS("particles-js", {
-                particles: {
-                    number: { value: 45 },
-                    color: { value: "#ffffff" },
-                    opacity: { value: 0.15 },
-                    size: { value: 2 },
-                    line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.05, width: 1 },
-                    move: { enable: true, speed: 0.8 }
-                }
-            });
-        }
-
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) navbar.classList.add('scrolled');
-            else navbar.classList.remove('scrolled');
-        });
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const hash = this.getAttribute('href');
-                if(hash === "#" || hash === "") return;
-                const target = document.querySelector(hash);
-                if(target) {
-                    e.preventDefault();
-                    window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
-                }
-            });
-        });
-
-        const sections = document.querySelectorAll("section");
-        const navLinks = document.querySelectorAll(".nav-items a");
-        window.addEventListener("scroll", () => {
-            let current = "";
-            sections.forEach(section => {
-                if(scrollY >= section.offsetTop - 250) current = section.getAttribute("id");
-            });
-            const footer = document.querySelector('.site-footer');
-            if(footer && scrollY >= footer.offsetTop - 250) current = "contato";
-            navLinks.forEach(a => {
-                a.classList.remove("active");
-                if(a.getAttribute("href") === `#${current}`) a.classList.add("active");
-            });
-        });
-
-        const reveals = document.querySelectorAll(".card, .testi-card, .case-item, .break-conversion, .reveal");
-        const obs = new IntersectionObserver((entries) => {
-            entries.forEach(e => { if(e.isIntersecting) e.target.classList.add("reveal-active"); });
-        }, { threshold: 0.1 });
-        reveals.forEach(el => { el.classList.add("reveal"); obs.observe(el); });
-
-        const bgImgs = document.querySelectorAll('.hero-bg-img');
-        if(bgImgs.length > 1) {
-            let bgIndex = 0;
-            setInterval(() => {
-                bgImgs[bgIndex].classList.remove('active');
-                bgIndex = (bgIndex + 1) % bgImgs.length;
-                bgImgs[bgIndex].classList.add('active');
-            }, 5000); 
-        }
-
-        const track = document.getElementById('testimonialTrack');
-        const dotsContainer = document.getElementById('testimonialDots');
-        let currentSlide = 0;
-        const cards = track ? Array.from(track.children) : [];
-        if(cards.length) {
-            cards.forEach((_, i) => {
-                const dot = document.createElement('span');
-                dot.classList.add('dot');
-                if(i === 0) dot.classList.add('active');
-                dot.addEventListener('click', () => goToSlide(i));
-                dotsContainer.appendChild(dot);
-            });
-            function goToSlide(index) {
-                currentSlide = index;
-                track.style.transform = `translateX(-${currentSlide * 100}%)`;
-                document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === currentSlide));
-            }
-            setInterval(() => { let next = (currentSlide + 1) % cards.length; goToSlide(next); }, 6000);
-        }
-
-        const casesTrack = document.getElementById('casesTrack');
-        if(casesTrack) {
-            const items = Array.from(casesTrack.children);
-            items.forEach(item => casesTrack.appendChild(item.cloneNode(true)));
-            casesTrack.classList.add('animate');
-        }
-
-        let exitShown = false;
-        document.addEventListener("mouseleave", (e) => {
-            if(e.clientY <= 0 && !exitShown && !localStorage.getItem('exit_modal')) {
-                exitShown = true;
-                localStorage.setItem('exit_modal','true');
-                document.getElementById('whatsappModal')?.classList.add('show');
-                setTimeout(() => document.getElementById('whatsappModal')?.classList.remove('show'), 8000);
-            }
-        });
-
-        document.getElementById('whatsappFloatBtn')?.addEventListener('click', () => {
-            window.open("https://wa.me/5511999778996?text=Olá! Vim pelo site e gostaria de agendar uma consultoria estratégica para minha empresa.", "_blank", "noopener");
-        });
-    })();
-
-    function toggleWhatsAppModal() { document.getElementById('whatsappModal').classList.toggle('show'); }
-    function toggleMobileMenu() { 
-        const menu = document.getElementById('mobileMenu');
-        menu.classList.toggle('active');
-        document.querySelector('.burger-btn').classList.toggle('open');
-    }
-    function acceptCookies() { localStorage.setItem('redesigner_cookies', 'true'); document.getElementById('cookiePopup').classList.remove('show'); }
-    function closeCookie() { document.getElementById('cookiePopup').classList.remove('show'); }
-    window.onload = function() { if(!localStorage.getItem('redesigner_cookies')) setTimeout(() => document.getElementById('cookiePopup')?.classList.add('show'), 2500); };
-</script>
+    <!-- ========== SCRIPTS ========== -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

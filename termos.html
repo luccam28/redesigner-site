@@ -2,15 +2,6 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXX');
-    </script>
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Termos de Uso | ReDesigner Agência Digital</title>
     <meta name="description" content="Termos de Uso da ReDesigner. Conheça as condições para utilização de nossos serviços de marketing digital.">
@@ -35,528 +26,222 @@
     <meta property="og:url" content="https://redesigner.com.br/termos.html">
     <meta property="og:image" content="https://redesigner.com.br/logo-og.png">
 
-    <!-- Fonts & Icons -->
+    <!-- Pré-conexão para fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
-    <style>
-        /* ---------- RESET & VARIÁVEIS (BRANDBOOK REDESIGNER) ---------- */
-        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-        :root {
-            --brand-yellow: #FFC700;
-            --brand-purple: #59178A;
-            --brand-dark: #363630;
-            --brand-light: #DBD4D6;
-            --text-main: #FFFFFF;
-            --bg-darker: #20201d;
-            --brand-purple-dark: #370e56;
-            --text-dim: rgba(255, 255, 255, 0.75);
-            --transition: 0.5s cubic-bezier(0.22, 0.97, 0.36, 1);
-            --spacing-section: clamp(80px, 12vw, 140px);
-            --card-radius: 20px;
-            --card-padding: clamp(28px, 4vw, 40px);
-            --glow-yellow: 0 0 15px rgba(255, 199, 0, 0.3);
-        }
-        
-        html { scroll-padding-top: 80px; overflow-x: hidden; }
-        
-        body {
-            background-color: var(--bg-darker);
-            color: var(--text-main);
-            font-family: 'Paralucent Text', 'Paralucent', 'Montserrat', sans-serif;
-            line-height: 1.7;
-            -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
-        }
-
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-image: radial-gradient(circle at 25% 40%, rgba(89, 23, 138, 0.15) 1.5px, transparent 1px);
-            background-size: 40px 40px;
-            pointer-events: none; z-index: 0;
-        }
-
-        #particles-js { position: fixed; width: 100%; height: 100%; z-index: 1; pointer-events: none; opacity: 0.6; }
-        @media (max-width: 768px) { #particles-js { display: none; } }
-        
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: var(--bg-darker); }
-        ::-webkit-scrollbar-thumb { background: var(--brand-purple); border-radius: 10px; }
-        ::-webkit-scrollbar-thumb:hover { background: var(--brand-yellow); }
-        ::selection { background: var(--brand-yellow); color: var(--brand-dark); }
-
-        /* ---------- NAVBAR ---------- */
-        .navbar {
-            position: fixed; top: 0; left: 0; width: 100%; padding: 25px 8%;
-            display: flex; justify-content: space-between; align-items: center; z-index: 1001;
-            transition: var(--transition);
-        }
-        .navbar.scrolled {
-            padding: 10px 8%; background: rgba(54, 54, 48, 0.95);
-            backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(89, 23, 138, 0.4); box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-        .navbar .logo-img { height: 75px; filter: brightness(0) invert(1); transition: 0.3s; }
-        .navbar.scrolled .logo-img { height: 75px; }
-
-        .nav-items { display: flex; gap: 35px; list-style: none; align-items: center; }
-        .nav-items a {
-            color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.75rem;
-            font-weight: 700; text-transform: uppercase; letter-spacing: 2px;
-            transition: 0.3s; position: relative;
-        }
-        .nav-items a::after {
-            content: ''; position: absolute; bottom: -6px; left: 50%;
-            width: 0; height: 2px; background: var(--brand-yellow);
-            transition: 0.3s; transform: translateX(-50%);
-        }
-        .nav-items a:hover::after, .nav-items a.active::after { width: 100%; }
-        .nav-items a:hover, .nav-items a.active { color: var(--brand-yellow); text-shadow: var(--glow-yellow); }
-
-        .burger-btn { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 6px; z-index: 1002; }
-        .burger-btn span { display: block; width: 28px; height: 2px; background: #fff; transition: 0.3s; }
-
-        /* ---------- OVERLAY MENU MOBILE ---------- */
-        .mobile-nav-overlay {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
-            background: rgba(54, 54, 48, 0.98); backdrop-filter: blur(10px);
-            z-index: 1000; display: flex; flex-direction: column; justify-content: center; align-items: center;
-            transform: translateY(-100%); transition: 0.5s ease-in-out; opacity: 0;
-        }
-        .mobile-nav-overlay.active { transform: translateY(0); opacity: 1; }
-        .mobile-nav-overlay .nav-items { flex-direction: column; gap: 30px; text-align: center; }
-        .mobile-nav-overlay .nav-items a { font-size: 1.2rem; }
-
-        /* ---------- WHATSAPP ---------- */
-        .whatsapp-float {
-            position: fixed; bottom: 35px; right: 35px; width: 60px; height: 60px;
-            background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            z-index: 9998; cursor: pointer; transition: 0.3s; box-shadow: 0 5px 20px rgba(37,211,102,0.4);
-        }
-        .whatsapp-float:hover { transform: scale(1.1) rotate(5deg); }
-        
-        .whatsapp-modal {
-            position: fixed; bottom: -100%; right: 35px; width: calc(100% - 70px); max-width: 380px;
-            padding: 32px; z-index: 9999; transition: 0.5s;
-            background: rgba(54, 54, 48, 0.95); backdrop-filter: blur(16px);
-            border: 1px solid rgba(89, 23, 138, 0.6); border-radius: 24px;
-            box-shadow: 0 25px 45px rgba(0,0,0,0.8);
-        }
-        .whatsapp-modal.show { bottom: 110px; }
-
-        /* ---------- PÁGINA TERMOS ---------- */
-        .termos-page {
-            position: relative; z-index: 2;
-            padding: calc(80px + 6vw) 10% var(--spacing-section);
-            max-width: 1100px; margin: 0 auto;
-        }
-
-        .termos-title {
-            font-weight: 700;
-            font-size: clamp(2rem, 5vw, 3.2rem);
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            background: linear-gradient(135deg, #fff, var(--brand-yellow));
-            background-clip: text; -webkit-background-clip: text; color: transparent;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
-            display: inline-block;
-        }
-        .termos-title::after { content: '.'; color: var(--brand-yellow); background: none; -webkit-background-clip: unset; }
-
-        .termos-subtitle {
-            font-size: 1.1rem; color: var(--text-dim); margin-bottom: 60px;
-            max-width: 800px; line-height: 1.8;
-        }
-
-        .termos-section {
-            background: rgba(54, 54, 48, 0.5);
-            backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-            border-radius: var(--card-radius); padding: var(--card-padding);
-            margin-bottom: 40px;
-            border: 1px solid rgba(89, 23, 138, 0.3);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-            transition: var(--transition);
-        }
-        .termos-section:hover {
-            border-color: var(--brand-purple);
-            background: rgba(89, 23, 138, 0.15);
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px rgba(89, 23, 138, 0.3);
-        }
-
-        .section-title {
-            font-weight: 700; font-size: 1.6rem; margin-bottom: 25px;
-            color: var(--brand-yellow); text-transform: uppercase;
-            display: flex; align-items: center; gap: 15px;
-        }
-        .section-title i { color: var(--brand-purple); font-size: 1.4rem; }
-
-        .section-content { color: var(--text-dim); font-size: 1rem; line-height: 1.8; }
-        .section-content p { margin-bottom: 20px; }
-        .section-content strong { color: #fff; font-weight: 700; }
-        .section-content ul { margin-left: 25px; margin-bottom: 20px; list-style: none; }
-        .section-content li { margin-bottom: 10px; padding-left: 20px; position: relative; }
-        .section-content li::before {
-            content: "▹"; color: var(--brand-yellow); font-weight: bold;
-            position: absolute; left: 0; top: 0;
-        }
-
-        .highlight-box {
-            background: rgba(255, 199, 0, 0.05);
-            border-left: 4px solid var(--brand-yellow);
-            padding: 25px; margin: 30px 0;
-            border-radius: 0 15px 15px 0;
-        }
-
-        /* Tabela personalizada */
-        .info-table {
-            width: 100%; border-collapse: collapse; margin: 30px 0;
-            background: rgba(54, 54, 48, 0.3); border-radius: 15px; overflow: hidden;
-        }
-        .info-table th {
-            background: rgba(89, 23, 138, 0.25); color: var(--brand-yellow);
-            font-weight: 700; text-transform: uppercase; font-size: 0.85rem;
-            letter-spacing: 1px; padding: 20px; text-align: left;
-            border-bottom: 1px solid rgba(89, 23, 138, 0.3);
-        }
-        .info-table td { padding: 20px; color: var(--text-dim); border-bottom: 1px solid rgba(255,255,255,0.05); }
-        .info-table tr:last-child td { border-bottom: none; }
-        .info-table tr:hover td { background: rgba(255, 199, 0, 0.03); }
-
-        .acceptance-box {
-            background: rgba(54, 54, 48, 0.5);
-            backdrop-filter: blur(16px);
-            border: 2px solid var(--brand-purple);
-            border-radius: var(--card-radius);
-            padding: 50px; text-align: center; margin-top: 60px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-        }
-        .acceptance-box h4 {
-            font-size: 1.8rem; font-weight: 700; color: var(--brand-yellow);
-            margin-bottom: 20px; text-transform: uppercase;
-        }
-        .acceptance-box p { color: var(--text-dim); margin-bottom: 30px; }
-        .btn-accept {
-            display: inline-flex; align-items: center; gap: 12px;
-            padding: 16px 38px; background: var(--brand-yellow);
-            color: var(--brand-dark); text-decoration: none; font-weight: 700;
-            font-size: 0.85rem; border-radius: 50px; text-transform: uppercase;
-            letter-spacing: 1.5px; transition: 0.4s; border: none;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-        }
-        .btn-accept:hover { background: #ffffff; transform: translateY(-3px); box-shadow: 0 15px 30px rgba(255, 199, 0, 0.25); }
-
-        .termos-footer-text {
-            text-align: center; margin-top: 80px; padding-top: 40px;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            color: var(--text-dim); font-size: 0.9rem;
-        }
-        .termos-footer-text a {
-            color: var(--brand-yellow); text-decoration: none; font-weight: 600;
-            transition: var(--transition);
-        }
-        .termos-footer-text a:hover { text-decoration: underline; }
-
-        /* ---------- FOOTER ---------- */
-        .site-footer {
-            background-color: var(--brand-light);
-            color: var(--brand-dark);
-            padding: 80px 0 0;
-            position: relative;
-            z-index: 2;
-            overflow: hidden;
-        }
-        .footer-main {
-            display: flex; justify-content: space-between; align-items: flex-end;
-            padding: 60px 10%; position: relative;
-        }
-        .footer-info { max-width: 500px; }
-        .footer-social { display: flex; gap: 15px; margin-bottom: 30px; }
-        .footer-social a {
-            width: 45px; height: 45px; border-radius: 50%;
-            background-color: var(--brand-dark); color: var(--brand-light);
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.2rem; transition: 0.3s; text-decoration: none;
-        }
-        .footer-social a:hover { background-color: var(--brand-purple); color: #fff; transform: translateY(-5px); }
-        .footer-details { font-size: 0.85rem; line-height: 1.6; color: var(--brand-dark); }
-        .footer-details strong { display: block; font-size: 1rem; font-weight: 700; margin-bottom: 8px; text-transform: uppercase;}
-        .footer-graphic { position: relative; display: flex; align-items: flex-end; }
-        .footer-graphic img { width: 180px; filter: brightness(0) opacity(0.85); z-index: 2; }
-        .footer-bottom {
-            background-color: var(--brand-yellow);
-            color: var(--brand-dark);
-            padding: 20px 10%; text-align: left; font-size: 0.85rem; font-weight: 600;
-            display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;
-        }
-        .footer-bottom a { color: var(--brand-dark); text-decoration: none; margin-left: 15px; }
-        .footer-bottom a:hover { text-decoration: underline; color: var(--brand-purple); }
-
-        /* ---------- ANIMAÇÃO ---------- */
-        .reveal { opacity: 0; transform: translateY(40px); transition: 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1); }
-        .reveal-active { opacity: 1; transform: translateY(0); }
-
-        /* ---------- RESPONSIVO ---------- */
-        @media (max-width: 900px) {
-            .navbar { padding: 15px 5%; }
-            .navbar .logo-img { height: 50px; }
-            .nav-items { display: none; }
-            .burger-btn { display: flex; }
-            .termos-page { padding: calc(60px + 8vw) 5% 80px; }
-            .footer-main { flex-direction: column; align-items: center; text-align: center; gap: 50px; padding: 50px 5%; }
-            .footer-social { justify-content: center; }
-            .footer-bottom { flex-direction: column; text-align: center; justify-content: center; padding: 20px 5%; }
-            .footer-graphic img { width: 140px; }
-            .whatsapp-float { right: 20px; bottom: 20px; }
-            .whatsapp-modal { right: 20px; width: calc(100% - 40px); }
-            .section-title { font-size: 1.4rem; }
-            .info-table { display: block; overflow-x: auto; }
-        }
-        @media (max-width: 480px) {
-            .termos-title { font-size: 1.8rem; }
-            .section-title { font-size: 1.2rem; }
-            .termos-section { padding: 25px; }
-        }
-    </style>
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div id="particles-js"></div>
+    <!-- Partículas -->
+    <div id="particles-js" aria-hidden="true"></div>
 
-<!-- WhatsApp flutuante -->
-<div class="whatsapp-float" id="whatsappFloatBtn" aria-label="Fale pelo WhatsApp">
-    <i class="fab fa-whatsapp" style="font-size:32px; color:white;"></i>
-</div>
+    <!-- WhatsApp flutuante -->
+    <div class="whatsapp-float" id="whatsappFloatBtn" role="button" aria-label="Fale pelo WhatsApp" tabindex="0">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </div>
+    <div class="whatsapp-modal" id="whatsappModal" role="dialog" aria-label="Modal WhatsApp">
+        <button class="whatsapp-modal-close" id="whatsappModalClose" aria-label="Fechar modal">×</button>
+        <h4>Dúvidas sobre os termos?</h4>
+        <p>Fale com a gente pelo WhatsApp.</p>
+        <a href="https://wa.me/5511999778996" target="_blank" rel="noopener noreferrer" class="btn-prime btn-whatsapp">Iniciar Conversa →</a>
+    </div>
 
-<!-- Modal WhatsApp -->
-<div class="whatsapp-modal" id="whatsappModal">
-    <button onclick="toggleWhatsAppModal()" style="position:absolute; top:18px; right:18px; background:none; border:none; color:#aaa; font-size:1.8rem; cursor:pointer;">&times;</button>
-    <h4>Dúvidas sobre os termos?</h4>
-    <p style="color:var(--text-dim); font-size:0.9rem; margin-bottom: 20px;">Fale com a gente pelo WhatsApp.</p>
-    <a href="https://wa.me/5511999778996" target="_blank" rel="noopener noreferrer" class="btn-accept" style="width:100%; justify-content:center;">Iniciar Conversa →</a>
-</div>
-
-<!-- Navbar -->
-<nav class="navbar" id="navbar">
-    <a href="index.html"><img src="logo.png" alt="Redesigner Home" class="logo-img"></a>
-    <ul class="nav-items">
-        <li><a href="index.html#home">Home</a></li>
-        <li><a href="index.html#quem-somos">A Agência</a></li>
-        <li><a href="index.html#services">Soluções</a></li>
-        <li><a href="index.html#diferenciais">Expertise</a></li>
-        <li><a href="index.html#cases">Cases</a></li>
-        <li><a href="index.html#contato">Contato</a></li>
-    </ul>
-    <button class="burger-btn" onclick="toggleMobileMenu()" aria-label="Menu">
-        <span></span><span></span><span></span>
-    </button>
-</nav>
-
-<!-- Menu Overlay Mobile -->
-<div class="mobile-nav-overlay" id="mobileMenu">
-    <ul class="nav-items" style="display: flex;">
-        <li><a href="index.html#home" onclick="toggleMobileMenu()">Home</a></li>
-        <li><a href="index.html#quem-somos" onclick="toggleMobileMenu()">A Agência</a></li>
-        <li><a href="index.html#services" onclick="toggleMobileMenu()">Soluções</a></li>
-        <li><a href="index.html#diferenciais" onclick="toggleMobileMenu()">Expertise</a></li>
-        <li><a href="index.html#cases" onclick="toggleMobileMenu()">Cases</a></li>
-        <li><a href="index.html#contato" onclick="toggleMobileMenu()">Contato</a></li>
-    </ul>
-</div>
-
-<main class="termos-page">
-    <h1 class="termos-title">Termos de Uso</h1>
-    <p class="termos-subtitle">Estes Termos de Uso regulam a utilização dos serviços da ReDesigner PPM Agência Digital. Ao contratar nossos serviços, você concorda integralmente com estas condições.</p>
-
-    <section class="termos-section reveal">
-        <h2 class="section-title"><i class="fas fa-file-contract"></i> 1. Objeto</h2>
-        <div class="section-content">
-            <p>A ReDesigner oferece serviços de marketing digital, design e gestão de redes sociais, conforme descrito na proposta comercial.</p>
+    <!-- Cookie Popup -->
+    <div class="cookie-popup" id="cookiePopup" role="alert" aria-label="Aviso de cookies">
+        <p>Utilizamos cookies para métricas e melhoria da experiência. Ao continuar, você concorda com nossa <a href="privacidade.html" class="cookie-link">Política de Privacidade</a>.</p>
+        <div class="cookie-actions">
+            <button class="btn-cookie btn-accept" id="cookieAccept">Concordar</button>
+            <button class="btn-cookie btn-decline" id="cookieDecline">Recusar</button>
         </div>
-    </section>
+    </div>
 
-    <section class="termos-section reveal">
-        <h2 class="section-title"><i class="fas fa-user-plus"></i> 2. Cadastro</h2>
-        <div class="section-content">
-            <p>O cliente deve fornecer informações completas e verdadeiras. Informações incorretas podem resultar em cancelamento dos serviços.</p>
-            <div class="highlight-box">
-                <p><strong>Importante:</strong> O cliente é responsável pela veracidade das informações fornecidas.</p>
+    <!-- ========== HEADER ========== -->
+    <header class="navbar" id="navbar" role="banner">
+        <a href="index.html" class="logo-link" aria-label="Redesigner - Página inicial">
+            <img src="logo.png" alt="Logo Redesigner" class="logo-img" width="150" height="75">
+        </a>
+        <nav aria-label="Navegação principal">
+            <ul class="nav-items" id="navMenu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#proposta">A Agência</a></li>
+                <li><a href="index.html#solucoes">Soluções</a></li>
+                <li><a href="index.html#diferenciais">Expertise</a></li>
+                <li><a href="index.html#cases">Cases</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <button class="burger-btn" id="burgerBtn" aria-label="Abrir menu mobile" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <!-- Menu mobile -->
+    <div class="mobile-nav-overlay" id="mobileMenu" role="navigation" aria-label="Menu mobile">
+        <ul class="nav-items">
+            <li><a href="index.html#home" class="mobile-link">Home</a></li>
+            <li><a href="index.html#proposta" class="mobile-link">A Agência</a></li>
+            <li><a href="index.html#solucoes" class="mobile-link">Soluções</a></li>
+            <li><a href="index.html#diferenciais" class="mobile-link">Expertise</a></li>
+            <li><a href="index.html#cases" class="mobile-link">Cases</a></li>
+            <li><a href="index.html#contato" class="mobile-link">Contato</a></li>
+        </ul>
+    </div>
+
+    <!-- ========== CONTEÚDO PRINCIPAL ========== -->
+    <main class="policy-page termos-page">
+        <h1 class="policy-title termos-title">Termos de Uso</h1>
+        <p class="policy-subtitle termos-subtitle">Estes Termos de Uso regulam a utilização dos serviços da ReDesigner PPM Agência Digital. Ao contratar nossos serviços, você concorda integralmente com estas condições.</p>
+
+        <section class="policy-section termos-section reveal">
+            <h2 class="section-title"><i class="fas fa-file-contract" aria-hidden="true"></i> 1. Objeto</h2>
+            <div class="section-content">
+                <p>A ReDesigner oferece serviços de marketing digital, design e gestão de redes sociais, conforme descrito na proposta comercial.</p>
+            </div>
+        </section>
+
+        <section class="policy-section termos-section reveal">
+            <h2 class="section-title"><i class="fas fa-user-plus" aria-hidden="true"></i> 2. Cadastro</h2>
+            <div class="section-content">
+                <p>O cliente deve fornecer informações completas e verdadeiras. Informações incorretas podem resultar em cancelamento dos serviços.</p>
+                <div class="highlight-box">
+                    <p><strong>Importante:</strong> O cliente é responsável pela veracidade das informações fornecidas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="policy-section termos-section reveal">
+            <h2 class="section-title"><i class="fas fa-cogs" aria-hidden="true"></i> 3. Serviços</h2>
+            <div class="section-content">
+                <p>A ReDesigner se compromete a prestar serviços com qualidade técnica e profissionalismo.</p>
+                <table class="info-table">
+                    <thead>
+                        <tr><th>Tipo</th><th>Descrição</th><th>Entrega</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Gestão Completa</strong></td>
+                            <td>Gestão diária de redes sociais, criação de conteúdo</td>
+                            <td>Plano mensal</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Consultoria</strong></td>
+                            <td>Análise estratégica e planejamento</td>
+                            <td>Reuniões + relatórios</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Projeto Específico</strong></td>
+                            <td>Site, campanha, etc.</td>
+                            <td>Conforme cronograma</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="policy-section termos-section reveal">
+            <h2 class="section-title"><i class="fas fa-calendar-alt" aria-hidden="true"></i> 4. Prazos e Entregas</h2>
+            <div class="section-content">
+                <p>Os prazos são acordados previamente. Atraso na entrega de materiais pelo cliente pode impactar os prazos.</p>
+            </div>
+        </section>
+
+        <section class="policy-section termos-section reveal">
+            <h2 class="section-title"><i class="fas fa-credit-card" aria-hidden="true"></i> 5. Pagamentos</h2>
+            <div class="section-content">
+                <p>Condições estabelecidas na proposta. Cancelamentos: reembolso proporcional a serviços não prestados.</p>
+            </div>
+        </section>
+
+        <section class="policy-section termos-section reveal">
+            <h2 class="section-title"><i class="fas fa-copyright" aria-hidden="true"></i> 6. Propriedade Intelectual</h2>
+            <div class="section-content">
+                <p>Os direitos dos materiais desenvolvidos são transferidos após quitação integral, exceto metodologias e ferramentas internas.</p>
+            </div>
+        </section>
+
+        <section class="policy-section termos-section reveal">
+            <h2 class="section-title"><i class="fas fa-lock" aria-hidden="true"></i> 7. Confidencialidade</h2>
+            <div class="section-content">
+                <p>Ambas as partes mantêm sigilo sobre informações confidenciais trocadas.</p>
+            </div>
+        </section>
+
+        <section class="policy-section termos-section reveal">
+            <h2 class="section-title"><i class="fas fa-balance-scale" aria-hidden="true"></i> 8. Responsabilidades</h2>
+            <div class="section-content">
+                <p><strong>ReDesigner:</strong> executar com diligência, cumprir prazos, confidencialidade.<br>
+                <strong>Cliente:</strong> fornecer informações verdadeiras, entregar materiais, realizar pagamentos.</p>
+            </div>
+        </section>
+
+        <section class="policy-section termos-section reveal">
+            <h2 class="section-title"><i class="fas fa-ban" aria-hidden="true"></i> 9. Rescisão</h2>
+            <div class="section-content">
+                <p>Rescisão com aviso prévio de 30 dias. Rescisão imediata por inadimplência ou descumprimento grave.</p>
+            </div>
+        </section>
+
+        <section class="policy-section termos-section reveal">
+            <h2 class="section-title"><i class="fas fa-gavel" aria-hidden="true"></i> 10. Disposições Gerais</h2>
+            <div class="section-content">
+                <p><strong>Foro:</strong> São Paulo/SP. Alterações disponíveis no site. Regido pelas leis brasileiras.</p>
+            </div>
+        </section>
+
+        <div class="acceptance-box reveal">
+            <h4>Aceitação dos Termos</h4>
+            <p>Ao contratar nossos serviços, você declara ter lido e aceito integralmente estes Termos de Uso.</p>
+            <a href="index.html" class="btn-prime"><i class="fas fa-check-circle" aria-hidden="true"></i> Voltar ao Site</a>
+        </div>
+
+        <div class="policy-footer-text termos-footer-text reveal">
+            <p><strong>ReDesigner PPM Agência Digital</strong><br><small>CNPJ: 41.142.331/0001-43 • Última atualização: Julho 2024</small></p>
+            <p style="margin-top:15px;">
+                <a href="index.html">Página Inicial</a> • 
+                <a href="privacidade.html">Política de Privacidade</a> • 
+                <a href="cookies.html">Política de Cookies</a>
+            </p>
+        </div>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer" id="footer" role="contentinfo">
+        <div class="footer-main">
+            <div class="footer-info">
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/agenciaredesigner" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/agenciaredesigner" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/company/agenciaredesigner/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                    <a href="mailto:atendimento@redesigner.com.br" aria-label="E-mail"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+                </div>
+                <div class="footer-details">
+                    <strong>Redesigner - Planejamento, Publicidade e Marketing</strong>
+                    <p>São Paulo - SP - Atendimento Nacional</p>
+                    <p>CNPJ: 41.142.331/0001-43</p>
+                </div>
+            </div>
+            <div class="footer-graphic">
+                <a href="index.html"><img src="logo.png" alt="Redesigner Agência Digital" width="180" height="auto"></a>
             </div>
         </div>
-    </section>
-
-    <section class="termos-section reveal">
-        <h2 class="section-title"><i class="fas fa-cogs"></i> 3. Serviços</h2>
-        <div class="section-content">
-            <p>A ReDesigner se compromete a prestar serviços com qualidade técnica e profissionalismo.</p>
-            <table class="info-table">
-                <thead>
-                    <tr><th>Tipo</th><th>Descrição</th><th>Entrega</th></tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Gestão Completa</strong></td>
-                        <td>Gestão diária de redes sociais, criação de conteúdo</td>
-                        <td>Plano mensal</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Consultoria</strong></td>
-                        <td>Análise estratégica e planejamento</td>
-                        <td>Reuniões + relatórios</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Projeto Específico</strong></td>
-                        <td>Site, campanha, etc.</td>
-                        <td>Conforme cronograma</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="footer-bottom">
+            <p>&copy; 2019-2026 - Todos os direitos reservados.</p>
+            <nav aria-label="Políticas">
+                <a href="privacidade.html">Privacidade</a>
+                <a href="termos.html">Termos de Uso</a>
+                <a href="cookies.html">Cookies</a>
+                <a href="lgpd.html">LGPD</a>
+            </nav>
         </div>
-    </section>
+    </footer>
 
-    <section class="termos-section reveal">
-        <h2 class="section-title"><i class="fas fa-calendar-alt"></i> 4. Prazos e Entregas</h2>
-        <div class="section-content">
-            <p>Os prazos são acordados previamente. Atraso na entrega de materiais pelo cliente pode impactar os prazos.</p>
-        </div>
-    </section>
-
-    <section class="termos-section reveal">
-        <h2 class="section-title"><i class="fas fa-credit-card"></i> 5. Pagamentos</h2>
-        <div class="section-content">
-            <p>Condições estabelecidas na proposta. Cancelamentos: reembolso proporcional a serviços não prestados.</p>
-        </div>
-    </section>
-
-    <section class="termos-section reveal">
-        <h2 class="section-title"><i class="fas fa-copyright"></i> 6. Propriedade Intelectual</h2>
-        <div class="section-content">
-            <p>Os direitos dos materiais desenvolvidos são transferidos após quitação integral, exceto metodologias e ferramentas internas.</p>
-        </div>
-    </section>
-
-    <section class="termos-section reveal">
-        <h2 class="section-title"><i class="fas fa-lock"></i> 7. Confidencialidade</h2>
-        <div class="section-content">
-            <p>Ambas as partes mantêm sigilo sobre informações confidenciais trocadas.</p>
-        </div>
-    </section>
-
-    <section class="termos-section reveal">
-        <h2 class="section-title"><i class="fas fa-balance-scale"></i> 8. Responsabilidades</h2>
-        <div class="section-content">
-            <p><strong>ReDesigner:</strong> executar com diligência, cumprir prazos, confidencialidade.<br>
-            <strong>Cliente:</strong> fornecer informações verdadeiras, entregar materiais, realizar pagamentos.</p>
-        </div>
-    </section>
-
-    <section class="termos-section reveal">
-        <h2 class="section-title"><i class="fas fa-ban"></i> 9. Rescisão</h2>
-        <div class="section-content">
-            <p>Rescisão com aviso prévio de 30 dias. Rescisão imediata por inadimplência ou descumprimento grave.</p>
-        </div>
-    </section>
-
-    <section class="termos-section reveal">
-        <h2 class="section-title"><i class="fas fa-gavel"></i> 10. Disposições Gerais</h2>
-        <div class="section-content">
-            <p><strong>Foro:</strong> São Paulo/SP. Alterações disponíveis no site. Regido pelas leis brasileiras.</p>
-        </div>
-    </section>
-
-    <div class="acceptance-box reveal">
-        <h4>Aceitação dos Termos</h4>
-        <p>Ao contratar nossos serviços, você declara ter lido e aceito integralmente estes Termos de Uso.</p>
-        <a href="index.html" class="btn-accept"><i class="fas fa-check-circle"></i> Voltar ao Site</a>
-    </div>
-
-    <div class="termos-footer-text reveal">
-        <p><strong>ReDesigner PPM Agência Digital</strong><br><small>CNPJ: 41.142.331/0001-43 • Última atualização: Julho 2024</small></p>
-        <p style="margin-top:15px;">
-            <a href="index.html">Página Inicial</a> • 
-            <a href="privacidade.html">Política de Privacidade</a> • 
-            <a href="cookies.html">Política de Cookies</a>
-        </p>
-    </div>
-</main>
-
-<!-- Footer -->
-<footer class="site-footer">
-    <div class="footer-main">
-        <div class="footer-info reveal">
-            <div class="footer-social">
-                <a href="https://www.instagram.com/agenciaredesigner" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/agenciaredesigner" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.linkedin.com/company/agenciaredesigner/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="mailto:atendimento@redesigner.com.br" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
-            </div>
-            <div class="footer-details">
-                <strong>Redesigner - Planejamento, Publicidade e Marketing</strong>
-                <p>São Paulo - SP - Atendimento Nacional</p>
-                <p>CNPJ: 41.142.331/0001-43</p>
-            </div>
-        </div>
-        <div class="footer-graphic reveal">
-            <a href="index.html"><img src="logo.png" alt="Redesigner Agência Digital"></a>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>© 2019-2026 - Todos os direitos reservados.</p>
-        <p>
-            <a href="privacidade.html">Privacidade</a>
-            <a href="termos.html">Termos de Uso</a>
-            <a href="cookies.html">Cookies</a>
-        </p>
-    </div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
-<script>
-    (function() {
-        // Partículas
-        if(window.particlesJS && window.innerWidth > 768) {
-            particlesJS("particles-js", {
-                particles: {
-                    number: { value: 45 },
-                    color: { value: "#ffffff" },
-                    opacity: { value: 0.15 },
-                    size: { value: 2 },
-                    line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.05, width: 1 },
-                    move: { enable: true, speed: 0.8 }
-                }
-            });
-        }
-
-        // Navbar scroll
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) navbar.classList.add('scrolled');
-            else navbar.classList.remove('scrolled');
-        });
-
-        // Revelação suave
-        const reveals = document.querySelectorAll(".reveal");
-        const obs = new IntersectionObserver((entries) => {
-            entries.forEach(e => { if(e.isIntersecting) e.target.classList.add("reveal-active"); });
-        }, { threshold: 0.1 });
-        reveals.forEach(el => { el.classList.add("reveal"); obs.observe(el); });
-
-        // WhatsApp float
-        document.getElementById('whatsappFloatBtn')?.addEventListener('click', () => {
-            window.open("https://wa.me/5511999778996?text=Olá! Gostaria de esclarecer dúvidas sobre os Termos de Uso.", "_blank", "noopener");
-        });
-    })();
-
-    function toggleWhatsAppModal() { document.getElementById('whatsappModal').classList.toggle('show'); }
-    function toggleMobileMenu() { 
-        const menu = document.getElementById('mobileMenu');
-        menu.classList.toggle('active');
-        document.querySelector('.burger-btn').classList.toggle('open');
-    }
-</script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
